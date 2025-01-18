@@ -1,43 +1,101 @@
 ---
+import { SITE } from 'astrowind:config';
+import { twMerge } from 'tailwind-merge';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import { Icon } from 'astro-icon/components';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Stats2 from '~/components/widgets/Stats2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Pleasant Home Community Church',
   ignoreTitleTemplate: true,
 };
+
+const address = SITE?.address;
+const appleMaps = SITE?.appleMaps;
+const googleMaps = SITE?.googleMaps;
+const phone = SITE?.phone;
 ---
 
 <Layout metadata={metadata}>
   <!-- Welcome Widget ******************* -->
 
-  <Hero actions={[]} image={{ src: '~/assets/images/phcc-front-building.webp', alt: 'Pleasant Home Community Church' }}>
-    <Fragment slot="title"> Welcome! </Fragment>
-
-    <Fragment slot="subtitle">
-      Pleasant Home Community Church was first established in 1897. We have a long history of biblical faithfulness
-      which continues today through the expository preaching of God's Word.
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/phcc-front-building-crop.webp',
+      alt: 'Pleasant Home Community Church',
+    }}
+  >
+    <Fragment slot="content">
+      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
+        Welcome!
+      </h1><br />
+      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
+      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
+      through the expository preaching of God's Word.
     </Fragment>
-  </Hero>
+  </Content>
 
-  <!-- Service Times Widget ******************* -->
+  <!-- Worship Services Widget ******************* -->
 
-  <CallToAction actions={[]}>
-    <Fragment slot="title">Worship Services</Fragment>
-
-    <Fragment slot="subtitle">
-      Sunday Morning<br />
-      9:00 am & 10:45 am
+  <Stats2
+    title="Worship Services"
+    subtitle="Sunday"
+    stats={[
+      { title: 'First', amount: '9:00 am' },
+      { title: 'Second', amount: '10:45 am' },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </CallToAction>
+  </Stats2>
+
+  <!-- Location Widget ******************* -->
+
+  <Content
+    items={[
+      {
+        icon: 'tabler:brand-google-maps',
+        description: `<a href="${googleMaps}">Google</a>`,
+      },
+      {
+        icon: 'tabler:brand-apple',
+        description: `<a href="${appleMaps}">Apple</a>`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/phcc-apple-maps.png',
+      alt: 'Pleasant Home Community Church Location on Map',
+    }}
+  >
+    <Fragment slot="content">
+      <!-- <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3>
+      <span>Sunday at 9:00 am and 10:45 am</span><br /><br /> -->
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Location</h3><br />
+      <span set:html={address} />
+    </Fragment>
+
+    <!-- <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+  </Content>
+
+  <!-- What to Expect Widget ******************* -->
 </Layout>

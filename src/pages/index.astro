@@ -1,25 +1,9 @@
 ---
 import { SITE } from 'astrowind:config';
-import { twMerge } from 'tailwind-merge';
 import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Hero3 from '~/components/widgets/Hero3.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import { Icon } from 'astro-icon/components';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Stats2 from '~/components/widgets/Stats2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Pleasant Home Community Church',
@@ -40,6 +24,7 @@ const phone = SITE?.phone;
     image={{
       src: '~/assets/images/phcc-front-building-crop.webp',
       alt: 'Pleasant Home Community Church',
+      height: 400,
     }}
   >
     <Fragment slot="content">
@@ -58,8 +43,9 @@ const phone = SITE?.phone;
 
   <Content
     image={{
-      src: '~/assets/images/phcc-apple-maps.png',
+      src: '~/assets/images/phcc-apple-maps-gray.png',
       alt: 'Pleasant Home Community Church Location on Map',
+      height: 400,
     }}
   >
     <Fragment slot="content">

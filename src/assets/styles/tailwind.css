@@ -20,9 +20,10 @@
 
 .logo-subname {
   font-family: "open sans", "sans-serif";
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.15rem;
+  font-size: .9rem;
+  padding-top: 0;
 }
 
 @layer utilities {

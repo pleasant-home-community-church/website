@@ -2,23 +2,19 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    // {
-    //   text: 'About Us',
-    //   links: [
-    //     {
-    //       text: 'What We Believe',
-    //       href: getPermalink('/homes/saas'),
-    //     },
-    //     {
-    //       text: 'What to Expect When Visiting',
-    //       href: getPermalink('/homes/saas'),
-    //     },
-    //     {
-    //       text: 'Leadership and Staff',
-    //       href: getPermalink('/homes/startup'),
-    //     },
-    //   ],
-    // },
+    {
+      text: 'About Us',
+      links: [
+        // {
+        //   text: 'What We Believe',
+        //   href: getPermalink('/homes/saas'),
+        // },
+        {
+          text: 'Leadership and Staff',
+          href: getPermalink('/leadership'),
+        },
+      ],
+    },
     // {
     //   text: 'Pages',
     //   links: [

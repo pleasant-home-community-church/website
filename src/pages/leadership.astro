@@ -1,0 +1,102 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Headline from '~/components/ui/Headline.astro';
+import { Icon } from 'astro-icon/components';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Pleasant Home Community Church',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Pastor Mike Widget ******************* -->
+  <Headline title="Leadership and Staff" />
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/phcc-front-building-crop.webp',
+      alt: 'Pleasant Home Community Church',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
+        Mike Johnson
+      </h1>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl lg:text-3xl xl:text-5xl mb-2">
+        Senior Pastor
+      </h2><br />
+      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
+      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
+      through the expository preaching of God's Word.
+    </Fragment>
+  </Content>
+
+  <!-- Pastor Ryan Widget ******************* -->
+
+  <Content
+    image={{
+      src: '~/assets/images/phcc-front-building-crop.webp',
+      alt: 'Pleasant Home Community Church',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
+        Ryan Wether
+      </h1>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl lg:text-3xl xl:text-5xl mb-2">
+        Associate Pastor
+      </h2><br />
+      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
+      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
+      through the expository preaching of God's Word.
+    </Fragment>
+  </Content>
+
+  <!-- Pastor Jason Widget ******************* -->
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/phcc-front-building-crop.webp',
+      alt: 'Pleasant Home Community Church',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
+        Welcome!
+      </h1><br />
+      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
+      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
+      through the expository preaching of God's Word.
+    </Fragment>
+  </Content>
+
+  <!-- Worship Services Widget ******************* -->
+
+  <!-- Location Widget ******************* -->
+
+  <Content
+    image={{
+      src: '~/assets/images/phcc-apple-maps-gray.png',
+      alt: 'Pleasant Home Community Church Location on Map',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3><br />
+      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Sunday Morning</h3>
+      9:00 am, 10:45 am<br /><br />
+      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Location</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+</Layout>

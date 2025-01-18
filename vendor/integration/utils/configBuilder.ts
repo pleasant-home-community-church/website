@@ -16,6 +16,8 @@ export type Config = {
 export interface SiteConfig {
   name: string;
   subname: string;
+  address?: string;
+  phone?: string;
   site?: string;
   base?: string;
   trailingSlash?: boolean;

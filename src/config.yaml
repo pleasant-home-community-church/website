@@ -1,6 +1,8 @@
 site:
   name: Pleasant Home
   subname: Community Church
+  address: 32120 SE Dodge Park Blvd<br />Gresham, OR 97080
+  phone: 503-663-3668
   site: 'https://www.pleasanthome.cc'
   base: '/'
   trailingSlash: false
@@ -19,7 +21,7 @@ metadata:
   openGraph:
     site_name: Pleasant Home Community Church
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/phcc-front-building.webp'
         width: 1200
         height: 628
     type: website

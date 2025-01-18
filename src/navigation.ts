@@ -2,23 +2,23 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'About Us',
-      links: [
-        {
-          text: 'What We Believe',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'What to Expect When Visiting',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Leadership and Staff',
-          href: getPermalink('/homes/startup'),
-        },
-      ],
-    },
+    // {
+    //   text: 'About Us',
+    //   links: [
+    //     {
+    //       text: 'What We Believe',
+    //       href: getPermalink('/homes/saas'),
+    //     },
+    //     {
+    //       text: 'What to Expect When Visiting',
+    //       href: getPermalink('/homes/saas'),
+    //     },
+    //     {
+    //       text: 'Leadership and Staff',
+    //       href: getPermalink('/homes/startup'),
+    //     },
+    //   ],
+    // },
     // {
     //   text: 'Pages',
     //   links: [
@@ -167,11 +167,9 @@ export const footerData = {
     // { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'SermonAudio', icon: 'tabler:device-tv', href: 'https://www.sermonaudio.com/broadcasters/phcc/' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/rooted.phcc/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/Pleasant-Home-Community-Church-308366072618357' },
   ],
   footNote: '',
 };

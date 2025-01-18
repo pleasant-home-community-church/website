@@ -54,48 +54,69 @@ const phone = SITE?.phone;
 
   <!-- Worship Services Widget ******************* -->
 
-  <Stats2
-    title="Worship Services"
-    subtitle="Sunday"
-    stats={[
-      { title: 'First', amount: '9:00 am' },
-      { title: 'Second', amount: '10:45 am' },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Stats2>
-
   <!-- Location Widget ******************* -->
 
   <Content
-    items={[
-      {
-        icon: 'tabler:brand-google-maps',
-        description: `<a href="${googleMaps}">Google</a>`,
-      },
-      {
-        icon: 'tabler:brand-apple',
-        description: `<a href="${appleMaps}">Apple</a>`,
-      },
-    ]}
     image={{
       src: '~/assets/images/phcc-apple-maps.png',
       alt: 'Pleasant Home Community Church Location on Map',
     }}
   >
     <Fragment slot="content">
-      <!-- <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3>
-      <span>Sunday at 9:00 am and 10:45 am</span><br /><br /> -->
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Location</h3><br />
-      <span set:html={address} />
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3><br />
+      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Sunday Morning</h3>
+      9:00 am, 10:45 am<br /><br />
+      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Location</h3>
+      <span set:html={address} /><br /><br />
+      <a href={appleMaps} target="_blank"><Icon name="tabler:brand-apple" class="w-5 h-5 inline" /></a>
+      <a href={googleMaps} target="_blank"><Icon name="tabler:brand-google" class="w-5 h-5 inline" /></a>
     </Fragment>
 
-    <!-- <Fragment slot="bg">
+    <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment> -->
+    </Fragment>
   </Content>
 
   <!-- What to Expect Widget ******************* -->
+
+  <Features
+    id="features"
+    title="What to Expect When You Visit"
+    subtitle="When you visit one of our services, you will notice that we like to keep things simple. We are not about flashy church growth strategies or entertaining our members. We are about knowing God, making Him known, and enjoying the common salvation we have with the saints of Christ. We are a church that holds to the inerrancy, infallibility, and sufficiency of Scripture. We invite you to come and worship with us."
+    columns={3}
+    items={[
+      {
+        title: 'Friendly Believers',
+        description: 'You will be greeted by a friendly group of believers.',
+        icon: 'tabler:friends',
+      },
+      {
+        title: 'Worship Music',
+        description:
+          'Worship will include a mixture of old hymns, modern hymns, and select contemporary worship music.',
+        icon: 'tabler:music',
+      },
+      {
+        title: 'Expository Teaching',
+        description:
+          'The preaching will be expository from the Bible, and you will be challenged, encouraged, and edified.',
+        icon: 'tabler:bible',
+      },
+      {
+        title: "Children's Church",
+        description: "Children's Church is offered for Nursery (0-2yrs) through 5th grade.",
+        icon: 'tabler:monkeybar',
+      },
+      {
+        title: 'Casual Dress',
+        description: 'Most members wear casual to dressy-casual attire.',
+        icon: 'tabler:shirt-sport',
+      },
+      {
+        title: 'Fellowship',
+        description: 'After service, we invite you to stick around and fellowship with one another.',
+        icon: 'tabler:heart-handshake',
+      },
+    ]}
+  />
 </Layout>

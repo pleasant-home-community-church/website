@@ -17,6 +17,7 @@ export interface SiteConfig {
   name: string;
   subname: string;
   address?: string;
+  cityState?: string;
   appleMaps?: string;
   googleMaps?: string;
   phone?: string;

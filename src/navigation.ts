@@ -9,10 +9,10 @@ export const headerData = {
     {
       text: 'About',
       links: [
-        // {
-        //   text: 'What We Believe',
-        //   href: getPermalink('/homes/saas'),
-        // },
+        {
+          text: 'What We Believe',
+          href: getPermalink('/beliefs'),
+        },
         {
           text: 'Leadership and Staff',
           href: getPermalink('/leadership'),

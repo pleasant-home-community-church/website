@@ -25,6 +25,11 @@
   font-size: .9rem;
 }
 
+.bg-logo-b-l {
+  --tw-bg-opacity: .10;
+  background-color: rgb(133 204 169 / var(--tw-bg-opacity, 1)) /* #85cca9 */;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);

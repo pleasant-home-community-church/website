@@ -13,14 +13,13 @@ const metadata = {
 const address = SITE?.address;
 const appleMaps = SITE?.appleMaps;
 const googleMaps = SITE?.googleMaps;
-const phone = SITE?.phone;
 ---
 
 <Layout metadata={metadata}>
   <!-- Welcome Widget ******************* -->
-
   <Content
     isReversed
+    title="Welcome!"
     image={{
       src: '~/assets/images/phcc-front-building-crop.webp',
       alt: 'Pleasant Home Community Church',
@@ -28,12 +27,9 @@ const phone = SITE?.phone;
     }}
   >
     <Fragment slot="content">
-      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
-        Welcome!
-      </h1><br />
-      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
-      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
-      through the expository preaching of God's Word.
+      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship
+      with one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues
+      today through the expository preaching of God's Word.
     </Fragment>
   </Content>
 
@@ -42,6 +38,7 @@ const phone = SITE?.phone;
   <!-- Location Widget ******************* -->
 
   <Content
+    title="Worship Services"
     image={{
       src: '~/assets/images/phcc-apple-maps-gray.png',
       alt: 'Pleasant Home Community Church Location on Map',
@@ -49,7 +46,6 @@ const phone = SITE?.phone;
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3><br />
       <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Sunday Morning</h3>
       9:00 am, 10:45 am<br /><br />
       <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Location</h3>
@@ -67,7 +63,7 @@ const phone = SITE?.phone;
 
   <Features
     id="features"
-    title="What to Expect When You Visit"
+    title="What to Expect"
     subtitle="When you visit one of our services, you will notice that we like to keep things simple. We are not about flashy church growth strategies or entertaining our members. We are about knowing God, making Him known, and enjoying the common salvation we have with the saints of Christ. We are a church that holds to the inerrancy, infallibility, and sufficiency of Scripture. We invite you to come and worship with us."
     columns={3}
     items={[

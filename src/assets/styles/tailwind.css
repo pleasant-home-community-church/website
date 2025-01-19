@@ -23,7 +23,6 @@
   font-weight: 400;
   text-transform: uppercase;
   font-size: .9rem;
-  padding-top: 0;
 }
 
 @layer utilities {
@@ -77,10 +76,10 @@
 
 #header.expanded nav {
   position: fixed;
-  top: 70px;
+  top: 102px;
   left: 0;
   right: 0;
-  bottom: 70px !important;
+  bottom: 102px !important;
   padding: 0 5px;
 }
 

@@ -1,37 +1,32 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
-import Headline from '~/components/ui/Headline.astro';
-import { Icon } from 'astro-icon/components';
 import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
-  title: 'Pleasant Home Community Church',
-  ignoreTitleTemplate: true,
+  title: 'Leadership',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Pastor Mike Widget ******************* -->
-  <Headline title="Leadership and Staff" />
+
   <Content
     isReversed
+    title="Leadership and Staff"
     image={{
-      src: '~/assets/images/phcc-front-building-crop.webp',
-      alt: 'Pleasant Home Community Church',
+      src: '~/assets/images/pastor-mike-johnston.webp',
+      alt: 'Pastor Mike Johnston and Family',
       height: 400,
     }}
   >
     <Fragment slot="content">
-      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
-        Mike Johnson
-      </h1>
-      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl lg:text-3xl xl:text-5xl mb-2">
-        Senior Pastor
-      </h2><br />
-      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
-      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
-      through the expository preaching of God's Word.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mike Johnson</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Senior Pastor</h2><br />
+      Pastor Mike began serving at Pleasant Home Community Church in September 2017. He and his wife, Katy were married in
+      January 2005 in Estacada, OR and have four children. Prior to coming to PHCC, Mike served in youth and children's ministry
+      for over a decade. He completed his undergraduate at Multnomah Bible School (2011), before receiving his Masters of
+      Divinity from The Master's Seminary (2017). It is Mike's passion to connect people to God through His Word. He also
+      finds pleasure in spending time with his family, running and being outdoors.
     </Fragment>
   </Content>
 
@@ -39,21 +34,24 @@ const metadata = {
 
   <Content
     image={{
-      src: '~/assets/images/phcc-front-building-crop.webp',
-      alt: 'Pleasant Home Community Church',
+      src: '~/assets/images/pastor-ryan-wethern-edited.jpg',
+      alt: 'Pastor Ryan Wethern and Family',
       height: 400,
     }}
   >
     <Fragment slot="content">
-      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
-        Ryan Wether
-      </h1>
-      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl lg:text-3xl xl:text-5xl mb-2">
-        Associate Pastor
-      </h2><br />
-      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
-      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
-      through the expository preaching of God's Word.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ryan Wethern</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Associate Pastor</h2><br />
+      Pastor Ryan came to PHCC in February 2021. He and his wife, Becky, have been married since January 2006, and they have
+      four children. From 2006 to 2013, Ryan served in youth ministry in Reno, NV, and it was there that he realized his
+      need for more training. Upon moving to Southern California, Ryan completed his undergraduate degree in Biblical Counseling
+      at The Master's University (2016) and his Master of Divinity at The Master's Seminary (2020). Ryan is ACBC Certified,
+      loves the Word of God, and seeks to teach its sufficiency and power to transform lives. Ryan enjoys basketball, motocross,
+      and playing fun games with his family.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -62,41 +60,142 @@ const metadata = {
   <Content
     isReversed
     image={{
-      src: '~/assets/images/phcc-front-building-crop.webp',
-      alt: 'Pleasant Home Community Church',
+      src: '~/assets/images/pastor-jason-evans-edited.jpg',
+      alt: 'Pastor Jason Evans and Family',
       height: 400,
     }}
   >
     <Fragment slot="content">
-      <h1 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl lg:text-4xl xl:text-6xl mb-2">
-        Welcome!
-      </h1><br />
-      At Pleasant Home Community Church, we worship our Savior Jesus Christ, study His Word, and enjoy sweet fellowship with
-      one another.<br /><br />Established in 1897, we have a long history of Biblical faithfulness which continues today
-      through the expository preaching of God's Word.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Jason Evans</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Youth Pastor</h2><br />
+      Pastor Mike began serving at Pleasant Home Community Church in September 2017. He and his wife, Katy were married in
+      January 2005 in Estacada, OR and have four children. Prior to coming to PHCC, Mike served in youth and children's ministry
+      for over a decade. He completed his undergraduate at Multnomah Bible School (2011), before receiving his Masters of
+      Divinity from The Master's Seminary (2017). It is Mike's passion to connect people to God through His Word. He also
+      finds pleasure in spending time with his family, running and being outdoors.
     </Fragment>
   </Content>
 
-  <!-- Worship Services Widget ******************* -->
-
-  <!-- Location Widget ******************* -->
+  <!-- Elder David Salseth Widget ******************* -->
 
   <Content
     image={{
-      src: '~/assets/images/phcc-apple-maps-gray.png',
-      alt: 'Pleasant Home Community Church Location on Map',
+      src: '~/assets/images/elder-david-salseth.webp',
+      alt: 'Elder David Salseth and Family',
       height: 400,
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Worship Services</h3><br />
-      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Sunday Morning</h3>
-      9:00 am, 10:45 am<br /><br />
-      <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Location</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">David Salseth</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Elder</h2><br />
+      David has been a member of PHCC since 1974. He and his wife, Carolyn, have been married for 43 years and have 2 daughters
+      and 4 grandchildren. He graduated from Westmont College and Western Seminary with a passion to be involved in the Great
+      Commission. He ministered in the D.R. of the Congo with WorldVenture for 16 years. The last 21 years he has been serving
+      international students in the Portland area with Missions Door. He loves mountain climbing, big game hunting, motorcycles,
+      soccer and the Portland Trailblazers. A few of his favorite books are “One Church Many Tribes” by Richard Twiss, “Another
+      Hand On Mine: The Story of Dr. Carl K. Becker” by William Petersen, “Tender Warrior” by Stu Webber and “The Invisible
+      War” by Donald Grey Barnhouse.
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Elder Syd Brestel Widget ******************* -->
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/elder-syd-brestel-edited.jpg',
+      alt: 'Elder Syd Brestel and Family',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Syd Brestel</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Elder</h2><br />
+      Syd earned his undergraduate degree in New Testament Greek from The Moody Bible Institute in Chicago and a master in
+      Old Testament Literature from Western Seminary in Portland. He has served as lead pastor in four churches over a period
+      of 50 years. His passion is teaching the Bible by encouraging students to “get into the story.” He has authored the
+      book published by Moody Press, God in His Own Image: Loving God for Who He is Not Who We Want Him to Be. Backpacking
+      and fishing were his hobbies. Today he enjoys Sudoku, mentoring men and writing posts for standingonthepromise.com
+      Mary and Syd have two sons, five grandchildren and three great grandchildren. They enjoy living in Troutdale close
+      to grandchildren and great grandchildren.
+    </Fragment>
+  </Content>
+
+  <!-- Elder Mike Garland Widget ******************* -->
+
+  <Content
+    image={{
+      src: '~/assets/images/elder-mike-garland-edited.jpg',
+      alt: 'Elder Mike Garland and Family',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mike Garland</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Elder</h2>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Elder Jon Felter Widget ******************* -->
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/elder-jon-feltner-edited.jpg',
+      alt: 'Elder Jon Felter and Family',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Jon Feltner</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Elder</h2>
+    </Fragment>
+  </Content>
+
+  <!-- Worship Director Rod Eells Widget ******************* -->
+
+  <Content
+    image={{
+      src: '~/assets/images/worship-rod-eels.jpg',
+      alt: 'Worship Director Rod Eells and Family',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Rod Eels</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Worship Director</h2>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Administrative Assistant Barb Isaac Widget ******************* -->
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/staff-barb-isaac-edited.jpg',
+      alt: 'Administrative Assistant Barb Isaac and Family',
+      height: 400,
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Barb Isaac</h3>
+      <h2 class="text-1xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Administrative Assistant</h2><br />
+      Jonathon & Barb were married in 1994 and have 3 daughters. Jonathon grew up at PHCC, but they have been attending as
+      a family since 2013, after moving back to the area. Barb likes working quietly in the background, helping things run
+      smoothly, and has been the part-time secretary since 2015, adding bookkeeping a year later. Barb enjoys crochet, knitting,
+      and sewing.
     </Fragment>
   </Content>
 </Layout>

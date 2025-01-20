@@ -1,5 +1,5 @@
 ---
-title: Senior Adults Ministry
+title: "Senior Adults' Ministry"
 excerpt: The Prime Timers have a great time together.
 image: ~/assets/images/ministry-seniors-header.jpg
 ---

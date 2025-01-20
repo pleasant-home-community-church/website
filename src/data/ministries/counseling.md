@@ -1,5 +1,5 @@
 ---
-title: Counseling Ministry
+title: Counseling
 excerpt: Our desire is to help you glorify God in your thoughts, words and actions as you walk through life and interact with others.
 image: ~/assets/images/ministry-counseling-header.webp
 ---

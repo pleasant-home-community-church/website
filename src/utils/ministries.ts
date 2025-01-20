@@ -105,7 +105,7 @@ const load = async function (): Promise<Array<Ministry>> {
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
 
   const results = (await Promise.all(normalizedPosts))
-    .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
+    .sort((a, b) => a.slug.localeCompare(b.slug))
     .filter((post) => !post.draft);
 
   return results;

@@ -1,5 +1,5 @@
 ---
-title: Vacation Bible School Ministry
+title: Vacation Bible School
 excerpt: It’s all about Jesus and the call for kids to live for his glory.
 image: ~/assets/images/ministry-vbs-wonder-junction-header.png
 ---

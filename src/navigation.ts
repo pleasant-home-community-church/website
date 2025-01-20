@@ -1,6 +1,11 @@
 import { getPermalink, getMinistriesPermalink } from './utils/permalinks';
 import { fetchPosts } from './utils/ministries';
 
+const ministriesLinks = (await fetchPosts()).map((post) => ({
+  text: post.title,
+  href: getPermalink(post.slug, 'post'),
+}));
+
 export const headerData = {
   links: [
     {
@@ -20,14 +25,10 @@ export const headerData = {
         },
       ],
     },
-
     {
       text: 'Ministries',
       href: getMinistriesPermalink(),
-      links: (await fetchPosts()).map((post) => ({
-        text: post.title,
-        href: getPermalink(post.slug, 'post'),
-      })),
+      links: ministriesLinks,
     },
   ],
   actions: [],
@@ -36,28 +37,24 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    // {
-    //   title: 'Product',
-    //   links: [
-    //     { text: 'Features', href: '#' },
-    //     { text: 'Security', href: '#' },
-    //     { text: 'Team', href: '#' },
-    //     { text: 'Enterprise', href: '#' },
-    //     { text: 'Customer stories', href: '#' },
-    //     { text: 'Pricing', href: '#' },
-    //     { text: 'Resources', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Platform',
-    //   links: [
-    //     { text: 'Developer API', href: '#' },
-    //     { text: 'Partners', href: '#' },
-    //     { text: 'Atom', href: '#' },
-    //     { text: 'Electron', href: '#' },
-    //     { text: 'AstroWind Desktop', href: '#' },
-    //   ],
-    // },
+    {
+      title: 'About',
+      links: [
+        {
+          text: 'What We Believe',
+          href: getPermalink('/beliefs'),
+        },
+        {
+          text: 'Leadership and Staff',
+          href: getPermalink('/leadership'),
+        },
+      ],
+    },
+    {
+      title: 'Ministries',
+      href: getMinistriesPermalink(),
+      links: ministriesLinks,
+    },
     // {
     //   title: 'Support',
     //   links: [

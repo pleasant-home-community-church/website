@@ -21,6 +21,7 @@ export interface SiteConfig {
   appleMaps?: string;
   googleMaps?: string;
   phone?: string;
+  email?: string;
   site?: string;
   base?: string;
   trailingSlash?: boolean;

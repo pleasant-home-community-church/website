@@ -6,10 +6,11 @@ site:
   appleMaps: "https://maps.apple.com/?address=32120%20SE%20Dodge%20Park%20Blvd,%20Gresham,%20OR%20%2097080,%20United%20States&auid=13413920591760178387&ll=45.469195,-122.332160&lsp=9902&q=Pleasant%20Home%20Community%20Church&t=m"
   googleMaps: "https://maps.app.goo.gl/iDan1NWYLZNPYE6h7"
   phone: (503) 663-3668
+  email: 'contact@pleasanthome.cc'
+
   site: 'https://www.pleasanthome.cc'
   base: '/'
   trailingSlash: false
-
   googleSiteVerificationId: null
 
 # Default SEO metadata

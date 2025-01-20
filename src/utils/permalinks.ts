@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, APP_BLOG } from 'astrowind:config';
+import { SITE, APP_MINISTRIES } from 'astrowind:config';
 
 import { trim } from '~/utils/utils';
 
@@ -21,11 +21,11 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-export const BLOG_BASE = cleanSlug(APP_BLOG?.list?.pathname);
-export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);
-export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
+export const MINISTRIES_BASE = cleanSlug(APP_MINISTRIES?.list?.pathname);
+export const CATEGORY_BASE = cleanSlug(APP_MINISTRIES?.category?.pathname);
+export const TAG_BASE = cleanSlug(APP_MINISTRIES?.tag?.pathname) || 'tag';
 
-export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
+export const POST_PERMALINK_PATTERN = trimSlash(APP_MINISTRIES?.ministries?.permalink || `${MINISTRIES_BASE}/%slug%`);
 
 /** */
 export const getCanonical = (path = ''): string | URL => {
@@ -57,8 +57,8 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = getHomePermalink();
       break;
 
-    case 'blog':
-      permalink = getBlogPermalink();
+    case 'ministries':
+      permalink = getMinistriesPermalink();
       break;
 
     case 'asset':
@@ -74,7 +74,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       break;
 
     case 'post':
-      permalink = createPath(trimSlash(slug));
+      permalink = createPath(trimSlash(getMinistriesPermalink()), trimSlash(slug));
       break;
 
     case 'page':
@@ -90,7 +90,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 export const getHomePermalink = (): string => getPermalink('/');
 
 /** */
-export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+export const getMinistriesPermalink = (): string => getPermalink(MINISTRIES_BASE);
 
 /** */
 export const getAsset = (path: string): string =>
@@ -116,8 +116,8 @@ export const applyGetPermalinks = (menu: object = {}) => {
         } else if (typeof menu[key] === 'object') {
           if (menu[key].type === 'home') {
             obj[key] = getHomePermalink();
-          } else if (menu[key].type === 'blog') {
-            obj[key] = getBlogPermalink();
+          } else if (menu[key].type === 'ministies') {
+            obj[key] = getMinistriesPermalink();
           } else if (menu[key].type === 'asset') {
             obj[key] = getAsset(menu[key].url);
           } else if (menu[key].url) {

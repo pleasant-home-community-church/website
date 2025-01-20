@@ -38,33 +38,21 @@ i18n:
   textDirection: ltr
 
 apps:
-  blog:
-    isEnabled: false
+  ministries:
+    isEnabled: true
     postsPerPage: 6
 
-    post:
-      isEnabled: false
+    ministries:
+      isEnabled: true
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
     list:
-      isEnabled: false
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      isEnabled: true
+      pathname: 'ministries' # Ministries main path, you can change this to "articles" (/articles)
       robots:
         index: true
-
-    category:
-      isEnabled: false
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
-      robots:
-        index: true
-
-    tag:
-      isEnabled: false
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
-      robots:
-        index: false
 
     isRelatedPostsEnabled: false
     relatedPostsCount: 4

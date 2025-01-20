@@ -7,7 +7,7 @@ export type Config = {
   metadata?: MetaDataConfig;
   i18n?: I18NConfig;
   apps?: {
-    blog?: AppBlogConfig;
+    ministries?: AppMinistriesConfig;
   };
   ui?: unknown;
   analytics?: unknown;
@@ -37,12 +37,12 @@ export interface I18NConfig {
   textDirection: string;
   dateFormatter?: Intl.DateTimeFormat;
 }
-export interface AppBlogConfig {
+export interface AppMinistriesConfig {
   isEnabled: boolean;
   postsPerPage: number;
   isRelatedPostsEnabled: boolean;
   relatedPostsCount: number;
-  post: {
+  ministries: {
     isEnabled: boolean;
     permalink: string;
     robots: {
@@ -135,15 +135,15 @@ const getI18N = (config: Config) => {
   return value as I18NConfig;
 };
 
-const getAppBlog = (config: Config) => {
+const getAppMinistries = (config: Config) => {
   const _default = {
     isEnabled: false,
     postsPerPage: 6,
     isRelatedPostsEnabled: false,
     relatedPostsCount: 4,
-    post: {
+    ministries: {
       isEnabled: true,
-      permalink: '/blog/%slug%',
+      permalink: '/ministries/%slug%',
       robots: {
         index: true,
         follow: true,
@@ -151,7 +151,7 @@ const getAppBlog = (config: Config) => {
     },
     list: {
       isEnabled: true,
-      pathname: 'blog',
+      pathname: 'ministries',
       robots: {
         index: true,
         follow: true,
@@ -175,7 +175,7 @@ const getAppBlog = (config: Config) => {
     },
   };
 
-  return merge({}, _default, config?.apps?.blog ?? {}) as AppBlogConfig;
+  return merge({}, _default, config?.apps?.ministries ?? {}) as AppMinistriesConfig;
 };
 
 const getUI = (config: Config) => {
@@ -203,7 +203,7 @@ export default (config: Config) => ({
   SITE: getSite(config),
   I18N: getI18N(config),
   METADATA: getMetadata(config),
-  APP_BLOG: getAppBlog(config),
+  APP_MINISTRIES: getAppMinistries(config),
   UI: getUI(config),
   ANALYTICS: getAnalytics(config),
 });

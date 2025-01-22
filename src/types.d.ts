@@ -2,10 +2,10 @@ import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
 export interface Ministry {
-  /** A unique ID number that identifies a post. */
+  /** A unique name that identifies a ministry. */
   id: string;
 
-  /** A post’s unique slug – part of the post’s URL based on its name, i.e. a post called “My Sample Page” has a slug “my-sample-page”. */
+  /** A ministries unique slug – part of the ministry's URL based on its name, i.e. a ministry called “My Sample Page” has a slug “my-sample-page”. */
   slug: string;
 
   /**  */
@@ -18,7 +18,7 @@ export interface Ministry {
 
   /**  */
   title: string;
-  /** Optional summary of post content. */
+  /** Optional summary of ministry content. */
   excerpt?: string;
   /**  */
   image?: ImageMetadata | string;

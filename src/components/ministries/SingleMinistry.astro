@@ -3,39 +3,39 @@ import Image from '~/components/common/Image.astro';
 import type { Ministry } from '~/types';
 
 export interface Props {
-  post: Ministry;
+  ministry: Ministry;
   url: string | URL;
 }
 
-const { post } = Astro.props;
+const { ministry } = Astro.props;
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
   <article>
     <header
-      class={post.image
+      class={ministry.image
         ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
         : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
     >
       <h1
         class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
       >
-        {post.title}
+        {ministry.title}
       </h1>
       <p
         class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
       >
-        {post.excerpt}
+        {ministry.excerpt}
       </p>
 
       {
-        post.image ? (
+        ministry.image ? (
           <Image
-            src={post.image}
+            src={ministry.image}
             class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}
             sizes="(max-width: 900px) 400px, 900px"
-            alt={post?.excerpt || ''}
+            alt={ministry?.excerpt || ''}
             width={900}
             height={506}
             loading="eager"

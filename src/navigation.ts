@@ -1,9 +1,9 @@
 import { getPermalink, getMinistriesPermalink } from './utils/permalinks';
 import { fetchPosts } from './utils/ministries';
 
-const ministriesLinks = (await fetchPosts()).map((post) => ({
-  text: post.title,
-  href: getPermalink(post.slug, 'post'),
+const ministriesLinks = (await fetchPosts()).map((ministry) => ({
+  text: ministry.title,
+  href: getPermalink(ministry.slug, 'ministry'),
 }));
 
 export const headerData = {

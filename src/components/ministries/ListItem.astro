@@ -2,7 +2,6 @@
 import type { ImageMetadata } from 'astro';
 import { Icon } from 'astro-icon/components';
 import Image from '~/components/common/Image.astro';
-import PostTags from '~/components/ministries/Tags.astro';
 
 import { APP_MINISTRIES } from 'astrowind:config';
 import type { Ministry } from '~/types';
@@ -11,13 +10,13 @@ import { getPermalink } from '~/utils/permalinks';
 import { findImage } from '~/utils/images';
 
 export interface Props {
-  post: Ministry;
+  ministry: Ministry;
 }
 
-const { post } = Astro.props;
-const image = (await findImage(post.image)) as ImageMetadata | undefined;
+const { ministry } = Astro.props;
+const image = (await findImage(ministry.image)) as ImageMetadata | undefined;
 
-const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(post.permalink, 'post') : '';
+const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(ministry.permalink, 'ministry') : '';
 ---
 
 <article
@@ -35,7 +34,7 @@ const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(post.permalink
                 widths={[400, 900]}
                 width={900}
                 sizes="(max-width: 900px) 400px, 900px"
-                alt={post.title}
+                alt={ministry.title}
                 aspectRatio="16:9"
                 loading="lazy"
                 decoding="async"
@@ -52,7 +51,7 @@ const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(post.permalink
               widths={[400, 900]}
               width={400}
               sizes="(max-width: 900px) 400px, 900px"
-              alt={post.title}
+              alt={ministry.title}
               aspectRatio="16:9"
               loading="lazy"
               decoding="async"
@@ -66,21 +65,21 @@ const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(post.permalink
       <div class="mb-1">
         <span class="text-sm">
           {
-            post.author && (
+            ministry.author && (
               <>
                 {' '}
                 · <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-                <span>{post.author.replaceAll('-', ' ')}</span>
+                <span>{ministry.author.replaceAll('-', ' ')}</span>
               </>
             )
           }
           {
-            post.category && (
+            ministry.category && (
               <>
                 {' '}
                 ·{' '}
-                <a class="hover:underline" href={getPermalink(post.category.slug, 'category')}>
-                  {post.category.title}
+                <a class="hover:underline" href={getPermalink(ministry.category.slug, 'category')}>
+                  {ministry.category.title}
                 </a>
               </>
             )
@@ -94,15 +93,15 @@ const link = APP_MINISTRIES?.ministries?.isEnabled ? getPermalink(post.permalink
               class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
               href={link}
             >
-              {post.title}
+              {ministry.title}
             </a>
           ) : (
-            post.title
+            ministry.title
           )
         }
       </h2>
     </header>
 
-    {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
+    {ministry.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{ministry.excerpt}</p>}
   </div>
 </article>

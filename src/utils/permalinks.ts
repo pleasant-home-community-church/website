@@ -25,7 +25,7 @@ export const MINISTRIES_BASE = cleanSlug(APP_MINISTRIES?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(APP_MINISTRIES?.category?.pathname);
 export const TAG_BASE = cleanSlug(APP_MINISTRIES?.tag?.pathname) || 'tag';
 
-export const POST_PERMALINK_PATTERN = trimSlash(APP_MINISTRIES?.ministries?.permalink || `${MINISTRIES_BASE}/%slug%`);
+export const MINISTRIES_PERMALINK_PATTERN = trimSlash(APP_MINISTRIES?.ministries?.permalink || `${MINISTRIES_BASE}/%slug%`);
 
 /** */
 export const getCanonical = (path = ''): string | URL => {
@@ -73,7 +73,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = createPath(TAG_BASE, trimSlash(slug));
       break;
 
-    case 'post':
+    case 'ministry':
       permalink = createPath(trimSlash(getMinistriesPermalink()), trimSlash(slug));
       break;
 

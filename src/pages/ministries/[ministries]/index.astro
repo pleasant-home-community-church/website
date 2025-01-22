@@ -20,15 +20,15 @@ export const getStaticPaths = (async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { post } = Astro.props as Props;
+const { ministry } = Astro.props as Props;
 
-const url = getCanonical(getPermalink(post.permalink, 'post'));
-const image = (await findImage(post.image)) as ImageMetadata | string | undefined;
+const url = getCanonical(getPermalink(ministry.permalink, 'ministry'));
+const image = (await findImage(ministry.image)) as ImageMetadata | string | undefined;
 
 const metadata = merge(
   {
-    title: post.title,
-    description: post.excerpt,
+    title: ministry.title,
+    description: ministry.excerpt,
     robots: {
       index: ministriesPostRobots?.index,
       follow: ministriesPostRobots?.follow,
@@ -40,13 +40,13 @@ const metadata = merge(
         : {}),
     },
   },
-  { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
+  { ...(ministry?.metadata ? { ...ministry.metadata, canonical: ministry.metadata?.canonical || url } : {}) }
 ) as MetaData;
 ---
 
 <Layout metadata={metadata}>
-  <SingleMinistery post={{ ...post, image: image }} url={url}>
-    {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
+  <SingleMinistery ministry={{ ...ministry, image: image }} url={url}>
+    {ministry.Content ? <ministry.Content /> : <Fragment set:html={ministry.content || ''} />}
   </SingleMinistery>
   <ToMinistryLink />
 </Layout>

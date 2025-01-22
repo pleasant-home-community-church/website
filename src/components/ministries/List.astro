@@ -3,17 +3,17 @@ import Item from '~/components/ministries/ListItem.astro';
 import type { Ministry } from '~/types';
 
 export interface Props {
-  posts: Array<Ministry>;
+  ministries: Array<Ministry>;
 }
 
-const { posts } = Astro.props;
+const { ministries } = Astro.props;
 ---
 
 <ul>
   {
-    posts.map((post) => (
+    ministries.map((ministry) => (
       <li class="mb-12 md:mb-20">
-        <Item post={post} />
+        <Item ministry={ministry} />
       </li>
     ))
   }

@@ -1,0 +1,166 @@
+{
+  "id": "82122238287945",
+  "fullTitle": "A Theology of Christian Love",
+  "displayTitle": "A Theology of Christian Love",
+  "languageCode": "en",
+  "bibleText": "1 John 4:7-12",
+  "subtitle": "1 John",
+  "moreInfoText": "Pastor Ryan shares a message from 1 John 4. In this passage John gives us a theology of Christian love, so that we can pursue loving one another for the glory of God.",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 56917,
+    "displayName": "Ryan Wethern",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/56917-0002.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/56917-0002.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/56917-0002.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/56917-0002.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 167292
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3379,
+  "videoDurationSeconds": 3379,
+  "preachDate": "2022-08-21",
+  "publishTimestamp": 1661124200,
+  "type": "sermon",
+  "updateDate": 1661124505,
+  "publishDate": "2022-08-21",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/82122238287945.mp3?ts=1733744343&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/82122238287945.mp3?ts=1733744343&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 40849065,
+        "adaptiveBitrate": false,
+        "duration": 3379,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "82122238287945.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/82122238287945.mp3?ts=1733744343&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/82122238287945.mp3?ts=1733744343&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 7025469,
+        "adaptiveBitrate": false,
+        "duration": 3379,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "82122238287945.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/82122238287945.m3u8?ts=1733744343",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/82122238287945.jpg",
+        "adaptiveBitrate": true,
+        "duration": 3379,
+        "mediaFilename": "82122238287945.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/1080p/82122238287945.m3u8?ts=1733744343&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/1080p/82122238287945.mp4?ts=1733744343&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/82122238287945.jpg",
+        "bitrate": 2231,
+        "fileSizeBytes": 945052093,
+        "adaptiveBitrate": false,
+        "duration": 3379,
+        "audioCodec": "aac",
+        "videoCodec": "h265",
+        "language": "eng",
+        "mediaFilename": "82122238287945.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/82122238287945.m3u8?ts=1733744343&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/82122238287945.mp4?ts=1733744343&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/82122238287945.jpg",
+        "bitrate": 1228,
+        "fileSizeBytes": 521475814,
+        "adaptiveBitrate": false,
+        "duration": 3379,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "82122238287945.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/82122238287945.m3u8?ts=1733744343&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/82122238287945.mp4?ts=1733744343&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/82122238287945.jpg",
+        "bitrate": 531,
+        "fileSizeBytes": 226395748,
+        "adaptiveBitrate": false,
+        "duration": 3379,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "82122238287945.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/82122238287945.srt?ts=1733744343&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "82122238287945-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/82122238287945/waveform?peaksOnly=true",
+  "keywords": "PHCC PHCCGresham expositorypreaching faith love grace sin repentance jesus gospel salvation pleasanthome mercy mikejohnston Christ God Church",
+  "captionLanguages": {
+    "alpha_2": [
+      "en"
+    ],
+    "alpha_3": [
+      "eng"
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "121123011117410",
+  "fullTitle": "Our Peace in Christ",
+  "displayTitle": "Our Peace in Christ",
+  "languageCode": "en",
+  "bibleText": "Isaiah 40:1-11; Romans 5:1-11",
+  "subtitle": "Advent 2023",
+  "moreInfoText": "Outline:\nThe Destruction of Peace (Romans 5:1, 8-10; Genesis 1-3; Romans 3:10-18)\nThe Promise of Peace (Genesis 3:15; Isaiah 9:6-7; Isaiah 53:4-6)\nThe Restoration of Peace (Romans 5:1-5; Luke 1:26-33; Luke 2:8-14)\nThe Future of Peace (Romans 5:1-2; Isaiah 40)",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 56917,
+    "displayName": "Ryan Wethern",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/56917-0002.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/56917-0002.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/56917-0002.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/56917-0002.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 184555
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3181,
+  "videoDurationSeconds": 3181,
+  "preachDate": "2023-12-10",
+  "publishTimestamp": 1702258568,
+  "type": "sermon",
+  "updateDate": 1702259249,
+  "publishDate": "2023-12-11",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/121123011117410.mp3?ts=1702259269&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/121123011117410.mp3?ts=1702259269&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 38472112,
+        "adaptiveBitrate": false,
+        "duration": 3181,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "121123011117410.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/121123011117410.mp3?ts=1702259269&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/121123011117410.mp3?ts=1702259269&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 6643636,
+        "adaptiveBitrate": false,
+        "duration": 3181,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "121123011117410.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/121123011117410.m3u8?ts=1702259269",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/121123011117410.jpg",
+        "adaptiveBitrate": true,
+        "duration": 3181,
+        "mediaFilename": "121123011117410.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/121123011117410.m3u8?ts=1702259269&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/121123011117410.mp4?ts=1702259269&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/121123011117410.jpg",
+        "bitrate": 1085,
+        "fileSizeBytes": 434919037,
+        "adaptiveBitrate": false,
+        "duration": 3181,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "121123011117410.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/121123011117410.m3u8?ts=1702259269&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/121123011117410.mp4?ts=1702259269&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/121123011117410.jpg",
+        "bitrate": 388,
+        "fileSizeBytes": 157337330,
+        "adaptiveBitrate": false,
+        "duration": 3181,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "121123011117410.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/121123011117410.srt?ts=1702259269&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "121123011117410-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/121123011117410/waveform?peaksOnly=true",
+  "keywords": "Romans5 Pleasanthome PHCC Gresham Oregon Peace PeaceofGod Advent Genesis1 Genesis2 Genesis3 Isaiah9 Isaiah53 Isaiah40 romans3 PeacewithGod romans",
+  "captionLanguages": {
+    "alpha_2": [
+      "en"
+    ],
+    "alpha_3": [
+      "eng"
+    ]
+  }
+}

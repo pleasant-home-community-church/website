@@ -1,0 +1,166 @@
+{
+  "id": "111122730175675",
+  "fullTitle": "The Throne of Grace",
+  "displayTitle": "The Throne of Grace",
+  "languageCode": "en",
+  "bibleText": "Hebrews 4:14-16",
+  "subtitle": "Hebrews",
+  "moreInfoText": "Pastor Mike continues his sermon series in Hebrews.",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 167826
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3281,
+  "videoDurationSeconds": 3281,
+  "preachDate": "2022-11-06",
+  "publishTimestamp": 1668152097,
+  "type": "sermon",
+  "updateDate": 1668152096,
+  "publishDate": "2022-11-11",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/111122730175675.mp3?ts=1733368344&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/111122730175675.mp3?ts=1733368344&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 39689294,
+        "adaptiveBitrate": false,
+        "duration": 3281,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "111122730175675.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/111122730175675.mp3?ts=1733368344&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/111122730175675.mp3?ts=1733368344&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 6844178,
+        "adaptiveBitrate": false,
+        "duration": 3281,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "111122730175675.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/111122730175675.m3u8?ts=1733368344",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/111122730175675.jpg",
+        "adaptiveBitrate": true,
+        "duration": 3281,
+        "mediaFilename": "111122730175675.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/1080p/111122730175675.m3u8?ts=1733368344&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/1080p/111122730175675.mp4?ts=1733368344&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/111122730175675.jpg",
+        "bitrate": 2075,
+        "fileSizeBytes": 853943331,
+        "adaptiveBitrate": false,
+        "duration": 3281,
+        "audioCodec": "aac",
+        "videoCodec": "h265",
+        "language": "eng",
+        "mediaFilename": "111122730175675.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/111122730175675.m3u8?ts=1733368344&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/111122730175675.mp4?ts=1733368344&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/111122730175675.jpg",
+        "bitrate": 1076,
+        "fileSizeBytes": 444328687,
+        "adaptiveBitrate": false,
+        "duration": 3281,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "111122730175675.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/111122730175675.m3u8?ts=1733368344&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/111122730175675.mp4?ts=1733368344&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/111122730175675.jpg",
+        "bitrate": 380,
+        "fileSizeBytes": 157897849,
+        "adaptiveBitrate": false,
+        "duration": 3281,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "111122730175675.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/111122730175675.srt?ts=1733368344&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "111122730175675-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/111122730175675/waveform?peaksOnly=true",
+  "keywords": "Jesus Christ Gospel Faith God Salvation Grace Love Church Prayer Throne PHCC Mikejohnston Gresham Oregon Expository",
+  "captionLanguages": {
+    "alpha_2": [
+      "en"
+    ],
+    "alpha_3": [
+      "eng"
+    ]
+  }
+}

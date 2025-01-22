@@ -1,0 +1,149 @@
+{
+  "id": "1112232013102146",
+  "fullTitle": "The Theme of Heaven",
+  "displayTitle": "The Theme of Heaven",
+  "languageCode": "en",
+  "bibleText": "Revelation 5",
+  "subtitle": "Christian Unity",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 183815
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3065,
+  "videoDurationSeconds": 3066,
+  "preachDate": "2023-11-12",
+  "publishTimestamp": 1699820156,
+  "type": "sermon",
+  "updateDate": 1699820156,
+  "publishDate": "2023-11-12",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/1112232013102146.mp3?ts=1699821535&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/1112232013102146.mp3?ts=1699821535&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 37082418,
+        "adaptiveBitrate": false,
+        "duration": 3065,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "1112232013102146.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/1112232013102146.mp3?ts=1699821535&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/1112232013102146.mp3?ts=1699821535&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 6412114,
+        "adaptiveBitrate": false,
+        "duration": 3066,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "1112232013102146.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/1112232013102146.m3u8?ts=1699821535",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1112232013102146.jpg",
+        "adaptiveBitrate": true,
+        "duration": 3066,
+        "mediaFilename": "1112232013102146.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/1112232013102146.m3u8?ts=1699821535&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/1112232013102146.mp4?ts=1699821535&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1112232013102146.jpg",
+        "bitrate": 1080,
+        "fileSizeBytes": 417412629,
+        "adaptiveBitrate": false,
+        "duration": 3066,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "1112232013102146.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/1112232013102146.m3u8?ts=1699821535&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/1112232013102146.mp4?ts=1699821535&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1112232013102146.jpg",
+        "bitrate": 384,
+        "fileSizeBytes": 149850855,
+        "adaptiveBitrate": false,
+        "duration": 3066,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "1112232013102146.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/1112232013102146.srt?ts=1699821535&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "1112232013102146-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1112232013102146/waveform?peaksOnly=true",
+  "keywords": "PHCC Pleasanthome Rev5 Unity Revelation EndTimes EndTimesProphecy",
+  "captionLanguages": {
+    "alpha_2": [
+      "en"
+    ],
+    "alpha_3": [
+      "eng"
+    ]
+  }
+}

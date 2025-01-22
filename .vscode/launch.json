@@ -2,8 +2,28 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Ppython: current file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "python: fetch sermonaudio",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/sermonaudio_fetch.py",
+      "args": [
+        "--data-dir",
+        "${workspaceFolder}/src/data",
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false,
+    },
+    {
       "command": "${workspaceFolder}/node_modules/.bin/astro dev",
-      "name": "Development server",
+      "name": "node: Dev Server",
       "request": "launch",
       "type": "node-terminal",
       "cwd": "${workspaceFolder}"

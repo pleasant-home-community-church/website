@@ -143,3 +143,4 @@ pnpm-debug.log*
 
 pnpm-lock.yaml
 .astro
+.venv/

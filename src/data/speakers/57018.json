@@ -1,0 +1,10 @@
+{
+  "type": "speaker",
+  "id": 57018,
+  "displayName": "Jason Evans",
+  "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/57018-0001.jpg",
+  "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/57018-0001.png",
+  "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/57018-0001.jpg",
+  "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/57018-0001.png",
+  "sortName": "Evans, Jason"
+}

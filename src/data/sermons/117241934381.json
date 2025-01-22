@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/117241934381/waveform?peaksOnly=true",
-  "keywords": "Romans Justification PHCC Gresham Oregon Abraham Grace Faith Sin Salvation Pleasanthome",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Romans Justification PHCC Gresham Oregon Abraham Grace Faith Sin Salvation Pleasanthome"
 }

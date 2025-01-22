@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/712403724392/waveform?peaksOnly=true",
-  "keywords": "Harlot Grace PHCC PleasantHome Gresham Oregon Mikejohnston Israel Joshua Joshua2 Rahab",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Harlot Grace PHCC PleasantHome Gresham Oregon Mikejohnston Israel Joshua Joshua2 Rahab"
 }

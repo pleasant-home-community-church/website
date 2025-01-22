@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/82922441124242/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Faith Salvation God Gospel Church Grace trials PHCC mercy sin Firstfruits Steadfast Blessed joy Temptaion",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Faith Salvation God Gospel Church Grace trials PHCC mercy sin Firstfruits Steadfast Blessed joy Temptaion"
 }

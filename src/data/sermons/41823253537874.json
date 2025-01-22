@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/41823253537874/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Gospel Resurrection Faith God Salvation Grace Love Hebrews MikeJohnston PHCC",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Gospel Resurrection Faith God Salvation Grace Love Hebrews MikeJohnston PHCC"
 }

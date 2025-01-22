@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/922335785226/waveform?peaksOnly=true",
-  "keywords": "Joy Jesus PHCC Pleasanthome FalseTeachers Test Assurance John Wethern",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Joy Jesus PHCC Pleasanthome FalseTeachers Test Assurance John Wethern"
 }

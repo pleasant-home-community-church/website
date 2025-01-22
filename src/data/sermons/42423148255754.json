@@ -132,13 +132,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/42423148255754/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Gospel Faith God Salvation Grace Church Love Resurrection PHCC Mikejohnston manhood Romans1 Genesis1 Creation",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Gospel Faith God Salvation Grace Church Love Resurrection PHCC Mikejohnston manhood Romans1 Genesis1 Creation"
 }

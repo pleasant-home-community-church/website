@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/91024162948132/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome Gresham Oregon Joshua Mikejohnston Wisdom Obedience Trust",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome Gresham Oregon Joshua Mikejohnston Wisdom Obedience Trust"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/81324223526700/waveform?peaksOnly=true",
-  "keywords": "Joshua PHCC Pleasant Home Pleasanthome mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Joshua PHCC Pleasant Home Pleasanthome mikejohnston"
 }

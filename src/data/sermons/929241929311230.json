@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/929241929311230/waveform?peaksOnly=true",
-  "keywords": "PHCC Pleasant Pleasanthome Jesus Thegospelofmark Temptation Gresham oregon Baptism Repent",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Pleasant Pleasanthome Jesus Thegospelofmark Temptation Gresham oregon Baptism Repent"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1112232013102146/waveform?peaksOnly=true",
-  "keywords": "PHCC Pleasanthome Rev5 Unity Revelation EndTimes EndTimesProphecy",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Pleasanthome Rev5 Unity Revelation EndTimes EndTimesProphecy"
 }

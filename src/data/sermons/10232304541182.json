@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/10232304541182/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome Hebrews Hebrews13 Prayer Conclusion MikeJohnston Gresham Oregon Enabling Grace God love LoveofGod GraceofGod",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome Hebrews Hebrews13 Prayer Conclusion MikeJohnston Gresham Oregon Enabling Grace God love LoveofGod GraceofGod"
 }

@@ -148,13 +148,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/572323359658/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ Faith God Bible Salvation Grace Love Church Egalitarianism Complementarianism Equity",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ Faith God Bible Salvation Grace Love Church Egalitarianism Complementarianism Equity"
 }

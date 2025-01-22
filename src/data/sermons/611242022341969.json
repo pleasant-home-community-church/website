@@ -123,13 +123,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/611242022341969/waveform?peaksOnly=true",
-  "keywords": "phcc pleasanthome gresham oregon rejoice prayer love thanksgiving",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "phcc pleasanthome gresham oregon rejoice prayer love thanksgiving"
 }

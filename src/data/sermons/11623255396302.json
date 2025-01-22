@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11623255396302/waveform?peaksOnly=true",
-  "keywords": "Sundayseminary JasonMills PHCC PleasantHome Creation Theology God Science History Genesis1",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Sundayseminary JasonMills PHCC PleasantHome Creation Theology God Science History Genesis1"
 }

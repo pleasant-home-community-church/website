@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/82122238287945/waveform?peaksOnly=true",
-  "keywords": "PHCC PHCCGresham expositorypreaching faith love grace sin repentance jesus gospel salvation pleasanthome mercy mikejohnston Christ God Church",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PHCCGresham expositorypreaching faith love grace sin repentance jesus gospel salvation pleasanthome mercy mikejohnston Christ God Church"
 }

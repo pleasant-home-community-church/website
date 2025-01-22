@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/362305401039/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Gospel Faith God Salvation Church Grace Love Sin Sacrifice Hebrews PHCC Mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Gospel Faith God Salvation Church Grace Love Sin Sacrifice Hebrews PHCC Mikejohnston"
 }

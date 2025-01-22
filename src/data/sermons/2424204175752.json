@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/2424204175752/waveform?peaksOnly=true",
-  "keywords": "PHCC Pleasanthome gresham oregon philippians philippians1 citizenship gospel worthy life persecution suffering fear unity wethern Enduring Ryan",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Pleasanthome gresham oregon philippians philippians1 citizenship gospel worthy life persecution suffering fear unity wethern Enduring Ryan"
 }

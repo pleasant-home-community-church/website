@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/42824203232661/waveform?peaksOnly=true",
-  "keywords": "PHCC RyanWethern PleasantHome Gresham Oregon love humility unity Division Jesus Church Serving Servant",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC RyanWethern PleasantHome Gresham Oregon love humility unity Division Jesus Church Serving Servant"
 }

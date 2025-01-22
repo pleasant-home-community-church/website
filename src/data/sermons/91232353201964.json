@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/91232353201964/waveform?peaksOnly=true",
-  "keywords": "Evidence Test 1John PHCC Love Wethern Pleasanthome Falseteachers Faith Truth",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Evidence Test 1John PHCC Love Wethern Pleasanthome Falseteachers Faith Truth"
 }

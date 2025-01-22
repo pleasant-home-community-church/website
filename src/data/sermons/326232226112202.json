@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/326232226112202/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ God Faith Church Grace Sin Love Hebrews MikeJohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ God Faith Church Grace Sin Love Hebrews MikeJohnston"
 }

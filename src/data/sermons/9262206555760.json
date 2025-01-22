@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/9262206555760/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ God Gospel Faith Salvation Church Grace Love PHCC Pleasanthome mikejohnston Hebrews fall away sonofgod angels mercy hope redemption",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ God Gospel Faith Salvation Church Grace Love PHCC Pleasanthome mikejohnston Hebrews fall away sonofgod angels mercy hope redemption"
 }

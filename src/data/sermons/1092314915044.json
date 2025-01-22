@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1092314915044/waveform?peaksOnly=true",
-  "keywords": "Systematictheology Bible JasonMills PHCC Pleasanthome",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Systematictheology Bible JasonMills PHCC Pleasanthome"
 }

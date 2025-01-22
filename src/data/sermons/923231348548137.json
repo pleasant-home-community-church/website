@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/923231348548137/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Faith God Christ Grace Love Church PHCC MikeJohnston Hebrews Hebrews12 MountSinai Mountzion",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Faith God Christ Grace Love Church PHCC MikeJohnston Hebrews Hebrews12 MountSinai Mountzion"
 }

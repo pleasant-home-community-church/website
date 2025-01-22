@@ -136,13 +136,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/12224321112889/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome JasonMills Anthropology Man SundaySeminary",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome JasonMills Anthropology Man SundaySeminary"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11124185349710/waveform?peaksOnly=true",
-  "keywords": "PHCC Mikejohnston Gresham Oregon 1Thessalonians Epistle church Elders prayer love",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Mikejohnston Gresham Oregon 1Thessalonians Epistle church Elders prayer love"
 }

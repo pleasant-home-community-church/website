@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/91324175734359/waveform?peaksOnly=true",
-  "keywords": "Romans PHCC Gresham Oregon MikeJohnston Introduction",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Romans PHCC Gresham Oregon MikeJohnston Introduction"
 }

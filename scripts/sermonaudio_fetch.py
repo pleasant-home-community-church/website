@@ -95,8 +95,6 @@ class Broadcaster(BaseModel):
     categories: int
     welcomeVideoID: Optional[str] = Field(default=None)
     disabled: bool
-    primarySpeaker: Optional[LiteSermonSpeaker] = Field(default_factory=list)
-    primarySpeakers: Optional[list[LiteSermonSpeaker]] = Field(default_factory=list)
     groups: Optional[list[str]] = Field(default_factory=list)
     bannerImageURL: str
 
@@ -130,7 +128,6 @@ class Sermon(BaseModel):
     media: MediaSet
     waveformPeaksURL: str
     keywords: Optional[str] = Field(default=None)
-    captionLanguages: dict
 
 
 class Series(BaseModel):

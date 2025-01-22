@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11523216461767/waveform?peaksOnly=true",
-  "keywords": "Gospel PHCC Pleasanthome Ryanwethern Gresham Wethern Joy Rejoice Focus Love Hope",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Gospel PHCC Pleasanthome Ryanwethern Gresham Wethern Joy Rejoice Focus Love Hope"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11202314564237/waveform?peaksOnly=true",
-  "keywords": "PHCC MikeJohnston PleasantHome Christianunity Unity Spirit Freedom Freedominchrist Gresham Oregon love oneanother law Loveyourneighbor",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC MikeJohnston PleasantHome Christianunity Unity Spirit Freedom Freedominchrist Gresham Oregon love oneanother law Loveyourneighbor"
 }

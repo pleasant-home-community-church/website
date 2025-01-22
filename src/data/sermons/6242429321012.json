@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/6242429321012/waveform?peaksOnly=true",
-  "keywords": "PHCC Pleasanthome Gresham Oregon Joshua Mikejohnston Courage God's Promise",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Pleasanthome Gresham Oregon Joshua Mikejohnston Courage God's Promise"
 }

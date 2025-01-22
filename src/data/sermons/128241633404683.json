@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/128241633404683/waveform?peaksOnly=true",
-  "keywords": "Apostles Jesus Trinity Crowd",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Apostles Jesus Trinity Crowd"
 }

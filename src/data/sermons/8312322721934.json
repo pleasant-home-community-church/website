@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/8312322721934/waveform?peaksOnly=true",
-  "keywords": "ChildrenofGod ChildrenofSatan Gospel 1John Test Assurance Assuranceofsalvation PHCC pleasanthome Love Falseteachers",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "ChildrenofGod ChildrenofSatan Gospel 1John Test Assurance Assuranceofsalvation PHCC pleasanthome Love Falseteachers"
 }

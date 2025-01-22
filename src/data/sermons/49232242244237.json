@@ -133,13 +133,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/49232242244237/waveform?peaksOnly=true",
-  "keywords": "Easter Jesus Christ Gospel Salvation Resurrection God Faith Love Grace expository MikeJohnston PHCC",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Easter Jesus Christ Gospel Salvation Resurrection God Faith Love Grace expository MikeJohnston PHCC"
 }

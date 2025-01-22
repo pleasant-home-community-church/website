@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1162388563670/waveform?peaksOnly=true",
-  "keywords": "Christ Jesus Gospel God Salvation Church Grace Love PHCC Hebrews",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Christ Jesus Gospel God Salvation Church Grace Love PHCC Hebrews"
 }

@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/7223227321477/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel God Christ Faith Salvation Bible Grace Love PHCC MikeJohnston Hebrews Noah Enoch",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel God Christ Faith Salvation Bible Grace Love PHCC MikeJohnston Hebrews Noah Enoch"
 }

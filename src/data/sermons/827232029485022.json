@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/827232029485022/waveform?peaksOnly=true",
-  "keywords": "Jude Jesus Calling Gospel Election",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jude Jesus Calling Gospel Election"
 }

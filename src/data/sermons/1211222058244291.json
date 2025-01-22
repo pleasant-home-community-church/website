@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1211222058244291/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Gospel Faith God Salvation Grace Love Church FallingAway Hebrews Hebrews6 PHCC PleasantHome",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Gospel Faith God Salvation Grace Love Church FallingAway Hebrews Hebrews6 PHCC PleasantHome"
 }

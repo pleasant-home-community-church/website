@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/121123011117410/waveform?peaksOnly=true",
-  "keywords": "Romans5 Pleasanthome PHCC Gresham Oregon Peace PeaceofGod Advent Genesis1 Genesis2 Genesis3 Isaiah9 Isaiah53 Isaiah40 romans3 PeacewithGod romans",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Romans5 Pleasanthome PHCC Gresham Oregon Peace PeaceofGod Advent Genesis1 Genesis2 Genesis3 Isaiah9 Isaiah53 Isaiah40 romans3 PeacewithGod romans"
 }

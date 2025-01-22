@@ -132,13 +132,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/114242239505172/waveform?peaksOnly=true",
-  "keywords": "International Day of Prayer for the persecuted church Suffering Gresham Oregon PHCC Pleasanthome",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "International Day of Prayer for the persecuted church Suffering Gresham Oregon PHCC Pleasanthome"
 }

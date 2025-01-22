@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/124222055524494/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ God Faith Salvation Grace Love Church Hebrews maturity Discernment growth",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ God Faith Salvation Grace Love Church Hebrews maturity Discernment growth"
 }

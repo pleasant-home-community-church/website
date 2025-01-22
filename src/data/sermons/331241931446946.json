@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/331241931446946/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon MikeJohnston Easter Resurrection Romans8 Cross Gospel Jesus PleasantHome",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon MikeJohnston Easter Resurrection Romans8 Cross Gospel Jesus PleasantHome"
 }

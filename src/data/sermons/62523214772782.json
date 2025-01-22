@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/62523214772782/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ Faith God Church Bible Love Grace Salvation PHCC Mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ Faith God Church Bible Love Grace Salvation PHCC Mikejohnston"
 }

@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/101022041512039/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ God Gospel Salvation Grace Faith Love Church Regeneration Propitiation suffering Sanctification HypostaticUnion mikejohnston mankind",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ God Gospel Salvation Grace Faith Love Church Regeneration Propitiation suffering Sanctification HypostaticUnion mikejohnston mankind"
 }

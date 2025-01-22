@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/2623045524723/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ Gospel God Faith Salvation Grace Church Sin Love Covenant Mikejohnston PHCC pleasanthome gresham oregon Hebrews GreatHighPriest",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ Gospel God Faith Salvation Grace Church Sin Love Covenant Mikejohnston PHCC pleasanthome gresham oregon Hebrews GreatHighPriest"
 }

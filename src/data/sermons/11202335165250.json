@@ -136,13 +136,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11202335165250/waveform?peaksOnly=true",
-  "keywords": "PHCC SundaySeminary Pleasant PleasantHome Gresham Oregon Jesus Christology",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC SundaySeminary Pleasant PleasantHome Gresham Oregon Jesus Christology"
 }

@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/101623126253736/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome Mikejohnston Hebrews13 Leaders Leadership Submit Obey Pastors Elders Pray Israel",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome Mikejohnston Hebrews13 Leaders Leadership Submit Obey Pastors Elders Pray Israel"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1015241825141865/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon PleasantHome GospelofMark Authority Jesus Teaching Demons Sickness Faith",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon PleasantHome GospelofMark Authority Jesus Teaching Demons Sickness Faith"
 }

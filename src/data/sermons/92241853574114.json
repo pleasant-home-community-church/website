@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/92241853574114/waveform?peaksOnly=true",
-  "keywords": "Jude PHCC PleasantHome JasonMills Gresham Oregon",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jude PHCC PleasantHome JasonMills Gresham Oregon"
 }

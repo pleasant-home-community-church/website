@@ -132,13 +132,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/52824112367371/waveform?peaksOnly=true",
-  "keywords": "PHCC SydBrestel Discipleship Mission Gresham Oregon",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC SydBrestel Discipleship Mission Gresham Oregon"
 }

@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/9123450555650/waveform?peaksOnly=true",
-  "keywords": "Doctrine Test Assurance Assuranceofsalvation Faithful Love Obedience 1John PHCC Pleasanthome wethern",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Doctrine Test Assurance Assuranceofsalvation Faithful Love Obedience 1John PHCC Pleasanthome wethern"
 }

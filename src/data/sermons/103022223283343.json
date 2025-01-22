@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/103022223283343/waveform?peaksOnly=true",
-  "keywords": "Jesus Faith Christ God Gospel Salvation Grace Church Therefore rest unbeliever Isreal MikeJohnston creation mercy Hebrews theology TMS Youth",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Faith Christ God Gospel Salvation Grace Church Therefore rest unbeliever Isreal MikeJohnston creation mercy Hebrews theology TMS Youth"
 }

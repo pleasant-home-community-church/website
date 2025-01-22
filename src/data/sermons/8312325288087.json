@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/8312325288087/waveform?peaksOnly=true",
-  "keywords": "Test Love Assurance Wethern Gospel 1John 1john2 Faith",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Test Love Assurance Wethern Gospel 1John 1john2 Faith"
 }

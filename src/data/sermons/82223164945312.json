@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/82223164945312/waveform?peaksOnly=true",
-  "keywords": "Gospel Envy Rivalry Paul Prison Prisoner Rome Advancement Evangelism Selfless Unstoppable Inspiring Joy",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Gospel Envy Rivalry Paul Prison Prisoner Rome Advancement Evangelism Selfless Unstoppable Inspiring Joy"
 }

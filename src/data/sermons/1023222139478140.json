@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1023222139478140/waveform?peaksOnly=true",
-  "keywords": "Jesus Faith Gospel Christ God grace Theology hebrews danger Fallaway believer unbeliever phcc mikejohnston calling HolySpirit Sanctification",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Faith Gospel Christ God grace Theology hebrews danger Fallaway believer unbeliever phcc mikejohnston calling HolySpirit Sanctification"
 }

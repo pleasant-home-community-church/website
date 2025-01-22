@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1323226207261/waveform?peaksOnly=true",
-  "keywords": "NewYear Christ Jesus Gospel Christmas Faith Salvation God Love Bible PHCC MikeJohnston Hebrews",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "NewYear Christ Jesus Gospel Christmas Faith Salvation God Love Bible PHCC MikeJohnston Hebrews"
 }

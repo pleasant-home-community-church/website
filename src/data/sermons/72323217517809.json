@@ -51,9 +51,5 @@
     "text": [],
     "caption": []
   },
-  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/72323217517809/waveform?peaksOnly=true",
-  "captionLanguages": {
-    "alpha_2": [],
-    "alpha_3": []
-  }
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/72323217517809/waveform?peaksOnly=true"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/55242140175634/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon PleasantHome MikeJohnston Rapture Eschatology Endtimes 1Thessalonians4 Hope Return Jesus",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon PleasantHome MikeJohnston Rapture Eschatology Endtimes 1Thessalonians4 Hope Return Jesus"
 }

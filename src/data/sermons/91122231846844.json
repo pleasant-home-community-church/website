@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/91122231846844/waveform?peaksOnly=true",
-  "keywords": "Jesus Christ God Gospel Salvation Faith Church phcc repentance hope last days grace prophets creation temptaion pleasanthome mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Christ God Gospel Salvation Faith Church phcc repentance hope last days grace prophets creation temptaion pleasanthome mikejohnston"
 }

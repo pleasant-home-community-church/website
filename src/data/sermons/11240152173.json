@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/11240152173/waveform?peaksOnly=true",
-  "keywords": "phcc pleasanthome jasonevans james2 faith works gresham oregon",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "phcc pleasanthome jasonevans james2 faith works gresham oregon"
 }

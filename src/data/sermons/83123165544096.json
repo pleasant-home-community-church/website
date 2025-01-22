@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/83123165544096/waveform?peaksOnly=true",
-  "keywords": "God Love Abide Test Assuranceofsalvation Assurance Fellowship",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "God Love Abide Test Assuranceofsalvation Assurance Fellowship"
 }

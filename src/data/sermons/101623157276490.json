@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/101623157276490/waveform?peaksOnly=true",
-  "keywords": "SundaySeminary PHCC Bible Sytematictheology PleasantHome JasonMills",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "SundaySeminary PHCC Bible Sytematictheology PleasantHome JasonMills"
 }

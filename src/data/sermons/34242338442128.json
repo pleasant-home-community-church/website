@@ -135,13 +135,5 @@
       }
     ]
   },
-  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/34242338442128/waveform?peaksOnly=true",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/34242338442128/waveform?peaksOnly=true"
 }

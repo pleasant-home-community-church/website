@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/92423235471687/waveform?peaksOnly=true",
-  "keywords": "Hebrews Hebrews12 PHCC Gresham Oregon Fire Judgement PleasantHome Johnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Hebrews Hebrews12 PHCC Gresham Oregon Fire Judgement PleasantHome Johnston"
 }

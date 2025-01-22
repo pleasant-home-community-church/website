@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/41424204481437/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome Gresham Oregon MikeJohnston Brotherlylove love brotherly 1Thessalonians Oneanother",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome Gresham Oregon MikeJohnston Brotherlylove love brotherly 1Thessalonians Oneanother"
 }

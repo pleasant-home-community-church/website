@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/103220185402/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ God Faith Church Salvation Love Grace SonofDavid theology mankind Humility PHCC Regeneration",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ God Faith Church Salvation Love Grace SonofDavid theology mankind Humility PHCC Regeneration"
 }

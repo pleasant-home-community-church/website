@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1127222121335000/waveform?peaksOnly=true",
-  "keywords": "Thanksgiving Christ Jesus Gospel Grace Faith God Salvation Love Church HighPriest sin Jews PHCC mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Thanksgiving Christ Jesus Gospel Grace Faith God Salvation Love Church HighPriest sin Jews PHCC mikejohnston"
 }

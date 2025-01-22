@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/101722638104790/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel God Christ Faith Salvation Church Love Faithful Moses Hope Grace PHCC Confidence",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel God Christ Faith Salvation Church Love Faithful Moses Hope Grace PHCC Confidence"
 }

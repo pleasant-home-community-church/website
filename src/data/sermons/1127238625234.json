@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1127238625234/waveform?peaksOnly=true",
-  "keywords": "Psalm100 Psalm Thanksgiving Unity PHCC Pleasanthome Gresham Oregon MikeJohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Psalm100 Psalm Thanksgiving Unity PHCC Pleasanthome Gresham Oregon MikeJohnston"
 }

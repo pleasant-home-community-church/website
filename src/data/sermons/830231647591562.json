@@ -153,13 +153,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/830231647591562/waveform?peaksOnly=true",
-  "keywords": "SPIRITS Testing Wethern 1John 1john4 Discernment FalseTeaching FalseTeachers Faith Gospel",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "SPIRITS Testing Wethern 1John 1john4 Discernment FalseTeaching FalseTeachers Faith Gospel"
 }

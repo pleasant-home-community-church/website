@@ -136,13 +136,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/33024349407726/waveform?peaksOnly=true",
-  "keywords": "PHCC Goodfriday gresham oregon pleasanthome crucifixion Jesus prayer",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Goodfriday gresham oregon pleasanthome crucifixion Jesus prayer"
 }

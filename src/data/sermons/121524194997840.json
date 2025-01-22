@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/121524194997840/waveform?peaksOnly=true",
-  "keywords": "GodsWork Gospel Justification Faith pride Grace",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "GodsWork Gospel Justification Faith pride Grace"
 }

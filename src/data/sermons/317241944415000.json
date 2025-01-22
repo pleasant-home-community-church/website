@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/317241944415000/waveform?peaksOnly=true",
-  "keywords": "PHCC Prayer Pleasant PleasantHome MikeJohnston 1Thessalonians Faith love Gresham Oregon Portland",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Prayer Pleasant PleasantHome MikeJohnston 1Thessalonians Faith love Gresham Oregon Portland"
 }

@@ -138,13 +138,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/19238461415/waveform?peaksOnly=true",
-  "keywords": "Christ Jesus Gospel God Faith Salvation Love Grace Bible PHCC Mikejohnston Abraham Hebrews",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Christ Jesus Gospel God Faith Salvation Love Grace Bible PHCC Mikejohnston Abraham Hebrews"
 }

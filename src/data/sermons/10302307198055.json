@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/10302307198055/waveform?peaksOnly=true",
-  "keywords": "Jude PHCC Jasonmills Pleasanthome warning holiness falseteachers Antinomianism truth contend Discernment",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jude PHCC Jasonmills Pleasanthome warning holiness falseteachers Antinomianism truth contend Discernment"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/827241918392333/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon PleasantHome MikeJohnston Joshua Joshua8 Victory Celebration",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon PleasantHome MikeJohnston Joshua Joshua8 Victory Celebration"
 }

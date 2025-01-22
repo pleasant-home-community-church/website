@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/6123342447955/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ Faith God Salvation Grace Bible PHCC Foregiveness Forgive Luke",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ Faith God Salvation Grace Bible PHCC Foregiveness Forgive Luke"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/3424234242586/waveform?peaksOnly=true",
-  "keywords": "Pleasanthome PastoralMinistry Mikejohnston Gresham Oregon 1Thessalonians",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Pleasanthome PastoralMinistry Mikejohnston Gresham Oregon 1Thessalonians"
 }

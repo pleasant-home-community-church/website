@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/411241717135151/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon Please God 1Thessalonians pleasanthome mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon Please God 1Thessalonians pleasanthome mikejohnston"
 }

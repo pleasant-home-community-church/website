@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/121923203810376/waveform?peaksOnly=true",
-  "keywords": "PHCC Jasonmills PleasantHome John316 Love Advent Christmas Gresham Oregon Gospel",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Jasonmills PleasantHome John316 Love Advent Christmas Gresham Oregon Gospel"
 }

@@ -148,13 +148,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/51232125296013/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ Faith God Salvation creation Womanhood PHCC Mikejohnston Bible Church Grace Love",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ Faith God Salvation creation Womanhood PHCC Mikejohnston Bible Church Grace Love"
 }

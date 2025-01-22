@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/82324195683727/waveform?peaksOnly=true",
-  "keywords": "PHCC PleasantHome Gresham Oregon MikeJohnston Joshua Joshua7",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC PleasantHome Gresham Oregon MikeJohnston Joshua Joshua7"
 }

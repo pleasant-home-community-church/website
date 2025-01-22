@@ -136,13 +136,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1231231615427686/waveform?peaksOnly=true",
-  "keywords": "phcc joy advent pleasanthome gresham oregon christmas mikejohnston",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "phcc joy advent pleasanthome gresham oregon christmas mikejohnston"
 }

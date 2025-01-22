@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/521241536148064/waveform?peaksOnly=true",
-  "keywords": "PHCC Gresham Oregon PleasantHome Mikejohnston light ready sleep",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Gresham Oregon PleasantHome Mikejohnston light ready sleep"
 }

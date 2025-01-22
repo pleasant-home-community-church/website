@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1117242211427886/waveform?peaksOnly=true",
-  "keywords": "Jesus JohntheBaptist Faith",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus JohntheBaptist Faith"
 }

@@ -137,13 +137,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/10223188556520/waveform?peaksOnly=true",
-  "keywords": "PHCC Worship Hebrews Hebrews13 Johnston Pleasanthome Jesus Contentment Love Hospitality Gresham Oregon",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "PHCC Worship Hebrews Hebrews13 Johnston Pleasanthome Jesus Contentment Love Hospitality Gresham Oregon"
 }

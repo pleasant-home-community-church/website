@@ -132,13 +132,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/122224198587927/waveform?peaksOnly=true",
-  "keywords": "Angel Mary Jesus Humble Baby Announcement SonofGod",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Angel Mary Jesus Humble Baby Announcement SonofGod"
 }

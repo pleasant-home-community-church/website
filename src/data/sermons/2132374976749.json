@@ -154,13 +154,5 @@
     ]
   },
   "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/2132374976749/waveform?peaksOnly=true",
-  "keywords": "Jesus Gospel Christ Faith God Doctrine Salvation Grace Love Church PHCC JasonMills trials struggles Counterfit Gresham Oregon Expository",
-  "captionLanguages": {
-    "alpha_2": [
-      "en"
-    ],
-    "alpha_3": [
-      "eng"
-    ]
-  }
+  "keywords": "Jesus Gospel Christ Faith God Doctrine Salvation Grace Love Church PHCC JasonMills trials struggles Counterfit Gresham Oregon Expository"
 }

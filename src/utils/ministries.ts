@@ -1,9 +1,8 @@
-import type { PaginateFunction } from 'astro';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Ministry } from '~/types';
-import { APP_MINISTRIES } from 'astrowind:config';
-import { cleanSlug, trimSlash, MINISTRIES_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+import { MINISTRIES } from 'astrowind:config';
+import { cleanSlug, trimSlash, MINISTRIES_PERMALINK_PATTERN } from './permalinks';
 
 const generatePermalink = async ({
   id,
@@ -115,21 +114,11 @@ const load = async function (): Promise<Array<Ministry>> {
 let _ministries: Array<Ministry>;
 
 /** */
-export const isMinistriesEnabled = APP_MINISTRIES.isEnabled;
-export const isMinistriesListRouteEnabled = APP_MINISTRIES.list.isEnabled;
-export const isMinistriesPostRouteEnabled = APP_MINISTRIES.ministries.isEnabled;
-export const isMinistriesCategoryRouteEnabled = APP_MINISTRIES.category.isEnabled;
-export const isMinistriesTagRouteEnabled = APP_MINISTRIES.tag.isEnabled;
-
-export const ministriesListRobots = APP_MINISTRIES.list.robots;
-export const ministriesPostRobots = APP_MINISTRIES.ministries.robots;
-export const ministriesCategoryRobots = APP_MINISTRIES.category.robots;
-export const ministriesTagRobots = APP_MINISTRIES.tag.robots;
-
-export const ministriesPostsPerPage = APP_MINISTRIES?.postsPerPage;
+export const ministriesListRobots = MINISTRIES.list.robots;
+export const ministriesPostRobots = MINISTRIES.ministries.robots;
 
 /** */
-export const fetchPosts = async (): Promise<Array<Ministry>> => {
+export const fetchMinistries = async (): Promise<Array<Ministry>> => {
   if (!_ministries) {
     _ministries = await load();
   }
@@ -138,10 +127,10 @@ export const fetchPosts = async (): Promise<Array<Ministry>> => {
 };
 
 /** */
-export const findPostsBySlugs = async (slugs: Array<string>): Promise<Array<Ministry>> => {
+export const findMinistriesBySlugs = async (slugs: Array<string>): Promise<Array<Ministry>> => {
   if (!Array.isArray(slugs)) return [];
 
-  const ministries = await fetchPosts();
+  const ministries = await fetchMinistries();
 
   return slugs.reduce(function (r: Array<Ministry>, slug: string) {
     ministries.some(function (ministry: Ministry) {
@@ -152,10 +141,10 @@ export const findPostsBySlugs = async (slugs: Array<string>): Promise<Array<Mini
 };
 
 /** */
-export const findPostsByIds = async (ids: Array<string>): Promise<Array<Ministry>> => {
+export const fetchMinistriesByIds = async (ids: Array<string>): Promise<Array<Ministry>> => {
   if (!Array.isArray(ids)) return [];
 
-  const ministries = await fetchPosts();
+  const ministries = await fetchMinistries();
 
   return ids.reduce(function (r: Array<Ministry>, id: string) {
     ministries.some(function (ministry: Ministry) {
@@ -166,70 +155,19 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Ministry
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Ministry>> => {
+export const findLatestMinistries = async ({ count }: { count?: number }): Promise<Array<Ministry>> => {
   const _count = count || 4;
-  const ministries = await fetchPosts();
+  const ministries = await fetchMinistries();
 
   return ministries ? ministries.slice(0, _count) : [];
 };
 
 /** */
-export const getStaticPathsMinistriesPost = async () => {
-  if (!isMinistriesEnabled || !isMinistriesPostRouteEnabled) return [];
-  return (await fetchPosts()).flatMap((ministry) => ({
+export const getStaticPathsMinistries = async () => {
+  return (await fetchMinistries()).flatMap((ministry) => ({
     params: {
       ministries: ministry.permalink,
     },
     props: { ministry },
   }));
-};
-
-/** */
-export const getStaticPathsMinistriesCategory = async ({ paginate }: { paginate: PaginateFunction }) => {
-  if (!isMinistriesEnabled || !isMinistriesCategoryRouteEnabled) return [];
-
-  const ministries = await fetchPosts();
-  const categories = {};
-  ministries.map((ministry) => {
-    if (ministry.category?.slug) {
-      categories[ministry.category?.slug] = ministry.category;
-    }
-  });
-
-  return Array.from(Object.keys(categories)).flatMap((categorySlug) =>
-    paginate(
-      ministries.filter((ministry) => ministry.category?.slug && categorySlug === ministry.category?.slug),
-      {
-        params: { category: categorySlug, ministries: CATEGORY_BASE || undefined },
-        pageSize: ministriesPostsPerPage,
-        props: { category: categories[categorySlug] },
-      }
-    )
-  );
-};
-
-/** */
-export const getStaticPathsMinistriesTag = async ({ paginate }: { paginate: PaginateFunction }) => {
-  if (!isMinistriesEnabled || !isMinistriesTagRouteEnabled) return [];
-
-  const ministries = await fetchPosts();
-  const tags = {};
-  ministries.map((ministry) => {
-    if (Array.isArray(ministry.tags)) {
-      ministry.tags.map((tag) => {
-        tags[tag?.slug] = tag;
-      });
-    }
-  });
-
-  return Array.from(Object.keys(tags)).flatMap((tagSlug) =>
-    paginate(
-      ministries.filter((ministry) => Array.isArray(ministry.tags) && ministry.tags.find((elem) => elem.slug === tagSlug)),
-      {
-        params: { tag: tagSlug, ministries: TAG_BASE || undefined },
-        pageSize: ministriesPostsPerPage,
-        props: { tag: tags[tagSlug] },
-      }
-    )
-  );
 };

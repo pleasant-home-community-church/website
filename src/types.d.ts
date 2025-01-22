@@ -2,46 +2,44 @@ import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
 export interface Ministry {
-  /** A unique name that identifies a ministry. */
   id: string;
-
-  /** A ministries unique slug – part of the ministry's URL based on its name, i.e. a ministry called “My Sample Page” has a slug “my-sample-page”. */
   slug: string;
-
-  /**  */
   permalink: string;
-
-  /**  */
   publishDate: Date;
-  /**  */
   updateDate?: Date;
-
-  /**  */
   title: string;
-  /** Optional summary of ministry content. */
   excerpt?: string;
-  /**  */
   image?: ImageMetadata | string;
-
-  /**  */
-  category?: Taxonomy;
-  /**  */
-  tags?: Taxonomy[];
-  /**  */
   author?: string;
-
-  /**  */
   metadata?: MetaData;
-
-  /**  */
   draft?: boolean;
-
-  /**  */
   Content?: AstroComponentFactory;
   content?: string;
-
-  /**  */
   readingTime?: number;
+}
+
+export interface Series {
+  id: string;
+  slug: string;
+  title: string;
+  permalink: string;
+  image?: ImageMetadata | string;
+}
+
+export interface Sermon {
+  id: string;
+  slug: string;
+  title: string;
+  permalink: string;
+  image?: ImageMetadata | string;
+}
+
+export interface Speaker {
+  id: string;
+  slug: string;
+  title: string;
+  permalink: string;
+  image?: ImageMetadata | string;
 }
 
 export interface Taxonomy {

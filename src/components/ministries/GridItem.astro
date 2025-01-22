@@ -1,5 +1,4 @@
 ---
-import { APP_MINISTRIES } from 'astrowind:config';
 import type { Ministry } from '~/types';
 
 import Image from '~/components/common/Image.astro';
@@ -14,7 +13,7 @@ export interface Props {
 const { ministry } = Astro.props;
 const image = await findImage(ministry.image);
 
-const link = APP_MINISTRIES?.post?.isEnabled ? getPermalink(ministry.permalink, 'ministry') : '';
+const link = getPermalink(ministry.permalink, 'ministry');
 ---
 
 <article

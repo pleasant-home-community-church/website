@@ -29,34 +29,54 @@ metadata:
         width: 1200
         height: 628
     type: website
-  # twitter:
-  #   handle: '@onwidget'
-  #   site: '@onwidget'
-  #   cardType: summary_large_image
 
 i18n:
   language: en
   textDirection: ltr
 
-apps:
+ministries:
   ministries:
-    isEnabled: true
-    postsPerPage: 6
+    permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    robots:
+      index: true
 
-    ministries:
-      isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      robots:
-        index: true
+  list:
+    pathname: 'ministries'
+    robots:
+      index: true
 
-    list:
-      isEnabled: true
-      pathname: 'ministries' # Ministries main path, you can change this to "articles" (/articles)
-      robots:
-        index: true
+series:
+  series:
+    permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    robots:
+      index: true
 
-    isRelatedPostsEnabled: false
-    relatedPostsCount: 4
+  list:
+    pathname: 'series'
+    robots:
+      index: true
+
+sermons:
+  sermons:
+    permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    robots:
+      index: true
+
+  list:
+    pathname: 'sermons'
+    robots:
+      index: true
+
+spearkers:
+  speakers:
+    permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    robots:
+      index: true
+
+  list:
+    pathname: 'speakers'
+    robots:
+      index: true
 
 analytics:
   vendors:

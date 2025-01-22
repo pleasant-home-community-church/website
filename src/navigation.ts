@@ -1,7 +1,7 @@
 import { getPermalink, getMinistriesPermalink } from './utils/permalinks';
-import { fetchPosts } from './utils/ministries';
+import { fetchMinistries } from './utils/ministries';
 
-const ministriesLinks = (await fetchPosts()).map((ministry) => ({
+const ministriesLinks = (await fetchMinistries()).map((ministry) => ({
   text: ministry.title,
   href: getPermalink(ministry.slug, 'ministry'),
 }));

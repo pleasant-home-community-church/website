@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, APP_MINISTRIES } from 'astrowind:config';
+import { SITE, MINISTRIES, SERIES, SERMONS, SPEAKERS } from 'astrowind:config';
 
 import { trim } from '~/utils/utils';
 
@@ -21,11 +21,18 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-export const MINISTRIES_BASE = cleanSlug(APP_MINISTRIES?.list?.pathname);
-export const CATEGORY_BASE = cleanSlug(APP_MINISTRIES?.category?.pathname);
-export const TAG_BASE = cleanSlug(APP_MINISTRIES?.tag?.pathname) || 'tag';
+export const MINISTRIES_BASE = cleanSlug(MINISTRIES?.list?.pathname);
+export const MINISTRIES_PERMALINK_PATTERN = trimSlash(MINISTRIES?.ministries?.permalink || `${MINISTRIES_BASE}/%slug%`);
 
-export const MINISTRIES_PERMALINK_PATTERN = trimSlash(APP_MINISTRIES?.ministries?.permalink || `${MINISTRIES_BASE}/%slug%`);
+export const SERIES_BASE = cleanSlug(SERIES?.list?.pathname);
+export const SERIES_PERMALINK_PATTERN = trimSlash(SERIES?.series?.permalink || `${SERIES_BASE}/%slug%`);
+
+export const SERMONS_BASE = cleanSlug(SERMONS?.list?.pathname);
+export const SERMONS_PERMALINK_PATTERN = trimSlash(SERMONS?.sermons?.permalink || `${SERMONS_BASE}/%slug%`);
+
+export const SPEAKERS_BASE = cleanSlug(SPEAKERS?.list?.pathname);
+export const SPEAKERS_PERMALINK_PATTERN = trimSlash(SPEAKERS?.speakers?.permalink || `${SPEAKERS_BASE}/%slug%`);
+
 
 /** */
 export const getCanonical = (path = ''): string | URL => {
@@ -57,24 +64,40 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = getHomePermalink();
       break;
 
-    case 'ministries':
-      permalink = getMinistriesPermalink();
-      break;
-
     case 'asset':
       permalink = getAsset(slug);
       break;
 
-    case 'category':
-      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
-      break;
-
-    case 'tag':
-      permalink = createPath(TAG_BASE, trimSlash(slug));
+    case 'ministries':
+      permalink = getMinistriesPermalink();
       break;
 
     case 'ministry':
       permalink = createPath(trimSlash(getMinistriesPermalink()), trimSlash(slug));
+      break;
+
+    case 'allseries':
+      permalink = getSeriesPermalink();
+      break;
+
+    case 'series':
+      permalink = createPath(trimSlash(getSeriesPermalink()), trimSlash(slug));
+      break;
+
+    case 'sermons':
+      permalink = getSermonsPermalink();
+      break;
+
+    case 'sermon':
+      permalink = createPath(trimSlash(getSermonsPermalink()), trimSlash(slug));
+      break;
+
+    case 'speakers':
+      permalink = getSpeakersPermalink();
+      break;
+
+    case 'speaker':
+      permalink = createPath(trimSlash(getSpeakersPermalink()), trimSlash(slug));
       break;
 
     case 'page':
@@ -91,6 +114,9 @@ export const getHomePermalink = (): string => getPermalink('/');
 
 /** */
 export const getMinistriesPermalink = (): string => getPermalink(MINISTRIES_BASE);
+export const getSeriesPermalink = (): string => getPermalink(SERIES_BASE);
+export const getSermonsPermalink = (): string => getPermalink(SERMONS_BASE);
+export const getSpeakersPermalink = (): string => getPermalink(SPEAKERS_BASE);
 
 /** */
 export const getAsset = (path: string): string =>
@@ -118,6 +144,12 @@ export const applyGetPermalinks = (menu: object = {}) => {
             obj[key] = getHomePermalink();
           } else if (menu[key].type === 'ministies') {
             obj[key] = getMinistriesPermalink();
+          } else if (menu[key].type === 'series') {
+            obj[key] = getSeriesPermalink();
+          } else if (menu[key].type === 'sermons') {
+            obj[key] = getSermonsPermalink();
+          } else if (menu[key].type === 'speakers') {
+            obj[key] = getSpeakersPermalink();
           } else if (menu[key].type === 'asset') {
             obj[key] = getAsset(menu[key].url);
           } else if (menu[key].url) {

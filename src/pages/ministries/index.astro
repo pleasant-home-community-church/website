@@ -2,13 +2,12 @@
 import Layout from '~/layouts/PageLayout.astro';
 import MinistriesList from '~/components/ministries/List.astro';
 import Headline from '~/components/ministries/Headline.astro';
-// import PostTags from "~/components/ministries/Tags.astro";
 
-import { ministriesListRobots, fetchPosts } from '~/utils/ministries';
+import { ministriesListRobots, fetchMinistries } from '~/utils/ministries';
 
 export const prerender = true;
 
-const ministries = await fetchPosts();
+const ministries = await fetchMinistries();
 
 // const allCategories = await findCategories();
 // const allTags = await findTags();

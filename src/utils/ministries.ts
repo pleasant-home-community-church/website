@@ -8,12 +8,10 @@ const generatePermalink = async ({
   id,
   slug,
   publishDate,
-  category,
 }: {
   id: string;
   slug: string;
   publishDate: Date;
-  category: string | undefined;
 }) => {
   const year = String(publishDate.getFullYear()).padStart(4, '0');
   const month = String(publishDate.getMonth() + 1).padStart(2, '0');
@@ -25,7 +23,6 @@ const generatePermalink = async ({
   const permalink = MINISTRIES_PERMALINK_PATTERN
     .replace('%slug%', slug)
     .replace('%id%', id)
-    .replace('%category%', category || '')
     .replace('%year%', year)
     .replace('%month%', month)
     .replace('%day%', day)
@@ -50,8 +47,7 @@ const getNormalizedMinistry = async (ministry: CollectionEntry<'ministries'>): P
     title,
     excerpt,
     image,
-    tags: rawTags = [],
-    category: rawCategory,
+
     author,
     draft = false,
     metadata = {},
@@ -61,22 +57,12 @@ const getNormalizedMinistry = async (ministry: CollectionEntry<'ministries'>): P
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 
-  const category = rawCategory
-    ? {
-      slug: cleanSlug(rawCategory),
-      title: rawCategory,
-    }
-    : undefined;
 
-  const tags = rawTags.map((tag: string) => ({
-    slug: cleanSlug(tag),
-    title: tag,
-  }));
 
   return {
     id: id,
     slug: slug,
-    permalink: await generatePermalink({ id, slug, publishDate, category: category?.slug }),
+    permalink: await generatePermalink({ id, slug, publishDate }),
 
     publishDate: publishDate,
     updateDate: updateDate,
@@ -85,8 +71,6 @@ const getNormalizedMinistry = async (ministry: CollectionEntry<'ministries'>): P
     excerpt: excerpt,
     image: image,
 
-    category: category,
-    tags: tags,
     author: author,
 
     draft: draft,
@@ -115,7 +99,7 @@ let _ministries: Array<Ministry>;
 
 /** */
 export const ministriesListRobots = MINISTRIES.list.robots;
-export const ministriesPostRobots = MINISTRIES.ministries.robots;
+export const ministriesRobots = MINISTRIES.ministries.robots;
 
 /** */
 export const fetchMinistries = async (): Promise<Array<Ministry>> => {

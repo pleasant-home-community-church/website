@@ -1,0 +1,57 @@
+---
+import Image from '~/components/common/Image.astro';
+import type { Series } from '~/types';
+
+export interface Props {
+  series: Series;
+  url: string | URL;
+}
+
+const { series } = Astro.props;
+---
+
+<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+  <article>
+    <header
+      class={series.image
+        ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
+        : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
+    >
+      <h1
+        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
+      >
+        {series.title}
+      </h1>
+      <p
+        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
+      >
+        {series.title}
+      </p>
+
+      {
+        series.image ? (
+          <Image
+            src={series.image}
+            class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+            widths={[400, 900]}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={series?.title || ''}
+            width={900}
+            height={506}
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
+          <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="border-t dark:border-slate-700" />
+          </div>
+        )
+      }
+    </header>
+    <div
+      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
+    >
+      <slot />
+    </div>
+  </article>
+</section>

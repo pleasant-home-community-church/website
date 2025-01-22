@@ -1,0 +1,14 @@
+---
+import Item from '~/components/ministries/GridItem.astro';
+import type { Series } from '~/types';
+
+export interface Props {
+  allSeries: Array<Series>;
+}
+
+const { allSeries } = Astro.props;
+---
+
+<div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
+  {allSeries.map((series) => <Item series={series} />)}
+</div>

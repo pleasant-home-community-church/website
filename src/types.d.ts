@@ -24,6 +24,8 @@ export interface Series {
   title: string;
   permalink: string;
   image?: ImageMetadata | string;
+  Content?: AstroComponentFactory;
+  content?: string;
 }
 
 export interface Sermon {
@@ -32,6 +34,8 @@ export interface Sermon {
   title: string;
   permalink: string;
   image?: ImageMetadata | string;
+  Content?: AstroComponentFactory;
+  content?: string;
 }
 
 export interface Speaker {
@@ -40,6 +44,8 @@ export interface Speaker {
   title: string;
   permalink: string;
   image?: ImageMetadata | string;
+  Content?: AstroComponentFactory;
+  content?: string;
 }
 
 export interface Taxonomy {

@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SeriesList from '~/components/series/List.astro';
+import Headline from '~/components/series/Headline.astro';
+
+import { seriesListRobots, fetchAllSeries } from '~/utils/series';
+
+export const prerender = true;
+
+const allSeries = await fetchAllSeries();
+
+const metadata = {
+  title: 'Series',
+  robots: {
+    follow: seriesListRobots?.follow,
+  },
+  openGraph: {
+    type: 'series',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline>Series</Headline>
+    <SeriesList allSeries={allSeries} />
+  </section>
+</Layout>

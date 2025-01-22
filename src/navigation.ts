@@ -1,4 +1,4 @@
-import { getPermalink, getMinistriesPermalink } from './utils/permalinks';
+import { getPermalink, getMinistriesPermalink, getSermonsPermalink, getSeriesPermalink, getSpeakersPermalink } from './utils/permalinks';
 import { fetchMinistries } from './utils/ministries';
 
 const ministriesLinks = (await fetchMinistries()).map((ministry) => ({
@@ -30,6 +30,20 @@ export const headerData = {
       href: getMinistriesPermalink(),
       links: ministriesLinks,
     },
+    {
+      text: 'Sermons',
+      href: getSermonsPermalink(),
+      links: [
+        {
+          text: "Series",
+          href: getSeriesPermalink()
+        },
+        {
+          text: "Speakers",
+          href: getSpeakersPermalink()
+        },
+      ]
+    },
   ],
   actions: [],
   showRssFeed: false,
@@ -54,6 +68,20 @@ export const footerData = {
       title: 'Ministries',
       href: getMinistriesPermalink(),
       links: ministriesLinks,
+    },
+    {
+      title: 'Sermons',
+      href: getSermonsPermalink(),
+      links: [
+        {
+          text: "Series",
+          href: getSeriesPermalink(),
+        },
+        {
+          text: "Speakers",
+          href: getSpeakersPermalink(),
+        },
+      ]
     },
     // {
     //   title: 'Support',

@@ -1,0 +1,20 @@
+---
+import Item from '~/components/series/ListItem.astro';
+import type { Series } from '~/types';
+
+export interface Props {
+  allSeries: Array<Series>;
+}
+
+const { allSeries } = Astro.props;
+---
+
+<ul>
+  {
+    allSeries.map((series) => (
+      <li class="mb-12 md:mb-20">
+        <Item series={series} />
+      </li>
+    ))
+  }
+</ul>

@@ -6,9 +6,10 @@ export type Config = {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
   i18n?: I18NConfig;
-  apps?: {
-    ministries?: AppMinistriesConfig;
-  };
+  ministries?: MinistriesConfig;
+  series?: SeriesConfig;
+  sermons?: SermonsConfig;
+  speakers?: SpeakersConfig;
   ui?: unknown;
   analytics?: unknown;
 };
@@ -27,24 +28,22 @@ export interface SiteConfig {
   trailingSlash?: boolean;
   googleSiteVerificationId?: string;
 }
+
 export interface MetaDataConfig extends Omit<MetaData, 'title'> {
   title?: {
     default: string;
     template: string;
   };
 }
+
 export interface I18NConfig {
   language: string;
   textDirection: string;
   dateFormatter?: Intl.DateTimeFormat;
 }
-export interface AppMinistriesConfig {
-  isEnabled: boolean;
-  postsPerPage: number;
-  isRelatedPostsEnabled: boolean;
-  relatedPostsCount: number;
+
+export interface MinistriesConfig {
   ministries: {
-    isEnabled: boolean;
     permalink: string;
     robots: {
       index: boolean;
@@ -52,23 +51,6 @@ export interface AppMinistriesConfig {
     };
   };
   list: {
-    isEnabled: boolean;
-    pathname: string;
-    robots: {
-      index: boolean;
-      follow: boolean;
-    };
-  };
-  category: {
-    isEnabled: boolean;
-    pathname: string;
-    robots: {
-      index: boolean;
-      follow: boolean;
-    };
-  };
-  tag: {
-    isEnabled: boolean;
     pathname: string;
     robots: {
       index: boolean;
@@ -76,6 +58,58 @@ export interface AppMinistriesConfig {
     };
   };
 }
+
+export interface SeriesConfig {
+  series: {
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+  list: {
+    pathname: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
+export interface SermonsConfig {
+  sermons: {
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+  list: {
+    pathname: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
+export interface SpeakersConfig {
+  speakers: {
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+  list: {
+    pathname: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
 export interface AnalyticsConfig {
   vendors: {
     googleAnalytics: {
@@ -136,14 +170,9 @@ const getI18N = (config: Config) => {
   return value as I18NConfig;
 };
 
-const getAppMinistries = (config: Config) => {
+const getMinistries = (config: Config) => {
   const _default = {
-    isEnabled: false,
-    postsPerPage: 6,
-    isRelatedPostsEnabled: false,
-    relatedPostsCount: 4,
     ministries: {
-      isEnabled: true,
       permalink: '/ministries/%slug%',
       robots: {
         index: true,
@@ -151,32 +180,78 @@ const getAppMinistries = (config: Config) => {
       },
     },
     list: {
-      isEnabled: true,
       pathname: 'ministries',
       robots: {
         index: true,
         follow: true,
       },
     },
-    category: {
-      isEnabled: true,
-      pathname: 'category',
+  };
+
+  return merge({}, _default, config?.ministries ?? {}) as MinistriesConfig;
+};
+
+const getSeries = (config: Config) => {
+  const _default = {
+    series: {
+      permalink: '/series/%slug%',
       robots: {
         index: true,
         follow: true,
       },
     },
-    tag: {
-      isEnabled: true,
-      pathname: 'tag',
+    list: {
+      pathname: 'series',
       robots: {
-        index: false,
+        index: true,
         follow: true,
       },
     },
   };
 
-  return merge({}, _default, config?.apps?.ministries ?? {}) as AppMinistriesConfig;
+  return merge({}, _default, config?.series ?? {}) as SeriesConfig;
+};
+
+const getSermons = (config: Config) => {
+  const _default = {
+    sermons: {
+      permalink: '/sermons/%slug%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+    list: {
+      pathname: 'sermons',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.sermons ?? {}) as SermonsConfig;
+};
+
+const getSpeakers = (config: Config) => {
+  const _default = {
+    speakers: {
+      permalink: '/speakers/%slug%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+    list: {
+      pathname: 'speakers',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.speakers ?? {}) as SpeakersConfig;
 };
 
 const getUI = (config: Config) => {
@@ -204,7 +279,10 @@ export default (config: Config) => ({
   SITE: getSite(config),
   I18N: getI18N(config),
   METADATA: getMetadata(config),
-  APP_MINISTRIES: getAppMinistries(config),
+  MINISTRIES: getMinistries(config),
+  SERIES: getSeries(config),
+  SERMONS: getSermons(config),
+  SPEAKERS: getSpeakers(config),
   UI: getUI(config),
   ANALYTICS: getAnalytics(config),
 });

@@ -19,33 +19,61 @@ export interface Ministry {
 }
 
 export interface Series {
-  id: string;
-  slug: string;
-  title: string;
-  permalink: string;
+  id: string,
+  slug: string,
+  title: string,
+  permalink: string
+  broadcasterID: string,
+  count: number,
+  earliestDate: Date | undefined,
+  latestDate: Date | undefined,
   image?: ImageMetadata | string;
-  Content?: AstroComponentFactory;
-  content?: string;
 }
 
 export interface Sermon {
   id: string;
   slug: string;
-  title: string;
   permalink: string;
+  title: string;
+  displayTitle: string;
+
+  bibleText?: string;
+  subtitle?: string;
+  moreInfoText?: string;
+  eventType: string;
+
+  broadcasterID: string;
+  speaker?: Speaker;
+  series?: Series;
+
+  hasAudio: boolean;
+  hasVideo: boolean;
+  hasPDF: boolean;
+  audioDurationSeconds?: number;
+  videoDurationSeconds?: number;
+
+  preachDate: Date;
+  publishDate: Date;
+  updateDate?: Date;
+
+  type: string;
+  displayEventType: string;
+
   image?: ImageMetadata | string;
-  Content?: AstroComponentFactory;
-  content?: string;
+  keywords?: string;
 }
 
 export interface Speaker {
   id: string;
   slug: string;
-  title: string;
   permalink: string;
-  image?: ImageMetadata | string;
-  Content?: AstroComponentFactory;
-  content?: string;
+
+  displayName: string;
+  bio?: string;
+
+  portaitURL?: ImageMetadata | string;
+  albumArtURL?: ImageMetadata | string;
+  roundedThumbnailImageURL?: ImageMetadata | string;
 }
 
 export interface Taxonomy {

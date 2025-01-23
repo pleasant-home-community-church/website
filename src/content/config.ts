@@ -199,7 +199,7 @@ const speakersCollection = defineCollection({
   schema: z.object({
     type: z.string(),
     id: z.number().int(),
-    displayName: z.string().optional(),
+    displayName: z.string(),
     portaitURL: z.string().optional(),
     albumArtURL: z.string().optional(),
     roundedThumbnailImageURL: z.string().optional(),

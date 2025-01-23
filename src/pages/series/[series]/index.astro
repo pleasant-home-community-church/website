@@ -28,7 +28,6 @@ const image = (await findImage(series.image)) as ImageMetadata | string | undefi
 const metadata = merge(
   {
     title: series.title,
-    description: series.title,
     robots: {
       index: seriesRobots?.index,
       follow: seriesRobots?.follow,
@@ -47,7 +46,7 @@ const metadata = merge(
 
 <Layout metadata={metadata}>
   <SingleSeries series={{ ...series, image: image }} url={url}>
-    {series.Content ? <series.Content /> : <Fragment set:html={series.content || ''} />}
+    <Fragment></Fragment>
   </SingleSeries>
   <ToSeriesLink />
 </Layout>

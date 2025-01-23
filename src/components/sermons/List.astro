@@ -1,19 +1,19 @@
 ---
-import Item from '~/components/ministries/ListItem.astro';
-import type { Ministry } from '~/types';
+import Item from '~/components/sermons/ListItem.astro';
+import type { Sermon } from '~/types';
 
 export interface Props {
-  ministries: Array<Ministry>;
+  sermons: Array<Sermon>;
 }
 
-const { ministries } = Astro.props;
+const { sermons } = Astro.props;
 ---
 
 <ul>
   {
-    ministries.map((ministry) => (
+    sermons.map((sermon) => (
       <li class="mb-12 md:mb-20">
-        <Item ministry={ministry} />
+        <Item sermon={sermon} />
       </li>
     ))
   }

@@ -1,4 +1,4 @@
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Series } from '~/types';
 import { SERIES } from 'astrowind:config';
@@ -7,31 +7,13 @@ import { cleanSlug, trimSlash, SERIES_PERMALINK_PATTERN } from './permalinks';
 const generatePermalink = async ({
   id,
   slug,
-  publishDate,
-  category,
 }: {
   id: string;
   slug: string;
-  publishDate: Date;
-  category: string | undefined;
 }) => {
-  const year = String(publishDate.getFullYear()).padStart(4, '0');
-  const month = String(publishDate.getMonth() + 1).padStart(2, '0');
-  const day = String(publishDate.getDate()).padStart(2, '0');
-  const hour = String(publishDate.getHours()).padStart(2, '0');
-  const minute = String(publishDate.getMinutes()).padStart(2, '0');
-  const second = String(publishDate.getSeconds()).padStart(2, '0');
-
   const permalink = SERIES_PERMALINK_PATTERN
     .replace('%slug%', slug)
-    .replace('%id%', id)
-    .replace('%category%', category || '')
-    .replace('%year%', year)
-    .replace('%month%', month)
-    .replace('%day%', day)
-    .replace('%hour%', hour)
-    .replace('%minute%', minute)
-    .replace('%second%', second);
+    .replace('%id%', `${id}`);
 
   return permalink
     .split('/')
@@ -42,61 +24,29 @@ const generatePermalink = async ({
 
 const getNormalizedSeries = async (series: CollectionEntry<'series'>): Promise<Series> => {
   const { id, data } = series;
-  const { Content, remarkPluginFrontmatter } = await render(series);
-
   const {
-    publishDate: rawPublishDate = new Date(),
-    updateDate: rawUpdateDate,
+    broadcasterID,
+    count,
+    earliest,
+    latest,
     title,
-    excerpt,
-    image,
-    tags: rawTags = [],
-    category: rawCategory,
-    author,
-    draft = false,
-    metadata = {},
   } = data;
 
-  const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
-  const publishDate = new Date(rawPublishDate);
-  const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
+  const slug = cleanSlug(id);
 
-  const category = rawCategory
-    ? {
-      slug: cleanSlug(rawCategory),
-      title: rawCategory,
-    }
-    : undefined;
-
-  const tags = rawTags.map((tag: string) => ({
-    slug: cleanSlug(tag),
-    title: tag,
-  }));
+  const earliestDate = earliest ? new Date(Date.parse(earliest)) : new Date();
+  const latestDate = latest ? new Date(Date.parse(latest)) : new Date();
 
   return {
     id: id,
     slug: slug,
-    permalink: await generatePermalink({ id, slug, publishDate, category: category?.slug }),
-
-    publishDate: publishDate,
-    updateDate: updateDate,
-
+    permalink: await generatePermalink({ id, slug, }),
+    broadcasterID,
+    count,
+    earliestDate,
+    latestDate,
     title: title,
-    excerpt: excerpt,
-    image: image,
-
-    category: category,
-    tags: tags,
-    author: author,
-
-    draft: draft,
-
-    metadata,
-
-    Content: Content,
-    // or 'content' in case you consume from API
-
-    readingTime: remarkPluginFrontmatter?.readingTime,
+    image: undefined,
   };
 };
 
@@ -105,7 +55,7 @@ const load = async function (): Promise<Array<Series>> {
   const normalizedSeries = allSeries.map(async (series) => await getNormalizedSeries(series));
 
   const results = (await Promise.all(normalizedSeries))
-    .sort((a, b) => a.slug.localeCompare(b.slug))
+    .sort((a, b) => b.latestDate?.getTime() - a.latestDate?.getTime())
 
   return results;
 };

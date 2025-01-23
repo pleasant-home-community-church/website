@@ -139,14 +139,6 @@ export const fetchMinistriesByIds = async (ids: Array<string>): Promise<Array<Mi
 };
 
 /** */
-export const findLatestMinistries = async ({ count }: { count?: number }): Promise<Array<Ministry>> => {
-  const _count = count || 4;
-  const ministries = await fetchMinistries();
-
-  return ministries ? ministries.slice(0, _count) : [];
-};
-
-/** */
 export const getStaticPathsMinistries = async () => {
   return (await fetchMinistries()).flatMap((ministry) => ({
     params: {

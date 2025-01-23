@@ -1,5 +1,5 @@
 ---
-import type { Ministry } from '~/types';
+import type { Sermon } from '~/types';
 
 import Image from '~/components/common/Image.astro';
 
@@ -7,13 +7,13 @@ import { findImage } from '~/utils/images';
 import { getPermalink } from '~/utils/permalinks';
 
 export interface Props {
-  ministry: Ministry;
+  sermon: Sermon;
 }
 
-const { ministry } = Astro.props;
-const image = await findImage(ministry.image);
+const { sermon } = Astro.props;
+const image = await findImage(sermon.image);
 
-const link = getPermalink(ministry.permalink, 'sermon');
+const link = getPermalink(sermon.permalink, 'sermon');
 ---
 
 <article
@@ -30,7 +30,7 @@ const link = getPermalink(ministry.permalink, 'sermon');
               widths={[400, 900]}
               width={400}
               sizes="(max-width: 900px) 400px, 900px"
-              alt={ministry.title}
+              alt={sermon.title}
               aspectRatio="16:9"
               layout="cover"
               loading="lazy"
@@ -44,7 +44,7 @@ const link = getPermalink(ministry.permalink, 'sermon');
             widths={[400, 900]}
             width={400}
             sizes="(max-width: 900px) 400px, 900px"
-            alt={ministry.title}
+            alt={sermon.title}
             aspectRatio="16:9"
             layout="cover"
             loading="lazy"
@@ -58,13 +58,13 @@ const link = getPermalink(ministry.permalink, 'sermon');
     {
       link ? (
         <a class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={link}>
-          {ministry.title}
+          {sermon.title}
         </a>
       ) : (
-        ministry.title
+        sermon.title
       )
     }
   </h3>
 
-  <p class="text-muted dark:text-slate-400 text-lg">{ministry.excerpt}</p>
+  <p class="text-muted dark:text-slate-400 text-lg">{sermon.title}</p>
 </article>

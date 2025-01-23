@@ -52,6 +52,8 @@ export interface Sermon {
   audioDurationSeconds?: number;
   videoDurationSeconds?: number;
 
+  streamURL?: string;
+
   preachDate: Date;
   publishDate: Date;
   updateDate?: Date;
@@ -169,6 +171,7 @@ export interface Stat {
 export interface Item {
   title?: string;
   description?: string;
+  link?: string;
   icon?: string;
   classes?: Record<string, string>;
   callToAction?: CallToAction;

@@ -1,8 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import SpeakersList from '~/components/speakers/List.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Headline from '~/components/speakers/Headline.astro';
 
+import { getPermalink } from '~/utils/permalinks';
 import { speakersListRobots, fetchSpeakers } from '~/utils/speakers';
 
 export const prerender = true;
@@ -23,6 +24,13 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline>Speakers</Headline>
-    <SpeakersList speakers={speakers} />
+    <Features2
+      columns={3}
+      defaultIcon="tabler:users"
+      items={speakers.map((speaker) => ({
+        title: speaker.displayName,
+        link: getPermalink(speaker.permalink, 'speaker'),
+      }))}
+    />
   </section>
 </Layout>

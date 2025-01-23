@@ -77,9 +77,13 @@ const getNormalizedSermon = async (sermon: CollectionEntry<'sermons'>): Promise<
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 
   let image
+  let streamURL
   for (const video of media.video) {
     if (video.thumbnailImageURL !== undefined) {
       image = video.thumbnailImageURL;
+    }
+    if (video.adaptiveBitrate) {
+      streamURL = video.streamURL;
     }
   }
 
@@ -113,6 +117,8 @@ const getNormalizedSermon = async (sermon: CollectionEntry<'sermons'>): Promise<
     hasPDF,
     audioDurationSeconds,
     videoDurationSeconds,
+
+    streamURL,
 
     preachDate,
     publishDate,

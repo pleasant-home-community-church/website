@@ -1,6 +1,8 @@
 ---
-import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
 import type { Sermon } from '~/types';
+import { getPermalink } from '~/utils/permalinks';
+import { getFormattedDate } from '~/utils/utils';
 
 export interface Props {
   sermon: Sermon;
@@ -8,6 +10,9 @@ export interface Props {
 }
 
 const { sermon } = Astro.props;
+
+const speakerLink = getPermalink(sermon.speaker?.permalink, 'speaker');
+const seriesLink = getPermalink(sermon.series?.permalink, 'series');
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
@@ -17,6 +22,16 @@ const { sermon } = Astro.props;
         ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
         : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
     >
+    <p
+        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
+      >
+        <span class="text-sm">
+          {sermon.displayEventType && <span>{sermon.displayEventType}</span>}
+          {' '}
+          · <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+          <time datetime={String(sermon.preachDate)} class="inline-block">{getFormattedDate(sermon.preachDate)}</time>
+        </span>
+      </p>
       <h1
         class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
       >
@@ -25,22 +40,62 @@ const { sermon } = Astro.props;
       <p
         class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
       >
-        {sermon.title}
+      <span class="text-sm">
+        {
+          sermon.bibleText && (
+            <Icon name="tabler:bible" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+            <span>{sermon.bibleText}</span>
+          )
+        }
+        { sermon.bibleText && sermon.series?.title && ( <>{' '} · </>)}
+        {
+          sermon.series?.title && (
+           <a href={seriesLink}>
+              <Icon name="tabler:category" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+              <span>{sermon.series?.title}</span>
+            </a>
+          )
+        } <br />
+        <span class="text-sm">
+          {
+            sermon.speaker?.displayName && (
+              <>
+                <a href={speakerLink}>
+                  <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+                  <span>{sermon.speaker?.displayName}</span>
+                </a>
+              </>
+            )
+          }
+        </span>
+      </span>
       </p>
 
       {
         sermon.image ? (
-          <Image
-            src={sermon.image}
-            class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={sermon?.title || ''}
-            width={900}
-            height={506}
-            loading="eager"
-            decoding="async"
-          />
+          // <Image
+          //   src={sermon.image}
+          //   class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+          //   widths={[400, 900]}
+          //   sizes="(max-width: 900px) 400px, 900px"
+          //   alt={sermon?.title || ''}
+          //   width={900}
+          //   height={506}
+          //   loading="eager"
+          //   decoding="async"
+          // />
+          <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <video
+              id="sermon-video"
+              class="video-js max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+              controls
+              preload="auto"
+              poster={sermon.image}
+              data-setup="{}"
+            >
+              <source src={sermon.streamURL} type="application/x-mpegURL" />
+            </video>
+          </div>
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <div class="border-t dark:border-slate-700" />
@@ -55,3 +110,5 @@ const { sermon } = Astro.props;
     </div>
   </article>
 </section>
+
+<script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>

@@ -179,29 +179,15 @@ export const findSermonsByIds = async (ids: Array<string>): Promise<Array<Sermon
 /** */
 export const findSermonsBySeries = async (ids: Array<string>): Promise<Array<Sermon>> => {
   if (!Array.isArray(ids)) return [];
-
   const sermons = await fetchSermons();
-
-  return ids.reduce(function (r: Array<Sermon>, id: string) {
-    sermons.some(function (sermon: Sermon) {
-      return id === sermon.series?.id && r.push(sermon);
-    });
-    return r;
-  }, []);
+  return sermons.filter((sermon: Sermon) => sermon.series ? ids.includes(sermon.series?.id) : false);
 };
 
 /** */
 export const findSermonsBySpeakers = async (ids: Array<string>): Promise<Array<Sermon>> => {
   if (!Array.isArray(ids)) return [];
-
   const sermons = await fetchSermons();
-
-  return ids.reduce(function (r: Array<Sermon>, id: string) {
-    sermons.some(function (sermon: Sermon) {
-      return id === sermon.speaker?.id && r.push(sermon);
-    });
-    return r;
-  }, []);
+  return sermons.filter((sermon: Sermon) => sermon.speaker ? ids.includes(sermon.speaker?.id) : false);
 };
 
 /** */

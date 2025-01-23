@@ -47,7 +47,7 @@ const metadata = merge(
 
 <Layout metadata={metadata}>
   <SingleSermon sermon={{ ...sermon, image: image }} url={url}>
-    {sermon.Content ? <sermon.Content /> : <Fragment set:html={sermon.content || ''} />}
+    <Fragment></Fragment>
   </SingleSermon>
   <ToSermonsLink />
 </Layout>

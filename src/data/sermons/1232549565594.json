@@ -1,10 +1,11 @@
 {
-  "id": "33024349407726",
-  "fullTitle": "Good Friday- Jesus Prays for Sinners",
-  "displayTitle": "Good Friday- Jesus Prays for..",
+  "id": "1232549565594",
+  "fullTitle": "Sanctification: Human Transformation",
+  "displayTitle": "Sanctification: Human Transf..",
   "languageCode": "en",
-  "subtitle": "Easter/Resurrection",
-  "eventType": "Special Meeting",
+  "bibleText": "Romans 8:1-11",
+  "subtitle": "Romans (Wednesday Night)",
+  "eventType": "Midweek Service",
   "broadcaster": {
     "type": "broadcaster",
     "lite_type": "false",
@@ -32,19 +33,19 @@
   },
   "series": {
     "type": "series",
-    "id": 188819
+    "id": 194945
   },
   "hasAudio": true,
   "hasVideo": true,
   "hasPDF": false,
-  "audioDurationSeconds": 4097,
-  "videoDurationSeconds": 4097,
-  "preachDate": "2024-03-30",
-  "publishTimestamp": 1711770864,
+  "audioDurationSeconds": 4480,
+  "videoDurationSeconds": 4480,
+  "preachDate": "2025-01-22",
+  "publishTimestamp": 1737605473,
   "type": "sermon",
-  "updateDate": 1711770859,
-  "publishDate": "2024-03-30",
-  "displayEventType": "Special Meeting",
+  "updateDate": 1737605473,
+  "publishDate": "2025-01-23",
+  "displayEventType": "Midweek Service",
   "media": {
     "type": "media_set",
     "audio": [
@@ -52,29 +53,29 @@
         "type": "media",
         "mediaType": "mp3",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/33024349407726.mp3?ts=1711772666&language=eng",
-        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/33024349407726.mp3?ts=1711772666&language=eng&download=true",
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/1232549565594.mp3?ts=1737608052&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/1232549565594.mp3?ts=1737608052&language=eng&download=true",
         "bitrate": 96,
-        "fileSizeBytes": 49468098,
+        "fileSizeBytes": 54070348,
         "adaptiveBitrate": false,
-        "duration": 4097,
+        "duration": 4480,
         "audioCodec": "mp3",
         "language": "eng",
-        "mediaFilename": "33024349407726.mp3"
+        "mediaFilename": "1232549565594.mp3"
       },
       {
         "type": "media",
         "mediaType": "mp3",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/33024349407726.mp3?ts=1711772666&language=eng",
-        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/33024349407726.mp3?ts=1711772666&language=eng&download=true",
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/1232549565594.mp3?ts=1737608052&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/1232549565594.mp3?ts=1737608052&language=eng&download=true",
         "bitrate": 16,
-        "fileSizeBytes": 8476431,
+        "fileSizeBytes": 9243417,
         "adaptiveBitrate": false,
-        "duration": 4097,
+        "duration": 4480,
         "audioCodec": "mp3",
         "language": "eng",
-        "mediaFilename": "33024349407726.mp3"
+        "mediaFilename": "1232549565594.mp3"
       }
     ],
     "video": [
@@ -82,43 +83,43 @@
         "type": "media",
         "mediaType": "mp4",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/33024349407726.m3u8?ts=1711772666",
-        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/33024349407726.jpg",
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/1232549565594.m3u8?ts=1737608052",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1232549565594.jpg",
         "adaptiveBitrate": true,
-        "duration": 4097,
-        "mediaFilename": "33024349407726.mp4"
+        "duration": 4480,
+        "mediaFilename": "1232549565594.mp4"
       },
       {
         "type": "media",
         "mediaType": "mp4",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/video/high/33024349407726.m3u8?ts=1711772666&language=eng",
-        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/33024349407726.mp4?ts=1711772666&language=eng&download=true",
-        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/33024349407726.jpg",
-        "bitrate": 1075,
-        "fileSizeBytes": 555342280,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/1232549565594.m3u8?ts=1737608052&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/1232549565594.mp4?ts=1737608052&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1232549565594.jpg",
+        "bitrate": 1089,
+        "fileSizeBytes": 615028399,
         "adaptiveBitrate": false,
-        "duration": 4097,
+        "duration": 4480,
         "audioCodec": "aac",
         "videoCodec": "h264",
         "language": "eng",
-        "mediaFilename": "33024349407726.mp4"
+        "mediaFilename": "1232549565594.mp4"
       },
       {
         "type": "media",
         "mediaType": "mp4",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/video/low/33024349407726.m3u8?ts=1711772666&language=eng",
-        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/33024349407726.mp4?ts=1711772666&language=eng&download=true",
-        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/33024349407726.jpg",
-        "bitrate": 380,
-        "fileSizeBytes": 198471269,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/1232549565594.m3u8?ts=1737608052&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/1232549565594.mp4?ts=1737608052&language=eng&download=true",
+        "thumbnailImageURL": "https://media-cloud.sermonaudio.com/thumbnails/1232549565594.jpg",
+        "bitrate": 392,
+        "fileSizeBytes": 223687971,
         "adaptiveBitrate": false,
-        "duration": 4097,
+        "duration": 4480,
         "audioCodec": "aac",
         "videoCodec": "h264",
         "language": "eng",
-        "mediaFilename": "33024349407726.mp4"
+        "mediaFilename": "1232549565594.mp4"
       }
     ],
     "text": [],
@@ -127,14 +128,13 @@
         "type": "media",
         "mediaType": "caption",
         "live": false,
-        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/33024349407726.srt?ts=1711772666&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/1232549565594.srt?ts=1737608052&language=eng",
         "adaptiveBitrate": false,
         "language": "eng",
-        "mediaFilename": "33024349407726-eng.srt",
+        "mediaFilename": "1232549565594-eng.srt",
         "autoGenerated": true
       }
     ]
   },
-  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/33024349407726/waveform?peaksOnly=true",
-  "keywords": "PHCC Goodfriday gresham oregon pleasanthome crucifixion Jesus prayer"
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/1232549565594/waveform?peaksOnly=true"
 }

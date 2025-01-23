@@ -1,14 +1,14 @@
 ---
-import Item from '~/components/ministries/GridItem.astro';
-import type { Ministry } from '~/types';
+import Item from '~/components/speakers/GridItem.astro';
+import type { Speaker } from '~/types';
 
 export interface Props {
-  ministries: Array<Ministry>;
+  speakers: Array<Speaker>;
 }
 
-const { ministries } = Astro.props;
+const { speakers } = Astro.props;
 ---
 
 <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
-  {ministries.map((ministry) => <Item ministry={ministry} />)}
+  {speakers.map((speaker) => <Item speaker={speaker} />)}
 </div>

@@ -67,7 +67,7 @@ sermons:
     robots:
       index: true
 
-spearkers:
+speakers:
   speakers:
     permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
     robots:

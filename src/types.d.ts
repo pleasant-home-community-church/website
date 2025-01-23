@@ -74,6 +74,8 @@ export interface Speaker {
   portaitURL?: ImageMetadata | string;
   albumArtURL?: ImageMetadata | string;
   roundedThumbnailImageURL?: ImageMetadata | string;
+
+  image?: ImageMetadata | string;
 }
 
 export interface Taxonomy {

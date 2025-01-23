@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import type { Speaker } from '~/types';
 import { SPEAKERS } from 'astrowind:config';
 import { cleanSlug, trimSlash, SPEAKERS_PERMALINK_PATTERN } from './permalinks';
-// import {  } from './sermons';
 
 const generatePermalink = async ({
   id,
@@ -35,11 +34,12 @@ const getNormalizedSpeaker = async (speaker: CollectionEntry<'speakers'>): Promi
   } = data;
 
   const slug = cleanSlug(id);
+  const permalink = await generatePermalink({ id, slug, });
 
   return {
     id: id,
     slug: slug,
-    permalink: await generatePermalink({ id, slug }),
+    permalink,
 
     displayName,
     bio,
@@ -47,6 +47,8 @@ const getNormalizedSpeaker = async (speaker: CollectionEntry<'speakers'>): Promi
     portaitURL,
     albumArtURL,
     roundedThumbnailImageURL,
+
+    image: portaitURL,
   };
 };
 

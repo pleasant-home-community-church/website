@@ -89,13 +89,25 @@ const seriesLink = getPermalink(sermon.series?.permalink, 'series');
       <div class="mb-1">
         <span class="text-sm">
           {
+            sermon.bibleText && (
+              <Icon name="tabler:bible" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+              <span>{sermon.bibleText}</span>
+            )
+          }
+          { sermon.bibleText && sermon.series?.title && ( <>{' '} · </>)}
+          {
             sermon.series?.title && (
-              <a href={seriesLink}>
+             <a href={seriesLink}>
                 <Icon name="tabler:category" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
                 <span>{sermon.series?.title}</span>
               </a>
             )
           }
+        </span>
+      </div>
+      <div class="mb-1">
+        <span class="text-sm">
+          
         </span>
       </div>
       <div class="mb-1">

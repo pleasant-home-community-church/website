@@ -13,7 +13,7 @@ const generatePermalink = async ({
 }) => {
   const permalink = SERIES_PERMALINK_PATTERN
     .replace('%slug%', slug)
-    .replace('%id%', `${id}`);
+    .replace('%id%', id);
 
   return permalink
     .split('/')
@@ -24,6 +24,7 @@ const generatePermalink = async ({
 
 const getNormalizedSeries = async (series: CollectionEntry<'series'>): Promise<Series> => {
   const { id, data } = series;
+
   const {
     broadcasterID,
     count,
@@ -33,6 +34,7 @@ const getNormalizedSeries = async (series: CollectionEntry<'series'>): Promise<S
   } = data;
 
   const slug = cleanSlug(id);
+  const permalink = await generatePermalink({ id, slug, })
 
   const earliestDate = earliest ? new Date(Date.parse(earliest)) : new Date();
   const latestDate = latest ? new Date(Date.parse(latest)) : new Date();
@@ -40,7 +42,7 @@ const getNormalizedSeries = async (series: CollectionEntry<'series'>): Promise<S
   return {
     id: id,
     slug: slug,
-    permalink: await generatePermalink({ id, slug, }),
+    permalink,
     broadcasterID,
     count,
     earliestDate,

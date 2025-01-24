@@ -28,5 +28,5 @@ jobs:
           SERMONAUDIO_API_KEY: ${{ secrets.SERMONAUDIO_API_KEY }}
         run: |
           cd scripts
-          uv install
+          uv pip install
           uv run sermonaudio_fetch.py --data-dir "${{ github.workspace }}/src/data"

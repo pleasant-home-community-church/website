@@ -73,6 +73,8 @@ export interface Speaker {
   displayName: string;
   bio?: string;
 
+  lastPreachedDate?: Date;
+
   portaitURL?: ImageMetadata | string;
   albumArtURL?: ImageMetadata | string;
   roundedThumbnailImageURL?: ImageMetadata | string;

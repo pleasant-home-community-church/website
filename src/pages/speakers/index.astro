@@ -5,10 +5,20 @@ import Headline from '~/components/speakers/Headline.astro';
 
 import { getPermalink } from '~/utils/permalinks';
 import { speakersListRobots, fetchSpeakers } from '~/utils/speakers';
+import { findSermonsBySpeakers } from '~/utils/sermons';
 
 export const prerender = true;
 
 const speakers = await fetchSpeakers();
+const getLastPreached = speakers.map(async (speaker) => {
+  const lastSermon = (await findSermonsBySpeakers([speaker.id]))[0];
+  speaker.lastPreachedDate = lastSermon?.preachDate;
+  return speaker;
+});
+
+const latestSpeakers = (await Promise.all(getLastPreached)).sort(
+  (a, b) => b.lastPreachedDate.getTime() - a.lastPreachedDate.getTime()
+);
 
 const metadata = {
   title: 'Speakers',
@@ -27,7 +37,7 @@ const metadata = {
     <Features2
       columns={3}
       defaultIcon="tabler:users"
-      items={speakers.map((speaker) => ({
+      items={latestSpeakers.map((speaker) => ({
         title: speaker.displayName,
         link: getPermalink(speaker.permalink, 'speaker'),
       }))}

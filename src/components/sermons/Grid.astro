@@ -4,11 +4,12 @@ import type { Sermon } from '~/types';
 
 export interface Props {
   sermons: Array<Sermon>;
+  classes: Record<string, string>;
 }
 
 const { sermons } = Astro.props;
 ---
 
-<div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
+<div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-3 -mb-6 content-center">
   {sermons.map((sermon) => <Item sermon={sermon} />)}
 </div>

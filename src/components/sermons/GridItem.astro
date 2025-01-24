@@ -5,6 +5,8 @@ import Image from '~/components/common/Image.astro';
 
 import { findImage } from '~/utils/images';
 import { getPermalink } from '~/utils/permalinks';
+import { getFormattedDate } from '~/utils/utils';
+import { Icon } from 'astro-icon/components';
 
 export interface Props {
   sermon: Sermon;
@@ -14,6 +16,8 @@ const { sermon } = Astro.props;
 const image = await findImage(sermon.image);
 
 const link = getPermalink(sermon.permalink, 'sermon');
+const speakerLink = getPermalink(sermon.speaker?.permalink, 'speaker');
+const seriesLink = getPermalink(sermon.series?.permalink, 'series');
 ---
 
 <article
@@ -54,6 +58,12 @@ const link = getPermalink(sermon.permalink, 'sermon');
     }
   </div>
 
+  <span class="text-sm">
+    {sermon.displayEventType && <span>{sermon.displayEventType}</span>}
+    {' '}
+    · <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+    <time datetime={String(sermon.preachDate)} class="inline-block">{getFormattedDate(sermon.preachDate)}</time>
+  </span>
   <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
     {
       link ? (
@@ -65,6 +75,34 @@ const link = getPermalink(sermon.permalink, 'sermon');
       )
     }
   </h3>
-
-  <p class="text-muted dark:text-slate-400 text-lg">{sermon.title}</p>
+  <span class="text-sm">
+    {
+      sermon.bibleText && (
+        <Icon name="tabler:bible" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+        <span>{sermon.bibleText}</span>
+      )
+    }
+    { sermon.bibleText && sermon.series?.title && ( <>{' '} · </>)}
+    {
+      sermon.series?.title && (
+       <a href={seriesLink}>
+          <Icon name="tabler:category" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+          <span>{sermon.series?.title}</span>
+        </a>
+      )
+    } <br />
+    <span class="text-sm">
+      {
+        sermon.speaker?.displayName && (
+          <>
+            <a href={speakerLink}>
+              <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+              <span>{sermon.speaker?.displayName}</span>
+            </a>
+          </>
+        )
+      }
+    </span>
+  </span>
+  
 </article>

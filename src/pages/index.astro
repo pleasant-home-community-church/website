@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Features from '~/components/widgets/Features.astro';
 import { Icon } from 'astro-icon/components';
 import Content from '~/components/widgets/Content.astro';
+import LatestSermons from '~/components/widgets/LatestSermons.astro';
 
 const metadata = {
   title: 'Pleasant Home Community Church',
@@ -41,8 +42,6 @@ const googleMaps = SITE?.googleMaps;
       </span>
     </Fragment>
   </Content>
-
-  <!-- Worship Services Widget ******************* -->
 
   <!-- Location Widget ******************* -->
 
@@ -111,4 +110,12 @@ const googleMaps = SITE?.googleMaps;
       },
     ]}
   />
+
+  <!-- Worship Services Widget ******************* -->
+
+  <LatestSermons title="Latest Sermons">
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-logo-b-l dark:bg-transparent"></div>
+    </Fragment>
+  </LatestSermons>
 </Layout>

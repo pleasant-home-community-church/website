@@ -203,7 +203,8 @@ export interface Testimonial {
 export interface Input {
   type: HTMLInputTypeAttribute;
   name: string;
-  hidden?: bool;
+  hidden?: boolean;
+  required?: boolean;
   value?: string;
   label?: string;
   autocomplete?: string;

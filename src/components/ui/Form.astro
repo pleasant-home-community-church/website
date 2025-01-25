@@ -8,28 +8,41 @@ const { inputs, textarea, disclaimer, action, method, button = 'Contact us', des
 <form action={action} method={method}>
   {
     inputs &&
-      inputs.map(({ type = 'text', hidden, name, value = '', label = '', autocomplete = 'on', placeholder = '' }) =>
-        hidden ? (
-          <input type="hidden" name={name} id={name} value={value} />
-        ) : (
-          name && (
-            <div class="mb-6">
-              {label && (
-                <label for={name} class="block text-sm font-medium">
-                  {label}
-                </label>
-              )}
-              <input
-                type={type}
-                name={name}
-                id={name}
-                autocomplete={autocomplete}
-                placeholder={placeholder}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-              />
-            </div>
+      inputs.map(
+        ({ type = 'text', hidden, name, required, value = '', label = '', autocomplete = 'on', placeholder = '' }) =>
+          hidden ? (
+            <input type="hidden" name={name} id={name} value={value} />
+          ) : (
+            name && (
+              <div class="mb-6">
+                {label && (
+                  <label for={name} class="block text-sm font-medium">
+                    {label} {required && <span class="text-red-500">*</span>}
+                  </label>
+                )}
+                {required ? (
+                  <input
+                    type={type}
+                    name={name}
+                    id={name}
+                    autocomplete={autocomplete}
+                    placeholder={placeholder}
+                    class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                    required
+                  />
+                ) : (
+                  <input
+                    type={type}
+                    name={name}
+                    id={name}
+                    autocomplete={autocomplete}
+                    placeholder={placeholder}
+                    class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                  />
+                )}
+              </div>
+            )
           )
-        )
       )
   }
 

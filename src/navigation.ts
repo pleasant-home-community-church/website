@@ -52,6 +52,10 @@ export const headerData = {
         },
       ]
     },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
+    },
   ],
   actions: [],
   showRssFeed: false,
@@ -92,28 +96,10 @@ export const footerData = {
         },
       ]
     },
-    // {
-    //   title: 'Support',
-    //   links: [
-    //     { text: 'Docs', href: '#' },
-    //     { text: 'Community Forum', href: '#' },
-    //     { text: 'Professional Services', href: '#' },
-    //     { text: 'Skills', href: '#' },
-    //     { text: 'Status', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Company',
-    //   links: [
-    //     { text: 'About', href: '#' },
-    //     { text: 'Ministries', href: '#' },
-    //     { text: 'Careers', href: '#' },
-    //     { text: 'Press', href: '#' },
-    //     { text: 'Inclusion', href: '#' },
-    //     { text: 'Social Impact', href: '#' },
-    //     { text: 'Shop', href: '#' },
-    //   ],
-    // },
+    {
+      title: 'Contact',
+      href: getPermalink('/contact'),
+    },
   ],
   secondaryLinks: [
     // { text: 'Terms', href: getPermalink('/terms') },

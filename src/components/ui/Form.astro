@@ -2,14 +2,16 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, action, method, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form>
+<form action={action} method={method}>
   {
     inputs &&
-      inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
+      inputs.map(({ type = 'text', hidden, name, value = '', label = '', autocomplete = 'on', placeholder = '' }) =>
+        hidden ? (
+          <input type="hidden" name={name} id={name} value={value} />
+        ) : (
           name && (
             <div class="mb-6">
               {label && (
@@ -27,6 +29,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
               />
             </div>
           )
+        )
       )
   }
 

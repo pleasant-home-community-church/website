@@ -203,6 +203,8 @@ export interface Testimonial {
 export interface Input {
   type: HTMLInputTypeAttribute;
   name: string;
+  hidden?: bool;
+  value?: string;
   label?: string;
   autocomplete?: string;
   placeholder?: string;
@@ -245,6 +247,8 @@ export interface Collapse {
 
 export interface Form {
   inputs?: Array<Input>;
+  action?: string;
+  method?: string;
   textarea?: Textarea;
   disclaimer?: Disclaimer;
   button?: string;

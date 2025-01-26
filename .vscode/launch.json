@@ -11,7 +11,20 @@
         "${workspaceFolder}/src/data",
       ],
       "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/scripts",
+      "justMyCode": false,
+    },
+    {
+      "name": "python: fetch planningcenter",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/planningcenter_fetch.py",
+      "args": [
+        "--data-dir",
+        "${workspaceFolder}/src/data",
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/scripts",
       "justMyCode": false,
     },
     {

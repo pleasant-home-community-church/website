@@ -1,0 +1,55 @@
+{
+  "id": "12625208376505",
+  "fullTitle": "Kingdom Principles",
+  "displayTitle": "Kingdom Principles",
+  "languageCode": "en",
+  "bibleText": "Mark 4:21-34",
+  "subtitle": "The Gospel of Mark",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 195640
+  },
+  "hasAudio": false,
+  "hasVideo": false,
+  "hasPDF": false,
+  "preachDate": "2025-01-26",
+  "publishTimestamp": 1737922204,
+  "type": "sermon",
+  "updateDate": 1737922203,
+  "publishDate": "2025-01-26",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [],
+    "video": [],
+    "text": [],
+    "caption": []
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/12625208376505/waveform?peaksOnly=true"
+}

@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import StrEnum
 from typing import Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import AliasPath, BaseModel, ConfigDict, Field
 
 
 class EventApprovalStatus(StrEnum):
@@ -11,87 +11,50 @@ class EventApprovalStatus(StrEnum):
     REJECTED = "R"
 
 
-class EventAttributes(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-
-    approval_status: EventApprovalStatus
-    created_at: datetime
-    description: Optional[str]
-    featured: bool
-    image_url: Optional[str]
-    name: str
-    percent_approved: int
-    percent_rejected: int
-    registration_url: Optional[str]
-    summary: Optional[str]
-    updated_at: datetime
-    visible_in_church_center: bool
-
-
-class EventTimeAttributes(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-
-    ends_at: datetime
-    name: str
-    starts_at: datetime
-    visible_on_kiosks: bool
-    visible_on_widget_and_ical: bool
-
-
-class EventTime(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-
-    id: str
-    attributes: EventTimeAttributes
-
-
-class TagAttributes(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-
-    church_center_category: bool
-    color: str
-    created_at: datetime
-    name: str
-    position: int
-    updated_at: datetime
-
-
 class Tag(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
     id: str
-    attributes: TagAttributes
+
+    color: str = Field(validation_alias=AliasPath("attributes", "color"))
+    name: str = Field(validation_alias=AliasPath("attributes", "name"))
+    group: str = Field(validation_alias=AliasPath("tag_group", "attributes", "name"))
 
 
 class Event(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
     id: str
-    attributes: EventAttributes
+
+    approval_status: EventApprovalStatus = Field(validation_alias=AliasPath("attributes", "approval_status"))
+    created_at: datetime = Field(validation_alias=AliasPath("attributes", "created_at"))
+    description: Optional[str] = Field(validation_alias=AliasPath("attributes", "description"))
+    featured: bool = Field(validation_alias=AliasPath("attributes", "featured"))
+    image_url: Optional[str] = Field(validation_alias=AliasPath("attributes", "image_url"))
+    name: str = Field(validation_alias=AliasPath("attributes", "name"))
+    percent_approved: int = Field(validation_alias=AliasPath("attributes", "percent_approved"))
+    percent_rejected: int = Field(validation_alias=AliasPath("attributes", "percent_rejected"))
+    registration_url: Optional[str] = Field(validation_alias=AliasPath("attributes", "registration_url"))
+    summary: Optional[str] = Field(validation_alias=AliasPath("attributes", "summary"))
+    updated_at: datetime = Field(validation_alias=AliasPath("attributes", "updated_at"))
+    visible_in_church_center: bool = Field(validation_alias=AliasPath("attributes", "visible_in_church_center"))
+
     tags: list[Tag] = Field(default_factory=list)
 
 
-class EventInstanceAttributes(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-
-    all_day_event: bool
-    church_center_url: str
-    compact_recurrence_description: str
-    created_at: datetime
-    ends_at: datetime
-    location: Optional[str]
-    published_ends_at: Optional[datetime]
-    published_starts_at: Optional[datetime]
-    recurrence: str
-    recurrence_description: str
-    starts_at: datetime
-    updated_at: datetime
-
-
-class EventInstance(BaseModel):
+class CalendarInstance(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
     id: str
-    attributes: EventInstanceAttributes
+
+    all_day_event: bool = Field(validation_alias=AliasPath("attributes", "all_day_event"))
+    ends_at: datetime = Field(validation_alias=AliasPath("attributes", "ends_at"))
+    event_featured: bool = Field(validation_alias=AliasPath("attributes", "event_featured"))
+    event_name: str = Field(validation_alias=AliasPath("attributes", "event_name"))
+    starts_at: datetime = Field(validation_alias=AliasPath("attributes", "starts_at"))
+    status: str = Field(validation_alias=AliasPath("attributes", "status"))
+    visible_ends_at: datetime = Field(validation_alias=AliasPath("attributes", "visible_ends_at"))
+    visible_starts_at: datetime = Field(validation_alias=AliasPath("attributes", "visible_starts_at"))
+
     event: Optional[Event]
-    event_times: list[EventTime] = Field(default_factory=list)
+    tags: Optional[list[Tag]] = Field(default_factory=list)

@@ -1,5 +1,6 @@
 from os import environ
-from datetime import datetime, UTC
+from collections import deque
+from datetime import datetime, timedelta, UTC
 from typing import Callable, AsyncIterator
 
 from anyio import run
@@ -8,35 +9,52 @@ from dotenv import load_dotenv
 from httpx import BasicAuth
 from loguru import logger
 
-from Event import Event, EventInstance
+from Event import CalendarInstance, Event, Tag
 
 
-async def paginate(
-    method: Callable, per_page=100, **kwargs
-) -> AsyncIterator[tuple[dict, dict]]:
+def lookup_related(d: dict, included: dict) -> dict:
+    related_output: dict = {}
+
+    for key, value in d["relationships"].items():
+        relationship = value["data"]
+
+        match relationship:
+            case dict():
+                related_id = relationship["id"]
+                related_data = included.get(related_id)
+
+                # check if we should recurse
+                if related_data and "relationships" in related_data:
+                    related_data.update(lookup_related(related_data, included))
+
+                related_output[key] = related_data
+
+            case list():
+                for related_item in value["data"]:
+                    related_id = related_item["id"]
+                    related_data = included.get(related_id)
+
+                    # check if we should recurse
+                    if related_data and "relationships" in related_data:
+                        related_data.update(lookup_related(related_data, included))
+
+                    if key not in related_output:
+                        related_output[key] = []
+                    related_output[key].append(related_data)
+
+    return related_output
+
+
+async def paginate(method: Callable, *args, per_page=100) -> AsyncIterator[tuple[dict, dict]]:
     offset: int = 0
 
     while True:
-        resp = await method(offset, per_page, **kwargs)
+        resp = await method(offset, per_page, *args)
         data = resp["data"]
         included = {i["id"]: i for i in resp["included"]}
 
         for d in data:
-
-            for key, value in d["relationships"].items():
-                related_data = value["data"]
-
-                match related_data:
-                    case dict():
-                        related_id = related_data["id"]
-                        d[key] = included.get(related_id)
-                    case list():
-                        for rd in value["data"]:
-                            related_id = rd["id"]
-                            if key not in d:
-                                d[key] = []
-                            d[key].append(included.get(related_id))
-
+            d.update(lookup_related(d, included))
             yield d
 
         meta = resp["meta"]
@@ -51,36 +69,32 @@ async def paginate(
 @content("application/json")
 class Calendar(RestClient):
 
-    @GET("events")
-    @query("where", "where[visible_in_church_center]")
-    @query("include")
+    @GET("calendar_instances")
+    @query("where_visible_in_chruch_center", "where[visible_in_church_center]")
+    @query("where_during_start", "where[during][start]")
+    @query("where_during_end", "where[during][end]")
+    @query("fields_calendar_instance", "fields[CalendarInstance]")
+    @query("fields_tag", "fields[Tag]")
+    @query("fields_tag_group", "fields[TagGroup]")
     @query("filter")
-    @query("offset")
-    @query("per_page")
-    @on(200, lambda r: r.json())
-    async def event_list(
-        self,
-        offset=0,
-        per_page=100,
-        where="true",
-        include="tags",
-        filter="future",
-    ): ...
-
-    @GET("event_instances")
     @query("include")
-    @query("filter")
     @query("order")
     @query("offset")
     @query("per_page")
     @on(200, lambda r: r.json())
-    async def event_instances_list(
+    async def calendar_instances_list(
         self,
-        offset=0,
-        per_page=100,
-        include="event_times,event",
-        filter="future",
-        order="starts_at",
+        offset,
+        per_page,
+        where_during_start,  # =2025-01-26T08:00:00.000Z
+        where_during_end,  # =2025-02-26T07:59:59.999Z
+        where_visible_in_chruch_center="published",
+        fields_calendar_instance="all_day_event,ends_at,event,event_featured,event_name,starts_at,status,tags,visible_ends_at,visible_starts_at",
+        fields_tag="name,color,tag_group",
+        fields_tag_group="name,required",
+        filter="public_times",
+        include="tags.tag_group",
+        order="starts_at,ends_at",
     ): ...
 
 
@@ -88,22 +102,18 @@ async def main():
     CLIENT_ID: str = environ.get("PLANNINGCENTER_CLIENT_ID")
     CLIENT_SECRET: str = environ.get("PLANNINGCENTER_SECRET")
 
+    during_start: datetime = datetime.now(tz=UTC)
+    during_end: datetime = during_start + timedelta(weeks=52)
+
     calendar = Calendar(auth=BasicAuth(CLIENT_ID, CLIENT_SECRET))
 
-    events: dict[str, Event] = {}
-    event_instances: dict[str, EventInstance] = {}
-
-    async for data_event in paginate(calendar.event_list):
-        event: Event = Event(**data_event)
-        events[event.id] = event
-        logger.debug(f"{event.id} - {event.attributes.name}")
-
-    async for data_event_instance in paginate(calendar.event_instances_list):
-        event_instance: EventInstance = EventInstance(**data_event_instance)
-        event_instances[event_instance.id] = event_instance
-        logger.debug(
-            f"{event_instance.attributes.starts_at} - {event_instance.id} - {event_instance.event.attributes.name}"
-        )
+    async for instance in paginate(
+        calendar.calendar_instances_list,
+        during_start,
+        during_end,
+    ):
+        ci: CalendarInstance = CalendarInstance(**instance)
+        logger.debug(f"{ci.visible_starts_at}: {ci.id} - {ci.event_name}")
 
     logger.success("Done")
 

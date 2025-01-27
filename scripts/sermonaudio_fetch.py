@@ -5,7 +5,7 @@ from typing import Optional
 
 from dotenv import load_dotenv
 from loguru import logger
-from pydantic import BaseModel, ConfigDict, Field, with_config
+from pydantic import BaseModel, ConfigDict, Field
 from sermonaudio import set_api_key
 from sermonaudio.models import SeriesSortOrder, SermonSortOption
 from sermonaudio.node.requests import Node
@@ -180,11 +180,16 @@ def fetch_sermons(sermons_dir: Path) -> None:
         # conver the results to sermons
         for result in paged.results:
             sermon: Sermon = Sermon(**result._Model__obj)
-            sermon_file: Path = sermons_dir / f"{sermon.id}.json"
-            sermon_file.write_text(
-                sermon.model_dump_json(indent=2, exclude_none=True, exclude_unset=True)
-            )
-            logger.debug(f"{sermon.id} - {sermon.displayTitle}")
+
+            # ensure video exists before adding it
+            if sermon.hasVideo:
+                sermon_file: Path = sermons_dir / f"{sermon.id}.json"
+                sermon_file.write_text(
+                    sermon.model_dump_json(
+                        indent=2, exclude_none=True, exclude_unset=True
+                    )
+                )
+                logger.debug(f"{sermon.id} - {sermon.displayTitle}")
 
     logger.info(f"fetched {total} sermons")
 

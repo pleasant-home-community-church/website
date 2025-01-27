@@ -1,15 +1,16 @@
-from os import environ
-from collections import deque
+from argparse import ArgumentParser, Namespace
 from datetime import datetime, timedelta, UTC
+from os import environ
+from shutil import rmtree
 from typing import Callable, AsyncIterator
 
-from anyio import run
+from anyio import run, Path
 from decorest import backend, content, endpoint, on, query, GET, RestClient
 from dotenv import load_dotenv
 from httpx import BasicAuth
 from loguru import logger
 
-from Event import CalendarInstance, Event, Tag
+from planningcenter_models import CalendarInstance
 
 
 def lookup_related(d: dict, included: dict) -> dict:
@@ -98,12 +99,35 @@ class Calendar(RestClient):
     ): ...
 
 
+def parse_args():
+    """
+    Parse the command line arguments using the argparse library.
+
+    Returns:
+        Namespace: A Namespace object containing the parsed arguments.
+    """
+
+    parser = ArgumentParser()
+    parser.add_argument("--data-dir", type=str, required=True)
+    return parser.parse_args()
+
+
 async def main():
     CLIENT_ID: str = environ.get("PLANNINGCENTER_CLIENT_ID")
     CLIENT_SECRET: str = environ.get("PLANNINGCENTER_SECRET")
 
+    args: Namespace = parse_args()
+
     during_start: datetime = datetime.now(tz=UTC)
     during_end: datetime = during_start + timedelta(weeks=52)
+
+    data_dir: Path = Path(args.data_dir)
+    await data_dir.mkdir(parents=True, exist_ok=True)
+
+    events_dir = Path(data_dir) / "events"
+    # always cleanup the event dir to remove old events
+    rmtree(str(events_dir), ignore_errors=True)
+    await events_dir.mkdir(parents=True, exist_ok=True)
 
     calendar = Calendar(auth=BasicAuth(CLIENT_ID, CLIENT_SECRET))
 
@@ -112,8 +136,11 @@ async def main():
         during_start,
         during_end,
     ):
-        ci: CalendarInstance = CalendarInstance(**instance)
-        logger.debug(f"{ci.visible_starts_at}: {ci.id} - {ci.event_name}")
+        event: CalendarInstance = CalendarInstance(**instance)
+        logger.debug(f"{event.visible_starts_at}: {event.id} - {event.event_name}")
+
+        event_file: Path = events_dir / f"{event.id}.json"
+        await event_file.write_text(event.model_dump_json(indent=2, exclude_none=True, exclude_unset=True))
 
     logger.success("Done")
 

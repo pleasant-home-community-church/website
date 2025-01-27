@@ -1,0 +1,25 @@
+{
+  "id": "130384684",
+  "all_day_event": false,
+  "ends_at": "2025-06-29T19:00:00Z",
+  "event_featured": false,
+  "event_name": "Worship Service",
+  "starts_at": "2025-06-29T17:45:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-06-29T19:00:00Z",
+  "visible_starts_at": "2025-06-29T17:45:00Z",
+  "tags": [
+    {
+      "id": "203256",
+      "color": "#F297CD",
+      "name": "Regular Sunday Services/Events",
+      "group": "Ministry"
+    },
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ]
+}

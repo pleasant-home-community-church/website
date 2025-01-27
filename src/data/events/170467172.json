@@ -1,0 +1,19 @@
+{
+  "id": "170467172",
+  "all_day_event": false,
+  "ends_at": "2025-03-19T02:30:00Z",
+  "event_featured": false,
+  "event_name": "Tues Women's Bible Study: Study in John",
+  "starts_at": "2025-03-19T01:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-03-19T02:30:00Z",
+  "visible_starts_at": "2025-03-19T01:30:00Z",
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ]
+}

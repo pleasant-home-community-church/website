@@ -18,6 +18,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      diff: ${{ steps.git-diff.outputs.diff }}
     
     steps:
       - name: Checkout your repository using git
@@ -35,23 +37,25 @@ jobs:
             tsconfig.json
             tailwind.config.js
             
-
       - name: Install, build, and upload your site
-        if: steps.git-diff.outputs.filtered_diff
+        if: steps.git-diff.outputs.diff
         uses: withastro/action@v3
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
+  deploy:
+    needs: build
+    if: needs.build.outputs.diff
 
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

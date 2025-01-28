@@ -1,0 +1,46 @@
+name: Fetch Latest Events
+
+on:
+  # Re-run every 4 hours
+  schedule:
+    - cron: "30 */6 * * *"
+    
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Allow commit back to the repo any changes after fetching the sermons
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_GITHUB_TOKEN }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "scripts/pyproject.toml"
+
+      - name: Run script to fetch events
+        env:
+          PLANNINGCENTER_CLIENT_ID: ${{ secrets.PLANNINGCENTER_CLIENT_ID }}
+          PLANNINGCENTER_SECRET: ${{ secrets.PLANNINGCENTER_SECRET }}
+
+        run: |
+          cd scripts
+          uv run planningcenter_fetch.py --data-dir "${{ github.workspace }}/src/data"
+          
+      - name: Commit and push changes to repo
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions

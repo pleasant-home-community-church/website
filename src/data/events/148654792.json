@@ -1,0 +1,31 @@
+{
+  "id": "148654792",
+  "all_day_event": false,
+  "ends_at": "2025-02-12T03:30:00Z",
+  "event_featured": false,
+  "event_name": "Men's Bible Study",
+  "starts_at": "2025-02-12T02:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-02-12T03:30:00Z",
+  "visible_starts_at": "2025-02-12T02:30:00Z",
+  "tags": [
+    {
+      "id": "142029",
+      "color": "#CBEAFA",
+      "name": "Men's Ministry",
+      "group": "Ministry"
+    },
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    },
+    {
+      "id": "165090",
+      "color": "#F6E7BB",
+      "name": "Bible Study",
+      "group": "Ministry"
+    }
+  ]
+}

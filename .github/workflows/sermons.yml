@@ -3,7 +3,7 @@ name: Fetch Latest Sermons
 on:
   # Re-run every 4 hours
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 */6 * * *"
     
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
@@ -22,18 +22,22 @@ jobs:
         with:
           token: ${{ secrets.PAT_GITHUB_TOKEN }}
           ref: ${{ github.event.pull_request.head.ref }}
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
+
       - name: "Set up Python"
         uses: actions/setup-python@v5
         with:
           python-version-file: "scripts/pyproject.toml"
+
       - name: Run script to fetch sermons
         env:
           SERMONAUDIO_API_KEY: ${{ secrets.SERMONAUDIO_API_KEY }}
         run: |
           cd scripts
           uv run sermonaudio_fetch.py --data-dir "${{ github.workspace }}/src/data"
+          
       - name: Commit and push changes to repo
         uses: EndBug/add-and-commit@v9
         with:

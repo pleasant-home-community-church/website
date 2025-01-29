@@ -12,6 +12,17 @@
   height: 1.5rem;
 } */
 
+@layer calendar {
+  .sx-react-calendar-wrapper {
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 95%;
+    height: 80vh;
+    max-height: 90vh;
+  }
+}
+
 .logo-name {
   font-family: "DreamOrphan";
   font-weight: 550;

@@ -9,6 +9,24 @@ export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.lang
 
 export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
 
+export const getCalendarEventDate = (date: Date): string => {
+  const year: string = `${date.getFullYear()}`;
+  const month: string = `${date.getMonth() + 1}`.padStart(2, "0");
+  const day: string = `${date.getDate()}`.padStart(2, "0");
+  const hours: string = `${date.getHours()}`.padStart(2, "0");
+  const minutes: string = `${date.getMinutes()}`.padStart(2, "0");
+
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
+};
+
+export const getCalendarDateOnly = (date: Date): string => {
+  const year: string = `${date.getFullYear()}`;
+  const month: string = `${date.getMonth() + 1}`.padStart(2, "0");
+  const day: string = `${date.getDate()}`.padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+};
+
 export const trim = (str = '', ch?: string) => {
   let start = 0,
     end = str.length || 0;

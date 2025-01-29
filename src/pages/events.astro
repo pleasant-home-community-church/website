@@ -1,0 +1,43 @@
+---
+import Calendar from '~/components/events/Calendar';
+import Layout from '~/layouts/PageLayout.astro';
+import { fetchEvents } from '~/utils/events';
+import { getCalendarEventDate, getCalendarDateOnly } from '~/utils/utils';
+
+const metadata = {
+  title: 'Events',
+};
+
+// const faqHeadline = {
+//   headline: {
+//     title: 'text-4xl md:text-5xl ',
+//   },
+// };
+
+const allEvents = await fetchEvents();
+const events = allEvents
+  .map((event) => ({
+    id: event.id,
+    title: event.eventName,
+    start: event.allDayEvent ? getCalendarDateOnly(event.visibleStartsAt) : getCalendarEventDate(event.visibleStartsAt),
+    end: event.allDayEvent ? getCalendarDateOnly(event.visibleEndsAt) : getCalendarEventDate(event.visibleEndsAt),
+  }))
+  .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+
+const minDate = new Date();
+const maxDate = new Date();
+maxDate.setFullYear(minDate.getFullYear() + 1);
+maxDate.setDate(maxDate.getDate() - 1);
+
+// export const prerender = true;
+---
+
+<Layout metadata={metadata}>
+  <!-- Events List Widget ******************* -->
+  <Calendar
+    events={events}
+    minDate={getCalendarDateOnly(minDate)}
+    maxDate={getCalendarDateOnly(maxDate)}
+    client:only="react"
+  />
+</Layout>

@@ -5,8 +5,6 @@ import Headline from '~/components/ministries/Headline.astro';
 
 import { ministriesListRobots, fetchMinistries } from '~/utils/ministries';
 
-export const prerender = true;
-
 const ministries = await fetchMinistries();
 
 // const allCategories = await findCategories();

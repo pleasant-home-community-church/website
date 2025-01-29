@@ -1,6 +1,35 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
+export interface EventTarget {
+  id: string;
+  color: string;
+  name: string;
+  group: string;
+}
+
+export interface Event {
+  id: string;
+  slug: string;
+  eventName: string;
+
+  status: string;
+  allDayEvent: boolean;
+  eventFeatured: boolean;
+
+  startsAt: Date;
+  endsAt: Date;
+  visibleEndsAt: Date;
+  visibleStartsAt: Date;
+
+  tags?: EventTarget[];
+}
+
+export interface DayEvents {
+  date: Date;
+  events: Event[];
+}
+
 export interface Ministry {
   id: string;
   slug: string;
@@ -303,6 +332,7 @@ export interface Faqs extends Omit<Headline, 'classes'>, Widget {
   iconDown?: string;
   items?: Array<Item>;
   columns?: number;
+  defaultIcon?: string;
 }
 
 export interface Steps extends Omit<Headline, 'classes'>, Widget {

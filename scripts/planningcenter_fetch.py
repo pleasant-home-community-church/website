@@ -118,8 +118,9 @@ async def main():
 
     args: Namespace = parse_args()
 
-    during_start: datetime = datetime.now(tz=UTC)
-    during_end: datetime = during_start + timedelta(weeks=52)
+    # expand the range by 5 weeks to make sure we have enough events to fill the calendar
+    during_start: datetime = datetime.now(tz=UTC) - timedelta(weeks=5)
+    during_end: datetime = during_start + timedelta(weeks=52 + 5)
 
     data_dir: Path = Path(args.data_dir)
     await data_dir.mkdir(parents=True, exist_ok=True)

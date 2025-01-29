@@ -41,16 +41,24 @@ export const headerData = {
       text: 'Sermons',
       href: getSermonsPermalink(),
       links: [
-        ...sermonsLinks,
+        // ...sermonsLinks,
         {
-          text: "Series",
+          text: "By Date",
+          href: getSermonsPermalink()
+        },
+        {
+          text: "By Series",
           href: getSeriesPermalink()
         },
         {
-          text: "Speakers",
+          text: "By Speakers",
           href: getSpeakersPermalink()
         },
       ]
+    },
+    {
+      text: 'Events',
+      href: getPermalink('/events'),
     },
     {
       text: 'Contact',
@@ -64,7 +72,31 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'About',
+      title: 'Ministries',
+      href: getMinistriesPermalink(),
+      links: ministriesLinks,
+    },
+    {
+      title: 'Sermons',
+      href: getSermonsPermalink(),
+      links: [
+        // ...sermonsLinks,
+        {
+          text: "By Date",
+          href: getSermonsPermalink(),
+        },
+        {
+          text: "By Series",
+          href: getSeriesPermalink(),
+        },
+        {
+          text: "By Speakers",
+          href: getSpeakersPermalink(),
+        },
+      ]
+    },
+    {
+      title: "Resources",
       links: [
         {
           text: 'What We Believe',
@@ -74,31 +106,15 @@ export const footerData = {
           text: 'Leadership and Staff',
           href: getPermalink('/leadership'),
         },
-      ],
-    },
-    {
-      title: 'Ministries',
-      href: getMinistriesPermalink(),
-      links: ministriesLinks,
-    },
-    {
-      title: 'Sermons',
-      href: getSermonsPermalink(),
-      links: [
-        ...sermonsLinks,
         {
-          text: "Series",
-          href: getSeriesPermalink(),
+          text: 'Events',
+          href: getPermalink('/events'),
         },
         {
-          text: "Speakers",
-          href: getSpeakersPermalink(),
+          text: 'Contact',
+          href: getPermalink('/contact'),
         },
       ]
-    },
-    {
-      title: 'Contact',
-      href: getPermalink('/contact'),
     },
   ],
   secondaryLinks: [

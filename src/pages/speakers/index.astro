@@ -7,8 +7,6 @@ import { getPermalink } from '~/utils/permalinks';
 import { speakersListRobots, fetchSpeakers } from '~/utils/speakers';
 import { findSermonsBySpeakers } from '~/utils/sermons';
 
-export const prerender = true;
-
 const speakers = await fetchSpeakers();
 const getLastPreached = speakers.map(async (speaker) => {
   const lastSermon = (await findSermonsBySpeakers([speaker.id]))[0];

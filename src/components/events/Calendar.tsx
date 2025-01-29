@@ -10,7 +10,7 @@ import { createCurrentTimePlugin } from '@schedule-x/current-time';
  
 import '@schedule-x/theme-default/dist/index.css'
  
-function CalendarApp({events, minDate, maxDate}) { 
+function CalendarApp({categories, events, minDate, maxDate}) { 
   const eventsService = useState(() => createEventsServicePlugin())[0]
   const calendar = useCalendarApp({
     firstDayOfWeek: 0,
@@ -21,6 +21,7 @@ function CalendarApp({events, minDate, maxDate}) {
       createViewMonthGrid(), 
       createViewMonthAgenda(),
     ],
+    calendars: categories,
     events: events,
     plugins: [
       eventsService,

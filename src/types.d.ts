@@ -1,7 +1,7 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
-export interface EventTarget {
+export interface EventTag {
   id: string;
   color: string;
   name: string;
@@ -22,7 +22,7 @@ export interface Event {
   visibleEndsAt: Date;
   visibleStartsAt: Date;
 
-  tags?: EventTarget[];
+  tags?: EventTag[];
 }
 
 export interface DayEvents {

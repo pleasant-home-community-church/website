@@ -23,6 +23,10 @@
   }
 }
 
+/* :root {
+  --sx-color-primary: #85cca9;
+} */
+
 .logo-name {
   font-family: "DreamOrphan";
   font-weight: 550;

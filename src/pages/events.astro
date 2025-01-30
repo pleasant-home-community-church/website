@@ -47,9 +47,9 @@ const categories = {
   default: {
     colorName: 'default',
     lightColors: {
-      main: '#85cca9',
-      container: pSBC(0.65, '#85cca9'),
-      onContainer: pSBC(-0.75, '#85cca9'),
+      main: pSBC(-0.6, '#85cca9'),
+      container: pSBC(-0.35, '#85cca9'),
+      onContainer: pSBC(0.85, '#85cca9'),
     },
     darkColors: {
       main: pSBC(-0.6, '#85cca9'),
@@ -68,9 +68,9 @@ allEvents.forEach((event) => {
         categories[key] = {
           colorName: categoryKey(tag),
           lightColors: {
-            main: pSBC(0.0, tag.color),
-            container: pSBC(0.65, tag.color),
-            onContainer: pSBC(-0.75, tag.color),
+            main: pSBC(-0.6, tag.color),
+            container: pSBC(-0.35, tag.color),
+            onContainer: pSBC(0.85, tag.color),
           },
           darkColors: {
             main: pSBC(-0.6, tag.color),

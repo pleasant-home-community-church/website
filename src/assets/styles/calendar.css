@@ -25,7 +25,7 @@
 :root {
   --sx-color-primary: #85cca9;
   --sx-color-on-primary: #fff;
-  --sx-color-primary-container: #eaddff;
+  --sx-color-primary-container: #85cca9;
   --sx-color-on-primary-container: #21005e;
   --sx-color-secondary: #625b71;
   --sx-color-on-secondary: #fff;
@@ -345,7 +345,7 @@
   top: calc(100% + 1px);
   width: 20.75rem;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 500px;
   overflow: scroll;
   box-shadow: var(--sx-box-shadow-level3);
   padding: var(--sx-spacing-modal-padding);
@@ -610,6 +610,7 @@
 .sx__view-selection {
   position: relative;
   font-size: var(--sx-calendar-header-input-font-size);
+  display: none;
 }
 
 .sx__view-selection-selected-item {

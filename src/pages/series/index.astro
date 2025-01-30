@@ -6,8 +6,6 @@ import Headline from '~/components/series/Headline.astro';
 import { getPermalink } from '~/utils/permalinks';
 import { seriesListRobots, fetchAllSeries } from '~/utils/series';
 
-export const prerender = true;
-
 const allSeries = await fetchAllSeries();
 
 const metadata = {

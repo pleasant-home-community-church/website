@@ -8,7 +8,7 @@
       "~/*": [
         "src/*"
       ]
-    }
+    },
   },
   "include": [
     ".astro/types.d.ts",

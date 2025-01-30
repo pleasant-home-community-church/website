@@ -31,6 +31,30 @@ const metadataDefinition = () =>
     }).optional(),
   }).optional();
 
+const eventsCollection = defineCollection({
+  loader: glob({ pattern: ['*.json'], base: 'src/data/events' }),
+  schema: z.object({
+    id: z.string(),
+    event_name: z.string(),
+
+    status: z.string(),
+    all_day_event: z.boolean(),
+    event_featured: z.boolean(),
+
+    starts_at: z.string().datetime(),
+    ends_at: z.string().datetime(),
+    visible_ends_at: z.string().datetime(),
+    visible_starts_at: z.string().datetime(),
+
+    tags: z.array(z.object({
+      id: z.string(),
+      color: z.string(),
+      name: z.string(),
+      group: z.string(),
+    })).optional(),
+  }),
+})
+
 const ministriesCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/ministries' }),
   schema: z.object({
@@ -230,6 +254,7 @@ const seriesCollection = defineCollection({
 });
 
 export const collections = {
+  events: eventsCollection,
   ministries: ministriesCollection,
   sermons: sermonsCollection,
   speakers: speakersCollection,

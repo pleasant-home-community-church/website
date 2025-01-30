@@ -1,0 +1,101 @@
+---
+import Calendar from '~/components/events/Calendar';
+import Layout from '~/layouts/PageLayout.astro';
+import { fetchEvents } from '~/utils/events';
+import { getCalendarEventDate, getCalendarDateOnly } from '~/utils/utils';
+import moment from 'moment';
+import { pSBC } from '~/utils/colors';
+
+const metadata = {
+  title: 'Events',
+};
+
+const categoryKey = (tag): string => {
+  return tag.name.toLowerCase().replace(/[\s'\\/]/g, '');
+};
+
+const getMinistry = (event) => {
+  let ministry = 'default';
+  if (event.tags) {
+    event.tags.forEach((tag) => {
+      if (tag.group == 'Ministry') {
+        ministry = categoryKey(tag);
+      }
+    });
+  }
+
+  return ministry;
+};
+
+const allEvents = await fetchEvents();
+const events = allEvents
+  .map((event) => {
+    const ministry = getMinistry(event);
+    return {
+      id: event.id,
+      title: event.eventName,
+      start: event.allDayEvent
+        ? getCalendarDateOnly(event.visibleStartsAt)
+        : getCalendarEventDate(event.visibleStartsAt),
+      end: event.allDayEvent ? getCalendarDateOnly(event.visibleEndsAt) : getCalendarEventDate(event.visibleEndsAt),
+      calendarId: ministry,
+    };
+  })
+  .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+
+const categories = {
+  default: {
+    colorName: 'default',
+    lightColors: {
+      main: '#85cca9',
+      container: pSBC(0.65, '#85cca9'),
+      onContainer: pSBC(-0.75, '#85cca9'),
+    },
+    darkColors: {
+      main: pSBC(-0.6, '#85cca9'),
+      container: pSBC(-0.35, '#85cca9'),
+      onContainer: pSBC(0.85, '#85cca9'),
+    },
+  },
+};
+
+allEvents.forEach((event) => {
+  event.tags?.forEach((tag) => {
+    // console.log(tag);
+    if (tag.group == 'Ministry') {
+      const key = categoryKey(tag);
+      if (!(key in categories)) {
+        categories[key] = {
+          colorName: categoryKey(tag),
+          lightColors: {
+            main: pSBC(0.0, tag.color),
+            container: pSBC(0.65, tag.color),
+            onContainer: pSBC(-0.75, tag.color),
+          },
+          darkColors: {
+            main: pSBC(-0.6, tag.color),
+            container: pSBC(-0.35, tag.color),
+            onContainer: pSBC(0.85, tag.color),
+          },
+        };
+      }
+    }
+  });
+});
+
+const minDate = moment().subtract(5, 'weeks');
+const maxDate = moment().add(1, 'year').add(5, 'weeks');
+
+// export const prerender = true;
+---
+
+<Layout metadata={metadata}>
+  <!-- Events List Widget ******************* -->
+  <Calendar
+    categories={categories}
+    events={events}
+    minDate={minDate.format('YYYY-MM-DD')}
+    maxDate={maxDate.format('YYYY-MM-DD')}
+    client:only="react"
+  />
+</Layout>

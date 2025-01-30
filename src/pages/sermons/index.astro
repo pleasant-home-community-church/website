@@ -5,8 +5,6 @@ import Headline from '~/components/sermons/Headline.astro';
 
 import { sermonsListRobots, fetchSermons } from '~/utils/sermons';
 
-export const prerender = true;
-
 const sermons = await fetchSermons();
 
 const metadata = {

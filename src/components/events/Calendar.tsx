@@ -8,7 +8,7 @@ import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createEventModalPlugin } from '@schedule-x/event-modal';
 import { createCurrentTimePlugin } from '@schedule-x/current-time';
  
-import '@schedule-x/theme-default/dist/index.css'
+import '~/assets/styles/calendar.css';
  
 function CalendarApp({categories, events, minDate, maxDate}) { 
   const eventsService = useState(() => createEventsServicePlugin())[0]

@@ -56,7 +56,7 @@
 }
 
 .is-dark {
-  --sx-color-primary: #d0bcff;
+  --sx-color-primary: #85cca9;
   --sx-color-on-primary: #371e73;
   --sx-color-primary-container: #4f378b;
   --sx-color-on-primary-container: #eaddff;
@@ -75,7 +75,7 @@
   --sx-color-surface-container: #211f26;
   --sx-color-surface-container-low: #1d1b20;
   --sx-color-surface-container-high: #2b2930;
-  --sx-color-background: #141218;
+  --sx-color-background: #030620;
   --sx-color-on-background: #e6e1e5;
   --sx-color-outline: #938f99;
   --sx-color-outline-variant: #444746;

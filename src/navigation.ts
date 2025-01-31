@@ -1,24 +1,24 @@
 import { getPermalink, getMinistriesPermalink, getSermonsPermalink, getSeriesPermalink, getSpeakersPermalink } from './utils/permalinks';
 import { fetchMinistries } from './utils/ministries';
-import { findLatestSermons } from './utils/sermons';
-import { getFormattedDate } from './utils/utils';
+// import { findLatestSermons } from './utils/sermons';
+// import { getFormattedDate } from './utils/utils';
 
 const ministriesLinks = (await fetchMinistries()).map((ministry) => ({
   text: ministry.title,
   href: getPermalink(ministry.slug, 'ministry'),
 }));
 
-const sermonsLinks = (await findLatestSermons({ count: 3 })).map((sermon) => ({
-  text: `${getFormattedDate(sermon.preachDate)}`,
-  href: getPermalink(sermon.permalink, 'sermon')
-}));
+// const sermonsLinks = (await findLatestSermons({ count: 3 })).map((sermon) => ({
+//   text: `${getFormattedDate(sermon.preachDate)}`,
+//   href: getPermalink(sermon.permalink, 'sermon')
+// }));
 
 export const headerData = {
   links: [
-    {
-      text: 'Home',
-      href: '/',
-    },
+    // {
+    //   text: 'Home',
+    //   href: '/',
+    // },
     {
       text: 'About',
       links: [
@@ -59,6 +59,10 @@ export const headerData = {
     {
       text: 'Events',
       href: getPermalink('/events'),
+    },
+    {
+      text: 'Give',
+      href: '/give'
     },
     {
       text: 'Contact',
@@ -109,6 +113,10 @@ export const footerData = {
         {
           text: 'Events',
           href: getPermalink('/events'),
+        },
+        {
+          text: 'Give',
+          href: '/give'
         },
         {
           text: 'Contact',

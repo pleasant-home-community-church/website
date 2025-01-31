@@ -14,11 +14,12 @@
 
 @layer calendar {
   .sx-react-calendar-wrapper {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    width: 95%;
-    height: 80vh;
+    width: 85%;
+    height: 800px;
     max-height: 90vh;
   }
 }
@@ -41,6 +42,11 @@
 }
 
 .bg-logo-b-l {
+  --tw-bg-opacity: .10;
+  background-color: rgb(133 204 169 / var(--tw-bg-opacity, 1)) /* #85cca9 */;
+}
+
+.bg-logo-b-r {
   --tw-bg-opacity: .10;
   background-color: rgb(133 204 169 / var(--tw-bg-opacity, 1)) /* #85cca9 */;
 }

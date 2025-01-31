@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/sermons/Headline.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Give',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline title="Donate" />
+    <Features2
+      title="2 Corinthians 9:6-8"
+      subtitle="Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously. Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+    />
+
+    <!-- items={[
+      {
+        title: 'Give',
+        description: 'You can also text any amount to 84321.',
+        icon: 'flat-color-icons:document',
+        callToAction: {
+          variant: 'primary',
+          text: 'Online',
+          href: 'https://pleasanthome.churchcenter.com/giving',
+        },
+      },
+      {
+        title: 'Volunteer',
+        description: 'We are always in need of help. If you have an interest in serving please contact us.',
+        icon: 'flat-color-icons:template',
+        callToAction: {
+          variant: 'primary',
+          text: 'Contact',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Pray',
+        description:
+          'Providing customer support for any technical issues related to the templates or their implementation.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]} -->
+
+    <CallToAction
+      title="Give"
+      subtitle="Thank you for supporting us!<br/>You can also text any amount to 84321."
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Online',
+          href: 'https://pleasanthome.churchcenter.com/giving',
+        },
+      ]}
+    />
+    <CallToAction
+      title="Volunteer"
+      subtitle="We are always in need of help.<br/>If you have an interest in serving please contact us."
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Contact',
+          href: '/contact',
+        },
+      ]}
+    />
+
+    <CallToAction
+      title="Pray"
+      subtitle="Rejoice always, pray without ceasing give thanks in all circumstances;<br/>for this is the will of God in Christ Jesus for you.<br/><b>1 Thessalonians 5:16-18</b>"
+    />
+  </section>
+</Layout>

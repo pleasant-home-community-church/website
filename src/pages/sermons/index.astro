@@ -1,9 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import SermonsList from '~/components/sermons/List.astro';
+// import SermonsList from '~/components/sermons/List.astro';
+import SermonsTable from '~/components/sermons/SermonsTable';
 import Headline from '~/components/sermons/Headline.astro';
 
 import { sermonsListRobots, fetchSermons } from '~/utils/sermons';
+import { MantineProvider } from '@mantine/core';
 
 const sermons = await fetchSermons();
 
@@ -21,6 +23,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline>Sermons</Headline>
-    <SermonsList sermons={sermons} />
+    <MantineProvider>
+      <SermonsTable sermons={sermons} />
+    </MantineProvider>
   </section>
 </Layout>

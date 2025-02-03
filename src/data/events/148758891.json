@@ -1,17 +1,17 @@
 {
-  "id": "117369925",
+  "id": "148758891",
   "all_day_event": false,
-  "ends_at": "2024-12-29T18:15:00Z",
+  "ends_at": "2026-02-01T20:00:00Z",
   "event_featured": false,
   "event_name": "Worship Service",
-  "starts_at": "2024-12-29T17:00:00Z",
+  "starts_at": "2026-02-01T18:45:00Z",
   "status": "approved",
-  "visible_ends_at": "2024-12-29T18:15:00Z",
-  "visible_starts_at": "2024-12-29T17:00:00Z",
+  "visible_ends_at": "2026-02-01T20:00:00Z",
+  "visible_starts_at": "2026-02-01T18:45:00Z",
   "tags": [
     {
       "id": "203256",
-      "color": "#F297CD",
+      "color": "#7EC7ED",
       "name": "Regular Sunday Services/Events",
       "group": "Ministry"
     },

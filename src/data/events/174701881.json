@@ -1,13 +1,13 @@
 {
-  "id": "174701824",
+  "id": "174701881",
   "all_day_event": false,
-  "ends_at": "2024-12-30T01:15:00Z",
+  "ends_at": "2026-02-02T01:15:00Z",
   "event_featured": false,
   "event_name": "Corporate Prayer Time",
-  "starts_at": "2024-12-30T00:30:00Z",
+  "starts_at": "2026-02-02T00:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2024-12-30T01:15:00Z",
-  "visible_starts_at": "2024-12-30T00:30:00Z",
+  "visible_ends_at": "2026-02-02T01:15:00Z",
+  "visible_starts_at": "2026-02-02T00:30:00Z",
   "tags": [
     {
       "id": "307165",

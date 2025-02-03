@@ -1,13 +1,13 @@
 {
-  "id": "117369927",
+  "id": "148758891",
   "all_day_event": false,
-  "ends_at": "2024-12-29T20:00:00Z",
+  "ends_at": "2026-02-01T20:00:00Z",
   "event_featured": false,
   "event_name": "Worship Service",
-  "starts_at": "2024-12-29T18:45:00Z",
+  "starts_at": "2026-02-01T18:45:00Z",
   "status": "approved",
-  "visible_ends_at": "2024-12-29T20:00:00Z",
-  "visible_starts_at": "2024-12-29T18:45:00Z",
+  "visible_ends_at": "2026-02-01T20:00:00Z",
+  "visible_starts_at": "2026-02-01T18:45:00Z",
   "tags": [
     {
       "id": "203256",

@@ -1,13 +1,13 @@
 {
-  "id": "177970112",
+  "id": "179517609",
   "all_day_event": false,
-  "ends_at": "2025-06-21T21:00:00Z",
+  "ends_at": "2025-06-22T21:00:00Z",
   "event_featured": false,
   "event_name": "VBS Dry Run, lunch, finish decorating",
-  "starts_at": "2025-06-21T16:00:00Z",
+  "starts_at": "2025-06-22T19:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-06-21T21:00:00Z",
-  "visible_starts_at": "2025-06-21T16:00:00Z",
+  "visible_ends_at": "2025-06-22T21:00:00Z",
+  "visible_starts_at": "2025-06-22T19:30:00Z",
   "tags": [
     {
       "id": "307165",

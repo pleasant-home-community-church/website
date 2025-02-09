@@ -1,20 +1,14 @@
-import { MantineProvider } from '@mantine/core';
 import { Table } from './Table';
 import type { Sermon } from '~/types';
+import { MantineProvider } from '@mantine/core';
 
 interface SermonTableProps {
   sermons: Sermon[];
 }
 
 export const SermonsTable = ({sermons}: SermonTableProps) => {
-
-  // convert sermon to sermon record
-  // const records: SermonRecord[] = sermons?.map(sermon => ({
-  //   title: sermon.title,
-  //   bibleText: sermon.bibleText,
-  // }));
-
   return (
+    // <MantineProvider theme={{ ...parentTheme, primaryColor: 'pink' }}>
     <MantineProvider>
       <Table sermons={sermons} />
     </MantineProvider>

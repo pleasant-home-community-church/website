@@ -1,5 +1,21 @@
-.table {
-  th {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer table {
+  .table {
     font-family: var(--aw-font-sans);
+  }
+
+  .head-cells {
+    @apply text-2xl
+  }
+
+  .body-cells {
+    @apply text-lg
+  }
+
+  .date-col {
+    @apply text-right
   }
 }

@@ -56,8 +56,16 @@ const googleMaps = SITE?.googleMaps;
     <Fragment slot="content">
       <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Sunday Morning</h3>
       9:00 am, 10:45 am<br /><br />
+      <iframe
+        tabindex="-1"
+        width="200"
+        height="40"
+        src="https://embed.sermonaudio.com/button/l/phcc/?color=red&borderless=true&rounded=true"
+        frameborder="0"
+        scrolling="no"></iframe><br />
       <h3 class="text-xl font-bold tracking-tight dark:text-white sm:text-1xl mb-2">Location</h3>
-      <span set:html={address} /><br /><span set:html={cityState} /><br /><br />
+      <span set:html={address} /><br /><span set:html={cityState} />
+      <br /><br />
       <a href={appleMaps} target="_blank"><Icon name="tabler:brand-apple" class="w-5 h-5 inline" /></a>
       <a href={googleMaps} target="_blank"><Icon name="tabler:brand-google" class="w-5 h-5 inline" /></a>
     </Fragment>

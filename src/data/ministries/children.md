@@ -20,7 +20,7 @@ Please visit the check-in station before attendance. Your child will receive a s
 
 First time visiting? Save time by completing our online registration form. This will allow you to check in quickly when you arrive.
 
-[Register](https://pleasanthome.churchcenter.com/registrations/events/1904085)
+<a href="https://pleasanthome.churchcenter.com/registrations/events/1904085" target="_blank">Register</a>
 
 ### Nursery & Pre-K Classes
 
@@ -45,4 +45,4 @@ If so, we would love to include and accommodate them. We currently have a separa
 
 Please complete the Children's Ministry Registration form so we can get a little more information to know your child's needs and understand how to best minister to you and your child.
 
-[Register](https://pleasanthome.churchcenter.com/registrations/events/1904085)
+<a href="https://pleasanthome.churchcenter.com/registrations/events/1904085" target="_blank">Register</a>

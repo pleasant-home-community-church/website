@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
+import ChurchCenterLogo from '~/assets/images/church-center-logo.svg';
 
 interface Link {
   text?: string;
@@ -43,6 +44,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           <a href=`mailto:${SITE?.email}?subject=Contact from Pleasant Home Website` set:html={SITE?.email} />
           <br />{(<Icon name="tabler:phone" class="w-5 h-5 inline" />)}
           <span set:html={SITE?.phone} />
+          <br /><br />
+          <a href="https://pleasanthome.churchcenter.com/" target="_blank"
+            ><ChurchCenterLogo width="300" height="87" style="display: inline;" /></a
+          >
         </div>
         <div class="text-sm text-muted flex gap-1">
           {

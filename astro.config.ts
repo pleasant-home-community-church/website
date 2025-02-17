@@ -24,6 +24,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+  site: 'https://www.phccgresham.org',
 
   experimental: {
     svg: true,

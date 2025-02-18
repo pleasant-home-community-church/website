@@ -43,7 +43,7 @@ importers:
         version: 2.19.0
       '@schedule-x/event-modal':
         specifier: ^2.15.1
-        version: 2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
+        version: 2.20.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
       '@schedule-x/events-service':
         specifier: ^2.15.1
         version: 2.19.0
@@ -1102,8 +1102,8 @@ packages:
   '@schedule-x/current-time@2.19.0':
     resolution: {integrity: sha512-KKCyegIAPvRcniyXW7e4F+PZZL29gFzLcN3wBWgATC8aCTzvFwVpS1ovz8rV3CZVCawzHc6R5H3j9XsT1xoL/Q==}
 
-  '@schedule-x/event-modal@2.19.0':
-    resolution: {integrity: sha512-gogbUwqzMF7fAgtGv9dIiK4Ji/3L/3i4YLqWOeJ5UgzVqg8Iko/3rkKbJFdoOq6CS4Yv2N0wzMRDEIDAj6zv5A==}
+  '@schedule-x/event-modal@2.20.0':
+    resolution: {integrity: sha512-DQsqJMI7VI7NhF/pMWsPEqKGjUzjkrEkfWrmH0aE1gqD59aveWHqDunr3Bw/4tDSX0rW1YN/M+D4LlbABs9imw==}
     peerDependencies:
       '@preact/signals': ^1.1.5
       preact: ^10.19.2
@@ -4896,7 +4896,7 @@ snapshots:
 
   '@schedule-x/current-time@2.19.0': {}
 
-  '@schedule-x/event-modal@2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)':
+  '@schedule-x/event-modal@2.20.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)':
     dependencies:
       '@preact/signals': 1.3.2(preact@10.25.4)
       preact: 10.25.4

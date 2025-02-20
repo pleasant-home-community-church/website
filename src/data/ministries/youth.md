@@ -1,7 +1,7 @@
 ---
 title: Youth Ministry
 excerpt: "Rooted is for Jr. & Sr. High Students"
-image: ~/assets/images/ministry-youth-header.jpg
+image: ~/assets/images/ministry-youth-logo.png
 ---
 
 Lead by Pastor Jason Evans

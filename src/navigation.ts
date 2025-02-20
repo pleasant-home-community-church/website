@@ -28,7 +28,7 @@ export const headerData = {
         },
         {
           text: 'Leadership and Staff',
-          href: getPermalink('/leadership'),
+          href: getPermalink('/leadership-staff'),
         },
       ],
     },
@@ -108,7 +108,7 @@ export const footerData = {
         },
         {
           text: 'Leadership and Staff',
-          href: getPermalink('/leadership'),
+          href: getPermalink('/leadership-staff'),
         },
         {
           text: 'Events',

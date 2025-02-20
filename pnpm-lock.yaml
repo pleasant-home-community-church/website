@@ -46,13 +46,13 @@ importers:
         version: 2.20.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
       '@schedule-x/events-service':
         specifier: ^2.15.1
-        version: 2.19.0
+        version: 2.20.0
       '@schedule-x/react':
         specifier: ^2.15.1
-        version: 2.19.0(@schedule-x/calendar@2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 2.20.0(@schedule-x/calendar@2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@schedule-x/theme-default':
         specifier: ^2.15.1
-        version: 2.19.0
+        version: 2.20.0
       '@tabler/icons-react':
         specifier: ^3.29.0
         version: 3.30.0(react@19.0.0)
@@ -1108,18 +1108,18 @@ packages:
       '@preact/signals': ^1.1.5
       preact: ^10.19.2
 
-  '@schedule-x/events-service@2.19.0':
-    resolution: {integrity: sha512-klOOKRM6HE0scP8+cgZOG8/g3ahxip0l1ubc5REz6EX5pcmvQ1DbjKgk0O80XSWrJga20Ppbw32oduMmt2BvFw==}
+  '@schedule-x/events-service@2.20.0':
+    resolution: {integrity: sha512-I5hVQg97YkM3x+ONDLX2P1PzxXIzVM31vM7tmLQoMdy02S7pApQeH8fCJybZvUlwcAYqL0GnJ3xKizfVNDgEiA==}
 
-  '@schedule-x/react@2.19.0':
-    resolution: {integrity: sha512-w6JrjFFJqXKvYQPb7DIdOp0llGkB+QZ6pWyUqxXEEspyY2iIjWMzcoR+PKEAK+wKlS8TCj/fG2KdFxLxU5Ltag==}
+  '@schedule-x/react@2.20.0':
+    resolution: {integrity: sha512-PL4E/IazbvO+GcfCLMvk7NKonrHk2V51fz2j8loMXpglX1s8xkYn1Mse8i8jMjg+Uy1F/jyOTwPquo4YWzwIXQ==}
     peerDependencies:
       '@schedule-x/calendar': ^2.18.0
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
-  '@schedule-x/theme-default@2.19.0':
-    resolution: {integrity: sha512-mqMBIYOrcGSlW4VL+rAi0jLchaLuKFtHvqGfYtVoEam9WQFqMnikl30WsQ4vnfmX5kChek/hSzutGpnb7W6NzA==}
+  '@schedule-x/theme-default@2.20.0':
+    resolution: {integrity: sha512-koH+2GVfAtCDrke+8ZBSVt1YUcJAVAJth9tuHVNXp7qEQmH5d3ML6weo/YT0FBNI7CHXzox+XnN3cgBtS0Vvjg==}
 
   '@shikijs/core@1.29.2':
     resolution: {integrity: sha512-vju0lY9r27jJfOY4Z7+Rt/nIOjzJpZ3y+nYpqtUZInVoXQ/TJZcfGnNOGnKjFdVZb8qexiCuSlZRKcGfhhTTZQ==}
@@ -4901,15 +4901,15 @@ snapshots:
       '@preact/signals': 1.3.2(preact@10.25.4)
       preact: 10.25.4
 
-  '@schedule-x/events-service@2.19.0': {}
+  '@schedule-x/events-service@2.20.0': {}
 
-  '@schedule-x/react@2.19.0(@schedule-x/calendar@2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@schedule-x/react@2.20.0(@schedule-x/calendar@2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@schedule-x/calendar': 2.19.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@schedule-x/theme-default@2.19.0': {}
+  '@schedule-x/theme-default@2.20.0': {}
 
   '@shikijs/core@1.29.2':
     dependencies:

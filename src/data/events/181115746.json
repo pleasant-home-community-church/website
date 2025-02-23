@@ -1,13 +1,13 @@
 {
-  "id": "177970013",
+  "id": "181115746",
   "all_day_event": false,
-  "ends_at": "2025-05-17T18:00:00Z",
+  "ends_at": "2025-05-18T21:30:00Z",
   "event_featured": false,
   "event_name": "VBS Team Mtgs",
-  "starts_at": "2025-05-17T16:00:00Z",
+  "starts_at": "2025-05-18T19:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-05-17T18:00:00Z",
-  "visible_starts_at": "2025-05-17T16:00:00Z",
+  "visible_ends_at": "2025-05-18T21:30:00Z",
+  "visible_starts_at": "2025-05-18T19:30:00Z",
   "tags": [
     {
       "id": "307165",

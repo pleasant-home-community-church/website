@@ -1,9 +1,9 @@
-name: Fetch Latest Sermons
+name: Fetch Latest Ministries
 
 on:
   # Re-run every 4 hours
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "45 */6 * * *"
     
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
@@ -30,12 +30,14 @@ jobs:
         with:
           python-version-file: "scripts/pyproject.toml"
 
-      - name: Run script to fetch sermons
+      - name: Run script to fetch events
         env:
-          SERMONAUDIO_API_KEY: ${{ secrets.SERMONAUDIO_API_KEY }}
+          PLANNINGCENTER_CLIENT_ID: ${{ secrets.PLANNINGCENTER_CLIENT_ID }}
+          PLANNINGCENTER_SECRET: ${{ secrets.PLANNINGCENTER_SECRET }}
+
         run: |
           cd scripts
-          uv run sermonaudio_fetch.py --data-dir "${{ github.workspace }}/src/data"
+          uv run planningcenter_fetch_ministries.py --data-dir "${{ github.workspace }}/src/data"
           
       - name: Commit and push changes to repo
         uses: EndBug/add-and-commit@v9

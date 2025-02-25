@@ -1,7 +1,9 @@
 ---
 title: "Senior Adults' Ministry"
-excerpt: The Prime Timers have a great time together.
-image: ~/assets/images/ministry-seniors-header.jpg
+excerpt: The Prime Timers have a great time together.    Sometimes we go out to eat, sometimes we eat at th...
+image: ~/assets/images/ministry-seniors-29dcfb58-2b8f-492d-b55b-150e72c80610.jpg
 ---
 
-Sometimes we go out to eat, sometimes we eat at the church.  We might have a game day or go to a museum.  Whatever it is, we have fun.  If you are 50+ (or have a spouse who is), you are welcome to join us.
+The Prime Timers have a great time together.  
+  
+Sometimes we go out to eat, sometimes we eat at the church.  We might have a game day or go to a museum.  Whatever it is, we have fun.  If you are 50+ (or have a spouse who is), you are welcome to join us.

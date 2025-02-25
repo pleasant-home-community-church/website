@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "python: fetch sermonaudio",
+      "name": "python: fetch sermons",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/scripts/sermonaudio_fetch.py",
@@ -15,13 +15,28 @@
       "justMyCode": false,
     },
     {
-      "name": "python: fetch planningcenter",
+      "name": "python: fetch events",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/scripts/planningcenter_fetch.py",
+      "program": "${workspaceFolder}/scripts/planningcenter_fetch_events.py",
       "args": [
         "--data-dir",
         "${workspaceFolder}/src/data",
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/scripts",
+      "justMyCode": false,
+    },
+    {
+      "name": "python: fetch ministries",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/planningcenter_fetch_ministries.py",
+      "args": [
+        "--data-dir",
+        "${workspaceFolder}/src/data",
+        "--asset-dir",
+        "${workspaceFolder}/src/assets",
       ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/scripts",

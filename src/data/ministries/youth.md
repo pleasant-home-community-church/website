@@ -1,14 +1,10 @@
 ---
-title: Youth Ministry
-excerpt: "Rooted is for Jr. & Sr. High Students"
-image: ~/assets/images/ministry-youth-logo.png
+title: "Rooted"
+excerpt: Our purpose is to honor God in all that we do by faithfully grounding ourselves in the truth of the ...
+image: ~/assets/images/ministry-youth-9b4ba32c-e769-4292-b658-d80366d00c03.png
 ---
 
-Lead by Pastor Jason Evans
-
-The purpose of ROOTED is to:
-
-* Come alongside the parents to help the students grow in the Lord. The ministry is not in competition with the family, but in allegiance to it, as the family is also in allegiance to the church.
-* See believing students become complete in Christ, using their spiritual gifts and talents to serve the local body and the universal body around the world.
-* Evangelize to the unbelieving students in the greater Gresham area.
-* See every youth (grades 6-12) have a passionate and personal relationship with Jesus Christ.
+Our purpose is to honor God in all that we do by faithfully grounding ourselves in the truth of the Bible. We seek to equip students with the knowledge and tools to deepen their relationship with God, encouraging them to live out their faith boldly and authentically in their daily lives. Through fellowship, worship, and discipleship, we aim to inspire a generation to know and follow God wholeheartedly.  
+  
+Colossians 2:6-7  
+Therefore, as you received Christ Jesus the Lord, so walk in him, rooted and built up in him and established in the faith, just as you were taught, abounding in thanksgiving.

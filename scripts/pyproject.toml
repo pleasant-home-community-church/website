@@ -9,6 +9,7 @@ dependencies = [
   "decorest>=0.1.0",
   "httpx>=0.28.1",
   "loguru>=0.7.3",
+  "markdownify>=1.0.0",
   "pydantic>=2.10.5",
   "python-dotenv>=1.0.1",
   "sermonaudio>=6.15.2",

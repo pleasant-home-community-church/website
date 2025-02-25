@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from httpx import BasicAuth
 from loguru import logger
 
-from planningcenter_models import CalendarInstance
+from planningcenter_models_events import CalendarInstance
 
 
 def lookup_related(d: dict, included: dict) -> dict:

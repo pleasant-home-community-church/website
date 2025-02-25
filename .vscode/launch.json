@@ -35,7 +35,7 @@
       "args": [
         "--data-dir",
         "${workspaceFolder}/src/data",
-        "--asset-dir",
+        "--assets-dir",
         "${workspaceFolder}/src/assets",
       ],
       "console": "integratedTerminal",

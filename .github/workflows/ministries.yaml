@@ -37,7 +37,7 @@ jobs:
 
         run: |
           cd scripts
-          uv run planningcenter_fetch_ministries.py --data-dir "${{ github.workspace }}/src/data"
+          uv run planningcenter_fetch_ministries.py --data-dir "${{ github.workspace }}/src/data" --assets-dir "${{ github.workspace }}/src/assets"
           
       - name: Commit and push changes to repo
         uses: EndBug/add-and-commit@v9

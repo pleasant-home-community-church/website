@@ -174,7 +174,7 @@ def parse_args():
 
     parser = ArgumentParser()
     parser.add_argument("--data-dir", type=str, required=True)
-    parser.add_argument("--asset-dir", type=str, required=True)
+    parser.add_argument("--assets-dir", type=str, required=True)
     return parser.parse_args()
 
 
@@ -194,9 +194,9 @@ async def main():
     await ministries_dir.mkdir(parents=True, exist_ok=True)
 
     # get the asset dir and make sure it exists
-    asset_dir: Path = Path(args.asset_dir)
-    await asset_dir.mkdir(parents=True, exist_ok=True)
-    images_dir = asset_dir / "images"
+    assets_dir: Path = Path(args.assets_dir)
+    await assets_dir.mkdir(parents=True, exist_ok=True)
+    images_dir = assets_dir / "images"
 
     # always cleanup the ministries images to remove old ministries
     async for image_file in images_dir.glob("ministry-*.*"):

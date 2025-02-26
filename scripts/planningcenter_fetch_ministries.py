@@ -12,6 +12,7 @@ from loguru import logger
 from markdownify import MarkdownConverter
 
 from planningcenter_models_ministries import (
+    DividerBlock,
     ImageBlock,
     PageInstance,
     SectionHeaderBlock,
@@ -131,6 +132,8 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
     # iterate blocks and render content
     for block in page.attr.blocks:
         match block:
+            case DividerBlock():
+                content.append("---")
             case ImageBlock():
                 alt: Path = Path(block.alt)
                 content.append(f"![{alt.name.lower()}](~/assets/images/ministry-{slug}-{block.id}{alt.suffix.lower()})")

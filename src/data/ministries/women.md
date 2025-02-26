@@ -4,8 +4,12 @@ excerpt: Older women likewise are to be reverent in behavior, not slanderers or 
 image: ~/assets/images/ministry-women-75d02e01-fbaf-4660-a250-efbb480879a0.jpg
 ---
 
+---
+
 "Older women likewise are to be reverent in behavior, not slanderers or slaves to much wine.  They are to teach what is good, and to train the young women to love their husbands and children, to be self-controlled, pure, working at home, kind, and submissive to their own husbands, that the word of God may not be reviled."  
  - Titus 2:3-5
+
+---
 
 ![our purpose.jpg](~/assets/images/ministry-women-75d02e01-fbaf-4660-a250-efbb480879a0.jpg)
 
@@ -19,7 +23,13 @@ Events hosted by the Women's Ministry provide a connection to encourage women to
 
 ![women's retreat photo 2024.jpg](~/assets/images/ministry-women-26a34271-5e28-48d3-8aea-ddfcdfb3afde.jpg)
 
+---
+
+---
+
 ![contact.jpg](~/assets/images/ministry-women-cfa3c2e1-a600-4738-b56d-438405639354.jpg)
 
 Women's Leadership Team  
 Email: women@phccgresham.org
+
+---

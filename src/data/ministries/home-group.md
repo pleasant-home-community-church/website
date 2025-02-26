@@ -4,6 +4,8 @@ excerpt: Home Groups are a place to develop deep relationships within the body o
 image: ~/assets/images/ministry-home-group-e0677497-5dfc-480a-ac7e-a180e3422a30.webp
 ---
 
+![ministry-home-groups-header.dtvptrrg_1qurhh.webp](~/assets/images/ministry-home-group-e0677497-5dfc-480a-ac7e-a180e3422a30.webp)
+
 Home Groups are a place to develop deep relationships within the body of Christ.  
   
 In each group you will find a warm welcome, exposure to God’s truth, and the encouragement you need to grow in the grace and knowledge of the Lord Jesus Christ.

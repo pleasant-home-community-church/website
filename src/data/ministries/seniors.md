@@ -4,6 +4,8 @@ excerpt: The Prime Timers have a great time together.    Sometimes we go out to 
 image: ~/assets/images/ministry-seniors-29dcfb58-2b8f-492d-b55b-150e72c80610.jpg
 ---
 
+![ministry-seniors-header.jpg](~/assets/images/ministry-seniors-29dcfb58-2b8f-492d-b55b-150e72c80610.jpg)
+
 The Prime Timers have a great time together.  
   
 Sometimes we go out to eat, sometimes we eat at the church.  We might have a game day or go to a museum.  Whatever it is, we have fun.  If you are 50+ (or have a spouse who is), you are welcome to join us.

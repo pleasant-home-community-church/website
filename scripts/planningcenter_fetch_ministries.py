@@ -135,7 +135,7 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
     combined: str = "\n".join(content)
     excerpt: str = await geneate_excerpt(combined)
 
-    return excerpt.replace("\n", ""), combined
+    return excerpt.replace("\n", "").replace("*", "").replace('"', ""), combined
 
 
 async def model_to_markdown(page: PageInstance, ministries_dir: Path, images_dir: Path):

@@ -1,6 +1,6 @@
 ---
 title: "Women's Ministry"
-excerpt: **"Older women likewise are to be reverent in behavior, not slanderers or slaves to much wine.  They...
+excerpt: Older women likewise are to be reverent in behavior, not slanderers or slaves to much wine.  They...
 image: ~/assets/images/ministry-women-75d02e01-fbaf-4660-a250-efbb480879a0.JPG
 ---
 

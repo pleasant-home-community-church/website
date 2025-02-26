@@ -14,6 +14,7 @@ from markdownify import MarkdownConverter
 from planningcenter_models_ministries import (
     ImageBlock,
     PageInstance,
+    SectionHeaderBlock,
     TextBlock,
 )
 
@@ -73,12 +74,14 @@ async def download_images(page: PageInstance, images_dir: Path) -> tuple[Optiona
     # look through all the blocks
     for block in page.attr.blocks:
         match block:
+            case SectionHeaderBlock():
+                ...
             case ImageBlock():
                 if not first:
                     first = block.id
 
                 # make image file path
-                suffix: str = Path(block.alt).suffix
+                suffix: str = Path(block.alt).suffix.lower()
                 image_file: Path = images_dir / f"ministry-{slug}-{block.id}{suffix}"
                 images[block.id] = image_file.name
 
@@ -123,19 +126,27 @@ def md(html, **options):
 async def convert_content(page: PageInstance) -> tuple[str, str]:
     content: list[str] = []
     excerpt: Optional[str] = None
+    slug: str = CC_TO_SITE_SLUGS[page.attr.slug]
 
     # iterate blocks and render content
     for block in page.attr.blocks:
         match block:
+            case ImageBlock():
+                alt: Path = Path(block.alt)
+                content.append(f"![{alt.name.lower()}](~/assets/images/ministry-{slug}-{block.id}{alt.suffix.lower()})")
+            case SectionHeaderBlock():
+                ...
             case TextBlock():
                 markdown: str = md(block.content)
                 content.append(f"{markdown}")
 
-    # generate excerpt
-    combined: str = "\n".join(content)
-    excerpt: str = await geneate_excerpt(combined)
+                if excerpt is None:
+                    excerpt = await geneate_excerpt(markdown)
 
-    return excerpt.replace("\n", ""), combined
+    # generate excerpt
+    combined: str = "\n\n".join(content)
+
+    return excerpt.replace("\n", "").replace("*", "").replace('"', ""), combined
 
 
 async def model_to_markdown(page: PageInstance, ministries_dir: Path, images_dir: Path):

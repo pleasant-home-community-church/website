@@ -4,6 +4,8 @@ excerpt: Our desire is to help you glorify God in your thoughts, words and actio
 image: ~/assets/images/ministry-counseling-825206bb-1a43-40df-acf5-93f223b38e28.webp
 ---
 
+![ministry-counseling-header.webp](~/assets/images/ministry-counseling-825206bb-1a43-40df-acf5-93f223b38e28.webp)
+
 Our desire is to help you glorify God in your thoughts, words and actions as you walk through life and interact with others.  
   
 We are confident that through the Scriptures and the power of His Spirit, God has given us everything we need for life and godliness (2 Peter 1:3-4). Because of this, the Scriptures are held as the final authority in all matters.

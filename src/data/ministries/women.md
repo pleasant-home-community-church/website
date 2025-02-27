@@ -96,25 +96,13 @@ A morning time of devotion, fellowship, and food.
 
 ![background](~/assets/images/ministry-women-d0866aee-a229-4c1d-980f-c8dd557e1225-0.jpeg)
 
-****
-
-
-
 ---
 
 ![background](~/assets/images/ministry-women-d0866aee-a229-4c1d-980f-c8dd557e1225-1.jpeg)
 
-****
-
-
-
 ---
 
 ![background](~/assets/images/ministry-women-d0866aee-a229-4c1d-980f-c8dd557e1225-2.jpeg)
-
-****
-
-
 
 ---
 

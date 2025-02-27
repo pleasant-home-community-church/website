@@ -30,15 +30,11 @@ Book of Psalms
 
 **Prayer Requests**
 
-
-
 ---
 
 <a href="https://pleasanthome.churchcenter.com/pages/rooted-pastors-desk" target="_blank">![background](~/assets/images/ministry-youth-31b11581-9a9c-49b9-be06-c9be1216c0b3-2.png)</a>
 
 **Pastor's Desk**
-
-
 
 ---
 
@@ -53,8 +49,6 @@ Recommended Listening
 <a href="https://pleasanthome.churchcenter.com/pages/rooted-upcoming-events" target="_blank">![background](~/assets/images/ministry-youth-31b11581-9a9c-49b9-be06-c9be1216c0b3-4.png)</a>
 
 **Upcoming Events**
-
-
 
 ---
 

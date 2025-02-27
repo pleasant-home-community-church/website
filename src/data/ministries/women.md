@@ -18,7 +18,7 @@ Women's Ministry
 
 ![our purpose.jpg](~/assets/images/ministry-women-75d02e01-fbaf-4660-a250-efbb480879a0.jpg)
 
-The purpose of the Women's Ministry at PHCC is to equip women to apply the principles of biblical womanhood to all of life and to model and instruct the next generation in that application.  We provide opportunities for mentoring and disciplining to assist women to teach and lead other godly women and to strengthen each woman's love for and service to God, their family, and the church.
+The purpose of the Women's Ministry at PHCC is to equip women to apply the principles of biblical womanhood to all of life and to model and instruct the next generation in that application.  We provide opportunities for mentoring and discipling to assist women to teach and lead other godly women and to strengthen each woman's love for and service to God, their family, and the church.
 
 Events hosted by the Women's Ministry provide a connection to encourage women to establish godly relationships and to provide purposeful and God-glorifying times of fellowship with fellow sisters in Christ.
 

@@ -1,5 +1,5 @@
 ---
-import Image from '~/components/common/Image.astro';
+// import Image from '~/components/common/Image.astro';
 import type { Ministry } from '~/types';
 
 export interface Props {
@@ -7,25 +7,21 @@ export interface Props {
   url: string | URL;
 }
 
-const { ministry } = Astro.props;
+//const { ministry } = Astro.props;
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
   <article>
-    <header
-      class={ministry.image
-        ? 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
-        : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
-    >
-      <h1
+    <header class="intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+      <!-- <h1
         class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
       >
         {ministry.title}
-      </h1>
-      <p
+      </h1> -->
+      <!-- <p
         class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
       >
-      </p>
+      </p> -->
 
       <!-- {
         ministry.image ? (

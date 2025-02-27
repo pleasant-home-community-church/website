@@ -3,6 +3,7 @@ from os import environ
 from re import compile, Pattern
 from shutil import rmtree
 from typing import Callable, AsyncIterator, Optional
+from urllib.parse import urlparse, ParseResult
 
 from anyio import run, Path
 from decorest import backend, content, endpoint, on, query, GET, RestClient
@@ -12,7 +13,9 @@ from loguru import logger
 from markdownify import MarkdownConverter
 
 from planningcenter_models_ministries import (
+    ButtonBlock,
     DividerBlock,
+    GridBlock,
     ImageBlock,
     PageInstance,
     SectionHeaderBlock,
@@ -75,8 +78,22 @@ async def download_images(page: PageInstance, images_dir: Path) -> tuple[Optiona
     # look through all the blocks
     for block in page.attr.blocks:
         match block:
-            case SectionHeaderBlock():
-                ...
+            case GridBlock():
+                # not using grid block images for page image (first)
+
+                for i, item in enumerate(block.attr.items):
+                    url: ParseResult = urlparse(item.src)
+                    suffix: str = Path(url.path).suffix.lower()
+                    image_file: Path = images_dir / f"ministry-{slug}-{block.id}-{i}{suffix}"
+                    images[block.id] = image_file.name
+
+                    # download all the images from each page
+                    async with AsyncClient() as client:
+                        async with client.stream("GET", item.src) as response:
+                            async with await image_file.open("wb") as f:
+                                async for chunk in response.aiter_bytes():
+                                    await f.write(chunk)
+
             case ImageBlock():
                 if not first:
                     first = block.id
@@ -92,6 +109,24 @@ async def download_images(page: PageInstance, images_dir: Path) -> tuple[Optiona
                         async with await image_file.open("wb") as f:
                             async for chunk in response.aiter_bytes():
                                 await f.write(chunk)
+
+            case SectionHeaderBlock():
+                # check if there is an image in the section header
+                if block.background_image_enabled:
+                    if not first:
+                        first = block.id
+
+                    url: ParseResult = urlparse(block.background_image_url)
+                    suffix: str = Path(url.path).suffix.lower()
+                    image_file: Path = images_dir / f"ministry-{slug}-{block.id}{suffix}"
+                    images[block.id] = image_file.name
+
+                    # download all the images from each page
+                    async with AsyncClient() as client:
+                        async with client.stream("GET", block.background_image_url) as response:
+                            async with await image_file.open("wb") as f:
+                                async for chunk in response.aiter_bytes():
+                                    await f.write(chunk)
 
     # return the first image id and all the images by id
     return first, images
@@ -132,13 +167,51 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
     # iterate blocks and render content
     for block in page.attr.blocks:
         match block:
+            case ButtonBlock():
+                ...
+
             case DividerBlock():
                 content.append("---")
+
+            case GridBlock():
+                for i, item in enumerate(block.attr.items):
+                    if i > 0:
+                        content.append("---")
+
+                    # image
+                    url: ParseResult = urlparse(item.src)
+                    suffix: str = Path(url.path).suffix.lower()
+
+                    image_md: str = f"![background](~/assets/images/ministry-{slug}-{block.id}-{i}{suffix})"
+                    if item.link_url:
+                        image_md = f'<a href="{item.link_url}" target="_blank">{image_md}</a>'
+
+                    content.append(image_md)
+
+                    # title
+                    title: str = item.title.strip()
+                    content.append(f"**{title}**")
+
+                    # text
+                    body: str = item.body.strip()
+                    content.append(body)
+
             case ImageBlock():
                 alt: Path = Path(block.alt)
                 content.append(f"![{alt.name.lower()}](~/assets/images/ministry-{slug}-{block.id}{alt.suffix.lower()})")
+
             case SectionHeaderBlock():
-                ...
+                # insert text
+                if block.callout_text_enabled:
+                    text: str = block.callout_text.strip()
+                    content.append(f"{text}\n{'=' * len(text)}")
+
+                # insert image
+                if block.background_image_enabled:
+                    url: ParseResult = urlparse(block.background_image_url)
+                    suffix: str = Path(url.path).suffix.lower()
+                    content.append(f"![background](~/assets/images/ministry-{slug}-{block.id}{suffix})")
+
             case TextBlock():
                 markdown: str = md(block.content)
                 content.append(f"{markdown}")

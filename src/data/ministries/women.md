@@ -54,10 +54,12 @@ Location: Canby Grove Retreat Center
 Monday: 9:00am
 
 Tuesday: 6:30pm
-Coincides with Men's Study
+coincides with Men's Study
 
 Wednesday: 9:00am
 childcare provided
+
+Thursday: 10:00am
 
 ![background](~/assets/images/ministry-women-749b0e7f-643c-493c-9c7d-5bb3af6c60b7-0.jpg)
 

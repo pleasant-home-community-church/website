@@ -190,11 +190,13 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
 
                     # title
                     title: str = item.title.strip()
-                    content.append(f"**{title}**")
+                    if title:
+                        content.append(f"**{title}**")
 
                     # text
                     body: str = item.body.strip()
-                    content.append(body)
+                    if body:
+                        content.append(body)
 
             case ImageBlock():
                 alt: Path = Path(block.alt)

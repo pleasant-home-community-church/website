@@ -168,7 +168,8 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
     for block in page.attr.blocks:
         match block:
             case ButtonBlock():
-                ...
+                button_link: str = f'<a href="{block.link_url}" target="_blank">{block.text}</a>'
+                content.append(f"{button_link}\n{"="*len(button_link)}")
 
             case DividerBlock():
                 content.append("---")

@@ -1,0 +1,25 @@
+{
+  "id": "172804466",
+  "all_day_event": true,
+  "ends_at": "2025-06-28T06:59:59Z",
+  "event_featured": true,
+  "event_name": "VBS",
+  "starts_at": "2025-06-23T07:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-06-28T06:59:59Z",
+  "visible_starts_at": "2025-06-23T07:00:00Z",
+  "tags": [
+    {
+      "id": "170750",
+      "color": "#F5A57A",
+      "name": "Vacation Bible School",
+      "group": "Special Services/Events"
+    },
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ]
+}

@@ -10,6 +10,12 @@
   "visible_starts_at": "2025-02-26T17:00:00Z",
   "tags": [
     {
+      "id": "142032",
+      "color": "#F297CD",
+      "name": "Women's Ministry",
+      "group": "Ministry"
+    },
+    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",

@@ -2,17 +2,21 @@ from argparse import ArgumentParser, Namespace
 from os import environ
 from re import compile, Pattern
 from shutil import rmtree
-from typing import Callable, AsyncIterator, Optional
+from typing import Optional
 from urllib.parse import urlparse, ParseResult
 
 from anyio import run, Path
-from decorest import backend, content, endpoint, on, query, GET, RestClient
 from dotenv import load_dotenv
 from httpx import BasicAuth, AsyncClient
 from loguru import logger
 from markdownify import MarkdownConverter
 
-from planningcenter_models_ministries import (
+from planningcenter_api import (
+    paginate,
+    Publishing,
+)
+
+from planningcenter_api_models import (
     ButtonBlock,
     DividerBlock,
     GridBlock,
@@ -21,7 +25,6 @@ from planningcenter_models_ministries import (
     SectionHeaderBlock,
     TextBlock,
 )
-
 
 CC_TO_SITE_SLUGS: dict[str, str] = {
     "childrens-ministry": "children",
@@ -33,41 +36,6 @@ CC_TO_SITE_SLUGS: dict[str, str] = {
     "womens-ministry": "women",
     "youth-group": "youth",
 }
-
-
-async def paginate(method: Callable, *args, per_page=100) -> AsyncIterator[tuple[dict, dict]]:
-    offset: int = 0
-
-    while True:
-        resp = await method(offset, per_page, *args)
-        data = resp["data"]
-
-        for d in data:
-            yield d
-
-        meta = resp["meta"]
-        if offset + meta["count"] < meta["total_count"]:
-            offset += per_page
-        else:
-            break
-
-
-@backend("httpx")
-@endpoint("https://api.planningcenteronline.com/publishing/v2")
-@content("application/json")
-class Publishing(RestClient):
-
-    @GET("pages")
-    @query("filter")
-    @query("offset")
-    @query("per_page")
-    @on(200, lambda r: r.json())
-    async def pages_list(
-        self,
-        offset,
-        per_page,
-        filter="current_published",
-    ): ...
 
 
 async def download_images(page: PageInstance, images_dir: Path) -> tuple[Optional[str], dict[str, str]]:

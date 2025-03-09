@@ -8,6 +8,22 @@
   "status": "approved",
   "visible_ends_at": "2025-04-17T03:00:00Z",
   "visible_starts_at": "2025-04-17T01:30:00Z",
+  "event": {
+    "id": "13878006",
+    "approval_status": "A",
+    "created_at": "2024-08-29T17:48:05Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "Romans Bible Study",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2024-12-18T17:36:49Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
   "tags": [
     {
       "id": "307165",
@@ -21,5 +37,9 @@
       "name": "Foundation Bible Church",
       "group": "Campus"
     }
-  ]
+  ],
+  "event_tags": {},
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
 }

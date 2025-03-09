@@ -8,6 +8,22 @@
   "status": "approved",
   "visible_ends_at": "2025-04-02T02:30:00Z",
   "visible_starts_at": "2025-04-02T01:30:00Z",
+  "event": {
+    "id": "10218581",
+    "approval_status": "A",
+    "created_at": "2023-08-29T16:13:23Z",
+    "description": null,
+    "featured": false,
+    "image_url": "https://images.planningcenterusercontent.com/v1/transform?bucket=resources-production&disposition=inline&expires_at=1743494399&key=uploads%2F253867%2F4has7cbmaqvgn13d06d6igugux7s&thumb=960x540%23&signature=c56248f846b7b11e1ca84bdd8b5e5cf2fd90814c74155858beef1ac630cabeb4",
+    "name": "Men's Bible Study",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "The Book of Proverbs is often neglected in study, yet it contains a wealth of much-needed wisdom and understanding. Join us on Tuesday nights as we study the book of Proverbs and learn what it means to be a man who leads with godly wisdom and understanding.",
+    "updated_at": "2025-03-09T02:03:11Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
   "tags": [
     {
       "id": "142029",
@@ -20,12 +36,19 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
-    },
-    {
-      "id": "165090",
-      "color": "#F6E7BB",
-      "name": "Bible Study",
-      "group": "Ministry"
     }
-  ]
+  ],
+  "event_tags": {
+    "Ministry": "Men's Ministry"
+  },
+  "group_tags": {
+    "Location Type": "In Home",
+    "Frequency": "Weekly",
+    "Who": "Men",
+    "Event Type": "Men Only",
+    "Campus": "Pleasant Home",
+    "Ministry": "Mens"
+  },
+  "ministry": "men",
+  "color": "#CBEAFA"
 }

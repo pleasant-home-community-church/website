@@ -18,6 +18,9 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     visible_ends_at,
     visible_starts_at,
 
+    ministry = "default",
+    color,
+
     tags,
   } = data;
 
@@ -42,6 +45,9 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     endsAt,
     visibleStartsAt,
     visibleEndsAt,
+
+    ministry,
+    color,
 
     tags,
   };

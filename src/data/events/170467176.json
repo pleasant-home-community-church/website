@@ -8,6 +8,22 @@
   "status": "approved",
   "visible_ends_at": "2025-04-16T02:30:00Z",
   "visible_starts_at": "2025-04-16T01:30:00Z",
+  "event": {
+    "id": "14472146",
+    "approval_status": "A",
+    "created_at": "2024-10-24T18:37:15Z",
+    "description": null,
+    "featured": false,
+    "image_url": "https://groups-production.s3.amazonaws.com/uploads/group/header_image/2511179/medium_image-1728407853501.jpg",
+    "name": "Tues Women's Bible Study: Study in John",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2024-10-24T18:37:17Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
   "tags": [
     {
       "id": "307165",
@@ -15,5 +31,12 @@
       "name": "Pleasant Home Community Church",
       "group": "Campus"
     }
-  ]
+  ],
+  "event_tags": {},
+  "group_tags": {
+    "Campus": "Pleasant Home",
+    "Ministry": "Womens"
+  },
+  "ministry": "women",
+  "color": "#F297CD"
 }

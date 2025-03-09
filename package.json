@@ -85,7 +85,13 @@
     "unist-util-visit": "^5.0.0"
   },
   "pnpm": {
-    "overrides": {}
+    "overrides": {},
+    "ignoredBuiltDependencies": [
+      "sharp"
+    ],
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   },
   "packageManager": "pnpm@10.6.1"
 }

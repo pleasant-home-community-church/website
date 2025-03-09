@@ -1,0 +1,62 @@
+{
+    "links": {
+        "self": "https://api.planningcenteronline.com/groups/v2/groups/2511194/tags"
+    },
+    "data": [
+        {
+            "type": "Tag",
+            "id": "1994463",
+            "attributes": {
+                "name": "Pleasant Home",
+                "position": 43
+            },
+            "relationships": {
+                "tag_group": {
+                    "data": {
+                        "type": "TagGroup",
+                        "id": "525842"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tags/1994463"
+            }
+        },
+        {
+            "type": "Tag",
+            "id": "2013131",
+            "attributes": {
+                "name": "Womens",
+                "position": 52
+            },
+            "relationships": {
+                "tag_group": {
+                    "data": {
+                        "type": "TagGroup",
+                        "id": "528771"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tags/2013131"
+            }
+        }
+    ],
+    "included": [],
+    "meta": {
+        "total_count": 2,
+        "count": 2,
+        "can_order_by": [
+            "name",
+            "position"
+        ],
+        "can_query_by": [
+            "id",
+            "name"
+        ],
+        "parent": {
+            "id": "2511194",
+            "type": "Group"
+        }
+    }
+}

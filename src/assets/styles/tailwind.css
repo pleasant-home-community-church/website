@@ -19,7 +19,7 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
     width: 85%;
-    height: 800px;
+    height: auto;
     max-height: 90vh;
   }
 }

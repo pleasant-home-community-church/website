@@ -1,0 +1,156 @@
+{
+    "links": {
+        "self": "https://api.planningcenteronline.com/groups/v2/tag_groups"
+    },
+    "data": [
+        {
+            "type": "TagGroup",
+            "id": "525842",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Campus",
+                "position": 0
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/525842"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "414655",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": true,
+                "name": "Event Type",
+                "position": 1
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/414655"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "396608",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Location Type",
+                "position": 2
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/396608"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "396609",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": true,
+                "name": "Stage of Life",
+                "position": 3
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/396609"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "396610",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Frequency",
+                "position": 4
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/396610"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "396611",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Neighborhood",
+                "position": 5
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/396611"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "397961",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": true,
+                "name": "Outreach",
+                "position": 6
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/397961"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "409191",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Who",
+                "position": 7
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/409191"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "525843",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Day of the Week",
+                "position": 8
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/525843"
+            }
+        },
+        {
+            "type": "TagGroup",
+            "id": "528771",
+            "attributes": {
+                "display_publicly": true,
+                "multiple_options_enabled": false,
+                "name": "Ministry",
+                "position": 9
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/groups/v2/tag_groups/528771"
+            }
+        }
+    ],
+    "included": [],
+    "meta": {
+        "total_count": 10,
+        "count": 10,
+        "can_order_by": [
+            "name",
+            "position"
+        ],
+        "can_query_by": [
+            "name"
+        ],
+        "can_filter": [
+            "public"
+        ],
+        "parent": {
+            "id": "253867",
+            "type": "Organization"
+        }
+    }
+}

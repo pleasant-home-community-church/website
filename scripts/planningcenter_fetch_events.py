@@ -2,101 +2,58 @@ from argparse import ArgumentParser, Namespace
 from datetime import datetime, timedelta, UTC
 from os import environ
 from shutil import rmtree
-from typing import Callable, AsyncIterator
 
 from anyio import run, Path
-from decorest import backend, content, endpoint, on, query, GET, RestClient
 from dotenv import load_dotenv
 from httpx import BasicAuth
 from loguru import logger
 
-from planningcenter_models_events import CalendarInstance
+from planningcenter_api import (
+    paginate,
+    Calendar,
+    Groups,
+)
+
+from planningcenter_api_models import (
+    CalendarInstance,
+    EventConnection,
+    GroupTag,
+    GroupTagGroup,
+)
 
 
-def lookup_related(d: dict, included: dict) -> dict:
-    related_output: dict = {}
+MINISTRY_TAG_TO_SLUG: dict[str, str] = {
+    "Children's Ministry": "children",
+    "Counseling": "counseling",
+    "Home Groups": "home-group",
+    "Men's Ministry": "men",
+    "Prime Timers (Seniors Ministry)": "seniors",
+    "Vacation Bible School": "vbs",
+    "Women's Ministry": "women",
+    "Rooted (Youth Ministry)": "youth",
+}
 
-    for key, value in d["relationships"].items():
-        relationship = value["data"]
+MINISTRY_GROUP_TAG_TO_SLUG: dict[str, str] = {
+    "Childrens": "children",
+    "Counseling": "counseling",
+    "Home Groups": "home-group",
+    "Mens": "men",
+    "Senior Aduilts": "seniors",
+    "Vacation Bible School": "vbs",
+    "Womens": "women",
+    "Youth": "youth",
+}
 
-        match relationship:
-            case dict():
-                related_id = relationship["id"]
-                related_data = included.get(related_id)
-
-                # check if we should recurse
-                if related_data and "relationships" in related_data:
-                    related_data.update(lookup_related(related_data, included))
-
-                related_output[key] = related_data
-
-            case list():
-                for related_item in value["data"]:
-                    related_id = related_item["id"]
-                    related_data = included.get(related_id)
-
-                    # check if we should recurse
-                    if related_data and "relationships" in related_data:
-                        related_data.update(lookup_related(related_data, included))
-
-                    if key not in related_output:
-                        related_output[key] = []
-                    related_output[key].append(related_data)
-
-    return related_output
-
-
-async def paginate(method: Callable, *args, per_page=100) -> AsyncIterator[tuple[dict, dict]]:
-    offset: int = 0
-
-    while True:
-        resp = await method(offset, per_page, *args)
-        data = resp["data"]
-        included = {i["id"]: i for i in resp["included"]}
-
-        for d in data:
-            d.update(lookup_related(d, included))
-            yield d
-
-        meta = resp["meta"]
-        if offset + meta["count"] < meta["total_count"]:
-            offset += per_page
-        else:
-            break
-
-
-@backend("httpx")
-@endpoint("https://api.planningcenteronline.com/calendar/v2")
-@content("application/json")
-class Calendar(RestClient):
-
-    @GET("calendar_instances")
-    @query("where_visible_in_chruch_center", "where[visible_in_church_center]")
-    @query("where_during_start", "where[during][start]")
-    @query("where_during_end", "where[during][end]")
-    @query("fields_calendar_instance", "fields[CalendarInstance]")
-    @query("fields_tag", "fields[Tag]")
-    @query("fields_tag_group", "fields[TagGroup]")
-    @query("filter")
-    @query("include")
-    @query("order")
-    @query("offset")
-    @query("per_page")
-    @on(200, lambda r: r.json())
-    async def calendar_instances_list(
-        self,
-        offset,
-        per_page,
-        where_during_start,  # =2025-01-26T08:00:00.000Z
-        where_during_end,  # =2025-02-26T07:59:59.999Z
-        where_visible_in_chruch_center="published",
-        fields_calendar_instance="all_day_event,ends_at,event,event_featured,event_name,starts_at,status,tags,visible_ends_at,visible_starts_at",
-        fields_tag="name,color,tag_group",
-        fields_tag_group="name,required",
-        filter="public_times",
-        include="tags.tag_group",
-        order="starts_at,ends_at",
-    ): ...
+MINISTRY_COLOR: dict[str, str] = {
+    "children": "#F6E7BB",
+    "counseling": "#C69CE8",
+    "home-group": "#E7DEFA",
+    "men": "#CBEAFA",
+    "seniors": "#7EC7ED",
+    "vbs": "#F9D266",
+    "women": "#F297CD",
+    "youth": "#FCDCCA",
+}
 
 
 def parse_args():
@@ -116,11 +73,13 @@ async def main():
     CLIENT_ID: str = environ.get("PLANNINGCENTER_CLIENT_ID")
     CLIENT_SECRET: str = environ.get("PLANNINGCENTER_SECRET")
 
+    auth: BasicAuth = BasicAuth(CLIENT_ID, CLIENT_SECRET)
+
     args: Namespace = parse_args()
 
     # expand the range by 5 weeks to make sure we have enough events to fill the calendar
     during_start: datetime = datetime.now(tz=UTC) - timedelta(weeks=5)
-    during_end: datetime = during_start + timedelta(weeks=52 + 5)
+    during_end: datetime = during_start + timedelta(weeks=26 + 5)
 
     data_dir: Path = Path(args.data_dir)
     await data_dir.mkdir(parents=True, exist_ok=True)
@@ -130,18 +89,59 @@ async def main():
     rmtree(str(events_dir), ignore_errors=True)
     await events_dir.mkdir(parents=True, exist_ok=True)
 
-    calendar = Calendar(auth=BasicAuth(CLIENT_ID, CLIENT_SECRET))
+    # get the group tag groups
+    groups = Groups(auth=auth)
+    group_tags: dict[str, GroupTagGroup] = {}
+    async for tag_isntance in paginate(groups.tag_groups):
+        tag_group: GroupTagGroup = GroupTagGroup(**tag_isntance)
+        logger.trace(f"Tag Group: {tag_group.id} - {tag_group.name}")
+        group_tags[tag_group.id] = tag_group
 
-    async for instance in paginate(
-        calendar.calendar_instances_list,
-        during_start,
-        during_end,
-    ):
+    calendar = Calendar(auth=auth)
+    async for instance in paginate(calendar.calendar_instances_list, during_start, during_end):
         event: CalendarInstance = CalendarInstance(**instance)
-        logger.debug(f"{event.visible_starts_at}: {event.id} - {event.event_name}")
+        logger.info(f"{event.visible_starts_at}: {event.id} - {event.event_name}")
+
+        # check for group connection
+        if event.event:
+            data = (await calendar.event_connections(event.event.id))["data"]
+            connections: list[EventConnection] = [EventConnection(**ec) for ec in data]
+
+            if connections:
+                # get the group tags
+                data = (await groups.group_tags(connections[0].connected_to_id))["data"]
+                for d in data:
+                    group_tag: GroupTag = GroupTag(**d)
+                    tag_group: GroupTagGroup = group_tags[group_tag.tag_group_id]
+                    event.group_tags[tag_group.name] = group_tag.value
+
+        # convert event tags into simple dictionary
+        if event.tags:
+            for tag in event.tags:
+                if tag.group != "Ministry" or tag.name not in MINISTRY_TAG_TO_SLUG:
+                    continue
+
+                # if multiple ministries are tagged take the last one
+                event.event_tags[tag.group] = tag.name
+
+        # figure out what the ministry is
+        # 1. if group tag then use that
+        # 2. if tag has a ministry then use that
+        # 3. leave ministry blank if not found
+        if "Ministry" in event.group_tags:
+            ministry = event.group_tags["Ministry"]
+            if ministry in MINISTRY_GROUP_TAG_TO_SLUG:
+                event.ministry = MINISTRY_GROUP_TAG_TO_SLUG[ministry]
+                event.color = MINISTRY_COLOR[event.ministry]
+
+        elif "Ministry" in event.event_tags:
+            ministry = event.event_tags["Ministry"]
+            if ministry in MINISTRY_TAG_TO_SLUG:
+                event.ministry = MINISTRY_TAG_TO_SLUG[ministry]
+                event.color = MINISTRY_COLOR[event.ministry]
 
         event_file: Path = events_dir / f"{event.id}.json"
-        await event_file.write_text(event.model_dump_json(indent=2, exclude_none=True, exclude_unset=True))
+        await event_file.write_text(event.model_dump_json(indent=2))
 
     logger.success("Done")
 

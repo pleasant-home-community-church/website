@@ -46,6 +46,9 @@ const eventsCollection = defineCollection({
     visible_ends_at: z.string().datetime(),
     visible_starts_at: z.string().datetime(),
 
+    ministry: z.string().optional(),
+    color: z.string(),
+
     tags: z.array(z.object({
       id: z.string(),
       color: z.string(),

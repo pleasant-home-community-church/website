@@ -1,0 +1,41 @@
+{
+    "links": {
+        "self": "https://api.planningcenteronline.com/calendar/v2/events/14470153/event_connections?where[product_name]=groups"
+    },
+    "data": [
+        {
+            "type": "EventConnection",
+            "id": "973415",
+            "attributes": {
+                "connected_to_id": 2511194,
+                "connected_to_name": "Monday Women's Bible Study",
+                "connected_to_type": "group",
+                "connected_to_url": "https://groups.planningcenteronline.com/groups/2511194/events",
+                "product_name": "groups"
+            },
+            "relationships": {
+                "event": {
+                    "data": {
+                        "type": "Event",
+                        "id": "14470153"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://api.planningcenteronline.com/calendar/v2/events/14470153/event_connections/973415"
+            }
+        }
+    ],
+    "included": [],
+    "meta": {
+        "total_count": 1,
+        "count": 1,
+        "can_query_by": [
+            "product_name"
+        ],
+        "parent": {
+            "id": "14470153",
+            "type": "Event"
+        }
+    }
+}

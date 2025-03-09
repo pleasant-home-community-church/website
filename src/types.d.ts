@@ -22,6 +22,9 @@ export interface Event {
   visibleEndsAt: Date;
   visibleStartsAt: Date;
 
+  color: string;
+  ministry: string;
+
   tags?: EventTag[];
 }
 

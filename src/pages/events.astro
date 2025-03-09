@@ -10,27 +10,9 @@ const metadata = {
   title: 'Events',
 };
 
-const categoryKey = (tag): string => {
-  return tag.name.toLowerCase().replace(/[\s'\\/]/g, '');
-};
-
-const getMinistry = (event) => {
-  let ministry = 'default';
-  if (event.tags) {
-    event.tags.forEach((tag) => {
-      if (tag.group == 'Ministry') {
-        ministry = categoryKey(tag);
-      }
-    });
-  }
-
-  return ministry;
-};
-
 const allEvents = await fetchEvents();
 const events = allEvents
   .map((event) => {
-    const ministry = getMinistry(event);
     return {
       id: event.id,
       title: event.eventName,
@@ -38,7 +20,7 @@ const events = allEvents
         ? getCalendarDateOnly(event.visibleStartsAt)
         : getCalendarEventDate(event.visibleStartsAt),
       end: event.allDayEvent ? getCalendarDateOnly(event.visibleEndsAt) : getCalendarEventDate(event.visibleEndsAt),
-      calendarId: ministry,
+      calendarId: event.ministry,
     };
   })
   .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
@@ -60,27 +42,22 @@ const categories = {
 };
 
 allEvents.forEach((event) => {
-  event.tags?.forEach((tag) => {
-    // console.log(tag);
-    if (tag.group == 'Ministry') {
-      const key = categoryKey(tag);
-      if (!(key in categories)) {
-        categories[key] = {
-          colorName: categoryKey(tag),
-          lightColors: {
-            main: pSBC(-0.6, tag.color),
-            container: pSBC(-0.35, tag.color),
-            onContainer: pSBC(0.85, tag.color),
-          },
-          darkColors: {
-            main: pSBC(-0.6, tag.color),
-            container: pSBC(-0.35, tag.color),
-            onContainer: pSBC(0.85, tag.color),
-          },
-        };
-      }
-    }
-  });
+  if (event.ministry != 'default') {
+    // console.log(`${JSON.stringify(event)}`);
+    categories[event.ministry] = {
+      colorName: event.ministry,
+      lightColors: {
+        main: pSBC(-0.6, event.color),
+        container: pSBC(-0.35, event.color),
+        onContainer: pSBC(0.85, event.color),
+      },
+      darkColors: {
+        main: pSBC(-0.6, event.color),
+        container: pSBC(-0.35, event.color),
+        onContainer: pSBC(0.85, event.color),
+      },
+    };
+  }
 });
 
 const minDate = moment().subtract(5, 'weeks');

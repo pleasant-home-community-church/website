@@ -38,7 +38,7 @@ MINISTRY_GROUP_TAG_TO_SLUG: dict[str, str] = {
     "Counseling": "counseling",
     "Home Groups": "home-group",
     "Mens": "men",
-    "Senior Aduilts": "seniors",
+    "Senior Adults": "seniors",
     "Vacation Bible School": "vbs",
     "Womens": "women",
     "Youth": "youth",

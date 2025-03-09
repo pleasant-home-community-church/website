@@ -31,6 +31,6 @@
     "Who": "Adults",
     "Ministry": "Senior Adults"
   },
-  "ministry": "default",
-  "color": "#6ADCC8"
+  "ministry": "seniors",
+  "color": "#7EC7ED"
 }

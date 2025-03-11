@@ -1,0 +1,38 @@
+---
+import Headline from '~/components/events/Headline.astro';
+import UpcomingDay from '~/components/events/UpcomingDay.astro';
+import type { Event, Ministry } from '~/types';
+
+import { findUpcomingEventsForMinistry } from '~/utils/events';
+
+export interface Props {
+  ministry: Ministry;
+}
+
+const { ministry } = Astro.props;
+
+const days: Array<{ date: Date; events: Array<Event> }> = await findUpcomingEventsForMinistry({
+  ministry: ministry.slug,
+});
+
+const count: number = days.reduce((sum, day) => sum + day.events.length, 0);
+---
+
+<table>
+  <thead>
+    <th colspan="2"><Headline title="This Week" /></th>
+  </thead>
+  <tbody>
+    {
+      count > 0 ? (
+        days.map((day) => <UpcomingDay day={day} />)
+      ) : (
+        <tr>
+          <td>
+            <Headline subtitle="No Scheduled Events" />
+          </td>
+        </tr>
+      )
+    }
+  </tbody>
+</table>

@@ -48,8 +48,8 @@ MINISTRY_COLOR: dict[str, str] = {
     "children": "#F6E7BB",
     "counseling": "#C69CE8",
     "home-group": "#E7DEFA",
-    "men": "#CBEAFA",
-    "seniors": "#7EC7ED",
+    "men": "#7EC7ED",
+    "seniors": "#CBEAFA",
     "vbs": "#F9D266",
     "women": "#F297CD",
     "youth": "#FCDCCA",
@@ -79,7 +79,7 @@ async def main():
 
     # expand the range by 5 weeks to make sure we have enough events to fill the calendar
     during_start: datetime = datetime.now(tz=UTC) - timedelta(weeks=5)
-    during_end: datetime = during_start + timedelta(weeks=26 + 5)
+    during_end: datetime = during_start + timedelta(weeks=52 + 5)
 
     data_dir: Path = Path(args.data_dir)
     await data_dir.mkdir(parents=True, exist_ok=True)

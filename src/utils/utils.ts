@@ -10,12 +10,20 @@ export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.lang
 
 export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
 
+export const getFormatedTime = (date: Date): string => {
+  return moment.utc(date).tz('America/Los_Angeles').format("h:mm A");
+};
+
 export const getCalendarEventDate = (date: Date): string => {
   return moment.utc(date).tz('America/Los_Angeles').format("YYYY-MM-DD HH:mm");
 };
 
 export const getCalendarDateOnly = (date: Date): string => {
   return moment.utc(date).tz('America/Los_Angeles').format("YYYY-MM-DD");
+};
+
+export const getCalendarDay = (date: Date): string => {
+  return moment.utc(date).tz('America/Los_Angeles').format("dddd, MMMM D");
 };
 
 export const trim = (str = '', ch?: string) => {

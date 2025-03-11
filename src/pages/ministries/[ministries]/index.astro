@@ -6,6 +6,7 @@ import type { ImageMetadata } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
 import SingleMinistery from '~/components/ministries/SingleMinistry.astro';
 import ToMinistryLink from '~/components/ministries/ToMinistryLink.astro';
+import UpcomingEvents from '~/components/events/UpcomingEvents.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { getStaticPathsMinistries, ministriesRobots } from '~/utils/ministries';
@@ -45,6 +46,8 @@ const metadata = merge(
 <Layout metadata={metadata}>
   <SingleMinistery ministry={{ ...ministry, image: image }} url={url}>
     {ministry.Content ? <ministry.Content /> : <Fragment set:html={ministry.content || ''} />}
+    <UpcomingEvents ministry={ministry} />
   </SingleMinistery>
+
   <ToMinistryLink />
 </Layout>

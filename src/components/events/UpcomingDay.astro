@@ -1,11 +1,10 @@
 ---
 import Headline from '~/components/events/Headline.astro';
 import type { Event } from '~/types';
-
-import { getCalendarDay, getFormatedTime } from '~/utils/utils';
+import { DateTime } from 'luxon';
 
 export interface Props {
-  day: { date: Date; events: Array<Event> };
+  day: { date: DateTime; events: Array<Event> };
 }
 
 const { day } = Astro.props;
@@ -13,14 +12,14 @@ const { day } = Astro.props;
 {
   day.events.length > 0 ? 
 <tr style="border-bottom-width: 0px;">
-  <td colspan="2"><Headline subtitle={getCalendarDay(day.date)} /></td>
+  <td colspan="2"><Headline subtitle={day.date.setZone("America/Los_Angeles").toFormat("cccc, MMMM dd")} /></td>
 </tr> : <></>
 }
 {
   day.events.length > 0 ? (
     day.events.map((event) => (
       <tr style="border-bottom-width: 0px;">
-        <td style="padding-left: 1rem">{event.allDayEvent ? "All Day" : getFormatedTime(event.startsAt)}</td>
+        <td style="padding-left: 1rem">{event.allDayEvent ? "All Day" : DateTime.fromJSDate(event.startsAt).setZone("America/Los_Angeles").toFormat("h:mm a")}</td>
         <td>{event.eventName}</td>
       </tr>
     ))

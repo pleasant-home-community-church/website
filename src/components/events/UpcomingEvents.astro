@@ -2,6 +2,7 @@
 import Headline from '~/components/events/Headline.astro';
 import UpcomingDay from '~/components/events/UpcomingDay.astro';
 import type { Event, Ministry } from '~/types';
+import { DateTime } from 'luxon';
 
 import { findUpcomingEventsForMinistry } from '~/utils/events';
 
@@ -11,7 +12,7 @@ export interface Props {
 
 const { ministry } = Astro.props;
 
-const days: Array<{ date: Date; events: Array<Event> }> = await findUpcomingEventsForMinistry({
+const days: Array<{ date: DateTime; events: Array<Event> }> = await findUpcomingEventsForMinistry({
   ministry: ministry.slug,
 });
 

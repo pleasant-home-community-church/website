@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Event } from '~/types';
+import { DateTime } from 'luxon';
 
 
 const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Event> => {
@@ -105,34 +106,27 @@ export const findEventsInFutureDays = async ({ days }: { days?: number }): Promi
   return events.filter((event: Event) => event.startsAt.getTime() < beforeDate.getTime())
 };
 
-export const findUpcomingEventsForMinistry = async ({ ministry, days = 7 }: { ministry: string, days?: number }): Promise<Array<{ date: Date, events: Array<Event> }>> => {
-  const dates: Array<{ date: Date, events: Array<Event> }> = [];
+export const findUpcomingEventsForMinistry = async ({ ministry, days = 7 }: { ministry: string, days?: number }): Promise<Array<{ date: DateTime, events: Array<Event> }>> => {
+  const dates: Array<{ date: DateTime, events: Array<Event> }> = [];
   const ministryEvents: Array<Event> = (await fetchEvents()).filter((event: Event) => event.ministry === ministry)
 
   for (let i = 0; i < days; i++) {
-    const startOfDay = new Date();
-    startOfDay.setHours(0, 0, 0, 0);
-    startOfDay.setDate(startOfDay.getDate() + i);
-
-    const endOfDay = new Date();
-    endOfDay.setHours(23, 59, 59, 999);
-    endOfDay.setDate(endOfDay.getDate() + i);
+    const day: DateTime = DateTime.utc().plus({ days: i })
+    const startOfDay: DateTime = day.setZone("America/Los_Angeles").startOf("day");
+    const endOfDay: DateTime = day.setZone("America/Los_Angeles").endOf("day");
 
     dates.push({
       date: startOfDay,
       events: ministryEvents
-        .filter((event: Event) =>
-          // starts after start time and ends before end time
-          (event.startsAt.getTime() > startOfDay.getTime() && event.endsAt.getTime() < endOfDay.getTime()) ||
+        .filter((event: Event) => {
+          const eventStart: DateTime = DateTime.fromJSDate(event.startsAt);
+          const eventEnd: DateTime = DateTime.fromJSDate(event.endsAt);
 
-          // starts before start time and ends before end time
-          (event.endsAt.getTime() > startOfDay.getTime() && event.endsAt.getTime() < endOfDay.getTime()) ||
-
-          // starts after start time and ends after end time
-          (event.startsAt.getTime() > startOfDay.getTime() && event.startsAt.getTime() < endOfDay.getTime()) ||
-
-          // starts before start time and ends after end time
-          (event.startsAt.getTime() < endOfDay.getTime() && event.endsAt.getTime() > endOfDay.getTime())
+          return (eventStart > startOfDay && eventEnd < endOfDay) ||
+            (eventEnd > startOfDay && eventEnd < endOfDay) ||
+            (eventStart > startOfDay && eventStart < endOfDay) ||
+            (eventStart < endOfDay && eventEnd > endOfDay);
+        }
         )
         .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
     });

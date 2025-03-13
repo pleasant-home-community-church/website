@@ -43,7 +43,6 @@ const categories = {
 
 allEvents.forEach((event) => {
   if (event.ministry != 'default') {
-    // console.log(`${JSON.stringify(event)}`);
     categories[event.ministry] = {
       colorName: event.ministry,
       lightColors: {

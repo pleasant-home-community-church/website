@@ -46,7 +46,7 @@ importers:
         version: 2.21.2(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
       '@schedule-x/events-service':
         specifier: ^2.15.1
-        version: 2.21.1
+        version: 2.21.2
       '@schedule-x/react':
         specifier: ^2.15.1
         version: 2.21.3(@schedule-x/calendar@2.21.2(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1258,8 +1258,8 @@ packages:
       '@preact/signals': ^1.1.5
       preact: ^10.19.2
 
-  '@schedule-x/events-service@2.21.1':
-    resolution: {integrity: sha512-llk9znPNTxx2wGJeZq4mf3qWyZcyX3ab+pa85NydNRd7lfr6ZVSIJaqHZfbBctrmgF3Jjh3zwRHHig5Uf/RI/Q==}
+  '@schedule-x/events-service@2.21.2':
+    resolution: {integrity: sha512-On/cdn9F+DXUYzHRGE7vzXjUQQkRy2hM9OhaIpvEB60+mBMoHqBw8memJ9gryInMy+kY7+Od01SZvkr3bQbYPQ==}
 
   '@schedule-x/react@2.21.3':
     resolution: {integrity: sha512-JNs4VE+bOx0QJpYx/PA5tqBWA1XFkPXROu813wEJHRwZAxAx0FJ2pkSXHydplUdr8ucUqIWBwKH0uY2wJeM2dg==}
@@ -5087,7 +5087,7 @@ snapshots:
       '@preact/signals': 1.3.2(preact@10.25.4)
       preact: 10.25.4
 
-  '@schedule-x/events-service@2.21.1': {}
+  '@schedule-x/events-service@2.21.2': {}
 
   '@schedule-x/react@2.21.3(@schedule-x/calendar@2.21.2(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:

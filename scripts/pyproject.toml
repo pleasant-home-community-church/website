@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
   "anyio>=4.8.0",
+  "async-cache>=1.1.1",
   "decorest>=0.1.0",
   "httpx>=0.28.1",
   "loguru>=0.7.3",

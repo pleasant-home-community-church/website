@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Features from '~/components/widgets/Features.astro';
 import { Icon } from 'astro-icon/components';
 import Content from '~/components/widgets/Content.astro';
+import FeaturedEvents from '~/components/widgets/FeaturedEvents.astro';
 import LatestSermons from '~/components/widgets/LatestSermons.astro';
 
 const metadata = {
@@ -119,11 +120,15 @@ const googleMaps = SITE?.googleMaps;
     ]}
   />
 
-  <!-- Worship Services Widget ******************* -->
+  <!-- Featured Events ******************* -->
 
-  <LatestSermons title="Latest Sermons">
+  <FeaturedEvents title="Upcoming Events">
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-logo-b-l dark:bg-transparent"></div>
     </Fragment>
-  </LatestSermons>
+  </FeaturedEvents>
+
+  <!-- Worship Services Widget ******************* -->
+
+  <LatestSermons title="Latest Sermons" />
 </Layout>

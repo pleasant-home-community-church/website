@@ -3,6 +3,11 @@
   "extends": [
     "config:recommended"
   ],
+  "timezone": "America/Los_Angeles",
+  "description": "Schedule daily before 4 AM",
+  "schedule": [
+    "* 0-3 * * *"
+  ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true

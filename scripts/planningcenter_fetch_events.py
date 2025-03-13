@@ -1,11 +1,14 @@
 from argparse import ArgumentParser, Namespace
 from datetime import datetime, timedelta, UTC
+from functools import cache
 from os import environ
 from shutil import rmtree
+from urllib.parse import ParseResult, urlparse
 
 from anyio import run, Path
+from cache import AsyncLRU
 from dotenv import load_dotenv
-from httpx import BasicAuth
+from httpx import BasicAuth, AsyncClient
 from loguru import logger
 
 from planningcenter_api import (
@@ -56,6 +59,43 @@ MINISTRY_COLOR: dict[str, str] = {
 }
 
 
+def generate_image_name(image_url: str) -> str:
+    url: ParseResult = urlparse(image_url)
+    parts: list[str] = [f"{url.path.replace("/", "-")}"]
+
+    if url.query:
+        params: list[str] = url.query.split("&")
+        for param in params:
+            if param.startswith("key"):
+                parts.append(param.split("=")[1].replace("%", "-"))
+
+    path: Path = Path("".join(parts))
+    return f"events-{path.stem}"
+
+
+CONTENT_TYPE_TO_SUFFIX: dict[str, str] = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+}
+
+
+@AsyncLRU()
+async def download_image(images_dir: Path, image_url: str):
+    image_name: str = generate_image_name(image_url)
+
+    async with AsyncClient() as client:
+        async with client.stream("GET", image_url) as response:
+            content_type: str = response.headers["content-type"]
+            suffix: str = CONTENT_TYPE_TO_SUFFIX[content_type.lower()]
+            image_file: Path = images_dir / f"{image_name}{suffix}"
+
+            async with await image_file.open("wb") as f:
+                async for chunk in response.aiter_bytes():
+                    await f.write(chunk)
+
+    return image_file.name
+
+
 def parse_args():
     """
     Parse the command line arguments using the argparse library.
@@ -66,6 +106,7 @@ def parse_args():
 
     parser = ArgumentParser()
     parser.add_argument("--data-dir", type=str, required=True)
+    parser.add_argument("--assets-dir", type=str, required=True)
     return parser.parse_args()
 
 
@@ -77,6 +118,8 @@ async def main():
 
     args: Namespace = parse_args()
 
+    image_urls: set[str] = set()
+
     # expand the range by 5 weeks to make sure we have enough events to fill the calendar
     during_start: datetime = datetime.now(tz=UTC) - timedelta(weeks=5)
     during_end: datetime = during_start + timedelta(weeks=52 + 5)
@@ -84,10 +127,19 @@ async def main():
     data_dir: Path = Path(args.data_dir)
     await data_dir.mkdir(parents=True, exist_ok=True)
 
+    # always cleanup the event dir
     events_dir = Path(data_dir) / "events"
-    # always cleanup the event dir to remove old events
     rmtree(str(events_dir), ignore_errors=True)
     await events_dir.mkdir(parents=True, exist_ok=True)
+
+    # get the asset dir and make sure it exists
+    assets_dir: Path = Path(args.assets_dir)
+    await assets_dir.mkdir(parents=True, exist_ok=True)
+    images_dir = assets_dir / "images"
+
+    # always cleanup the event images
+    async for image_file in images_dir.glob("events-*.*"):
+        await image_file.unlink()
 
     # get the group tag groups
     groups = Groups(auth=auth)
@@ -102,8 +154,15 @@ async def main():
         event: CalendarInstance = CalendarInstance(**instance)
         logger.info(f"{event.visible_starts_at}: {event.id} - {event.event_name}")
 
-        # check for group connection
+        # check for group connection and image
         if event.event:
+
+            # keep track of the image urls and replace with the local cache path
+            if event.event.image_url:
+                image_name: str = await download_image(images_dir, event.event.image_url)
+                event.event.image_url = f"~/assets/images/{image_name}"
+
+            # check for group connection
             data = (await calendar.event_connections(event.event.id))["data"]
             connections: list[EventConnection] = [EventConnection(**ec) for ec in data]
 

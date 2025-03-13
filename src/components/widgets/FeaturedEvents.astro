@@ -1,0 +1,51 @@
+---
+import Grid from '~/components/events/Grid.astro';
+
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+import Button from '../ui/Button.astro';
+import { findFeaturedEvents } from '~/utils/events';
+import Headline from '../sermons/Headline.astro';
+
+export interface Props extends Widget {
+  title?: string;
+  linkText?: string;
+  linkUrl?: string | URL;
+  information?: string;
+  count?: number;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  linkText = 'View Calendar',
+  linkUrl = '/events',
+  count = 3,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+const events = await findFeaturedEvents({ count });
+---
+
+{
+  (
+    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+      <Headline title={title} classes={classes?.headline as Record<string, string>}>
+        <Fragment slot="subtitle">
+          {linkText && linkUrl && (
+            <Button variant="link" href={linkUrl}>
+              {' '}
+              {linkText} »
+            </Button>
+          )}
+        </Fragment>
+      </Headline>
+      <div class="mb-8 md:mx-auto md:mb-12 text-center content-center">
+        <Grid events={events} classes={classes?.grid as Record<string, string>} />
+      </div>
+    </WidgetWrapper>
+  )
+}

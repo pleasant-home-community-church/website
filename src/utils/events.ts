@@ -13,6 +13,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     status,
     all_day_event: allDayEvent,
     event_featured: eventFeatured,
+    event: raw_event,
 
     starts_at,
     ends_at,
@@ -25,6 +26,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     tags,
   } = data;
 
+  const imageUrl = raw_event.image_url;
   const slug = id;
   const startsAt = new Date(starts_at);
   const endsAt = new Date(ends_at);
@@ -41,6 +43,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     status,
     allDayEvent,
     eventFeatured,
+    imageUrl,
 
     startsAt,
     endsAt,
@@ -56,9 +59,9 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
 
 const load = async function (): Promise<Array<Event>> {
   const events = await getCollection("events");
-  const normalizedSermon = events.map(async (event) => await getNormalizedEvent(event));
+  const normalizedEvents = events.map(async (event) => await getNormalizedEvent(event));
 
-  const results = (await Promise.all(normalizedSermon))
+  const results = (await Promise.all(normalizedEvents))
     .sort((a, b) => b.startsAt.getTime() - a.startsAt.getTime())
 
   return results;
@@ -106,6 +109,31 @@ export const findEventsInFutureDays = async ({ days }: { days?: number }): Promi
   return events.filter((event: Event) => event.startsAt.getTime() < beforeDate.getTime())
 };
 
+/** */
+export const findFeaturedEvents = async ({ count = 3 }: { count: number }): Promise<Array<Event>> => {
+  const beforeDate = new Date()
+
+  const events = await fetchEvents();
+  const featured = events
+    .filter((event: Event) => event.eventFeatured && event.endsAt.getTime() > beforeDate.getTime())
+
+  if (featured.length > count) {
+    // remove duplicate event instances
+    return featured
+      .reduce((r: Array<Event>, event: Event) => {
+        if (!(event.id in r)) { r.push(event) }
+        return r;
+      }, [])
+      .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
+      .slice(0, count);
+  } else {
+    return featured
+      .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
+      .slice(0, count);
+  }
+};
+
+/** */
 export const findUpcomingEventsForMinistry = async ({ ministry, days = 7 }: { ministry: string, days?: number }): Promise<Array<{ date: DateTime, events: Array<Event> }>> => {
   const dates: Array<{ date: DateTime, events: Array<Event> }> = [];
   const ministryEvents: Array<Event> = (await fetchEvents()).filter((event: Event) => event.ministry === ministry)
@@ -134,13 +162,3 @@ export const findUpcomingEventsForMinistry = async ({ ministry, days = 7 }: { mi
 
   return dates
 };
-
-// /** */
-// export const findEventsInFutureByDay = async ({ days }: { days?: number }): Promise<Array<DayEvents>> => {
-//   const _days = days || 90;
-//   const beforeDate = new Date()
-//   beforeDate.setDate(beforeDate.getDate() + _days)
-
-//   const events = await fetchEvents();
-//   return events.filter((event: Event) => event.startsAt.getTime() < beforeDate.getTime())
-// };

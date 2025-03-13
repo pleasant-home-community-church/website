@@ -22,6 +22,8 @@
       "args": [
         "--data-dir",
         "${workspaceFolder}/src/data",
+        "--assets-dir",
+        "${workspaceFolder}/src/assets",
       ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/scripts",

@@ -177,10 +177,6 @@ async def main():
         # convert event tags into simple dictionary
         if event.tags:
             for tag in event.tags:
-                if tag.group != "Ministry" or tag.name not in MINISTRY_TAG_TO_SLUG:
-                    continue
-
-                # if multiple ministries are tagged take the last one
                 event.event_tags[tag.group] = tag.name
 
         # figure out what the ministry is

@@ -25,6 +25,7 @@ export interface Event {
 
   color: string;
   ministry: string;
+  highlight: boolean;
 
   tags?: EventTag[];
 }

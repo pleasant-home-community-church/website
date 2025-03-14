@@ -24,6 +24,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     color,
 
     tags,
+    event_tags,
   } = data;
 
   const imageUrl = raw_event.image_url;
@@ -32,7 +33,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
   const endsAt = new Date(ends_at);
   const visibleStartsAt = new Date(visible_starts_at);
   const visibleEndsAt = new Date(visible_ends_at);
-
+  const highlight = event_tags.Highlight ? event_tags.Highlight == "Upcoming Event" : false;
 
   return {
     id,
@@ -52,6 +53,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
 
     ministry,
     color,
+    highlight,
 
     tags,
   };
@@ -110,12 +112,15 @@ export const findEventsInFutureDays = async ({ days }: { days?: number }): Promi
 };
 
 /** */
-export const findFeaturedEvents = async ({ count = 3 }: { count: number }): Promise<Array<Event>> => {
+export const findFeaturedEvents = async ({ count = 3, ministry }: { count: number, ministry: string | undefined }): Promise<Array<Event>> => {
   const beforeDate = new Date()
 
   const events = await fetchEvents();
   const featured = events
-    .filter((event: Event) => event.eventFeatured && event.endsAt.getTime() > beforeDate.getTime())
+    .filter((event: Event) =>
+      (ministry ? event.ministry === ministry : true) &&
+      (event.eventFeatured && event.endsAt.getTime() > beforeDate.getTime() || event.highlight)
+    )
 
   if (featured.length > count) {
     // remove duplicate event instances

@@ -58,6 +58,9 @@ const eventsCollection = defineCollection({
       name: z.string(),
       group: z.string(),
     })).optional(),
+    event_tags: z.object({
+      Highlight: z.string().optional(),
+    })
   }),
 })
 

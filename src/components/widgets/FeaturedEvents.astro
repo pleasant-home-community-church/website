@@ -13,6 +13,7 @@ export interface Props extends Widget {
   linkUrl?: string | URL;
   information?: string;
   count?: number;
+  ministry?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   linkText = 'View Calendar',
   linkUrl = '/events',
   count = 3,
+  ministry,
 
   id,
   isDark = false,
@@ -27,12 +29,12 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
-const events = await findFeaturedEvents({ count });
+const events = await findFeaturedEvents({ count, ministry });
 ---
 
 {
-  (
-    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+  ( events.length > 0 ?
+    (<WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
       <Headline title={title} classes={classes?.headline as Record<string, string>}>
         <Fragment slot="subtitle">
           {linkText && linkUrl && (
@@ -46,6 +48,7 @@ const events = await findFeaturedEvents({ count });
       <div class="mb-8 md:mx-auto md:mb-12 text-center content-center">
         <Grid events={events} classes={classes?.grid as Record<string, string>} />
       </div>
-    </WidgetWrapper>
+    </WidgetWrapper>)
+    : <></>
   )
 }

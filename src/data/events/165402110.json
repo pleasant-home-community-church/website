@@ -38,7 +38,9 @@
       "group": "Campus"
     }
   ],
-  "event_tags": {},
+  "event_tags": {
+    "Campus": "Foundation Bible Church"
+  },
   "group_tags": {},
   "ministry": "default",
   "color": "#6ADCC8"

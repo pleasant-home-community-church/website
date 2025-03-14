@@ -67,9 +67,9 @@ const link = `https://pleasanthome.churchcenter.com/calendar/event/${event.id}`;
     <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
     {
       event.allDayEvent ? (
-        <span>{DateTime.fromJSDate(event.startsAt).setZone('America/Los_Angeles').toFormat('MMMM, dd')}</span>
+        <span>{DateTime.fromJSDate(event.startsAt).setZone('America/Los_Angeles').toFormat('MMMM dd')}</span>
       ) : (
-        <span>{DateTime.fromJSDate(event.startsAt).setZone('America/Los_Angeles').toFormat('MMMM, dd h:mm a')}</span>
+        <span>{DateTime.fromJSDate(event.startsAt).setZone('America/Los_Angeles').toFormat('MMMM dd h:mm a')}</span>
       )
     }
   </span>

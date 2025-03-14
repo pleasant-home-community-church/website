@@ -143,29 +143,41 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                 content.append("---")
 
             case GridBlock():
+                content.append("{ /* Block Grid - START */ }")
+
+                content.append(f"export const items_{block.id.replace("-", "_")} = [")
                 for i, item in enumerate(block.attr.items):
-                    if i > 0:
-                        content.append("---")
+                    item_content: dict[str, str] = {}
 
                     # image
                     url: ParseResult = urlparse(item.src)
                     suffix: str = Path(url.path).suffix.lower()
 
-                    image_md: str = f"![background](~/assets/images/ministry-{slug}-{block.id}-{i}{suffix})"
-                    if item.link_url:
-                        image_md = f'<a href="{item.link_url}" target="_blank">{image_md}</a>'
+                    if item.src:
+                        item_content["imageUrl"] = f"~/assets/images/ministry-{slug}-{block.id}-{i}{suffix}"
 
-                    content.append(image_md)
+                    # link
+                    if item.link_url:
+                        item_content["linkUrl"] = item.link_url
 
                     # title
                     title: str = item.title.strip()
                     if title:
-                        content.append(f"**{title}**")
+                        item_content["title"] = title
 
                     # text
                     body: str = item.body.strip()
                     if body:
-                        content.append(body)
+                        item_content["text"] = body
+
+                    # render to the content
+                    content.append("    {")
+                    content.extend([f'        {k}: "{v.replace("\n", "<br />")}",' for k, v in item_content.items()])
+                    content.append("    },")
+
+                content.append("];")
+                content.append(f"<BlockGrid items={{items_{block.id.replace("-", "_")}}} columns={{{block.attr.columns_desktop}}} />")
+                content.append("{ /* Block Grid - END */ }")
 
             case ImageBlock():
                 alt: Path = Path(block.alt)
@@ -202,7 +214,7 @@ async def model_to_markdown(page: PageInstance, ministries_dir: Path, images_dir
     excerpt, content = await convert_content(page)
 
     # compute the minstry markdown file name
-    ministry_file: Path = ministries_dir / f"{CC_TO_SITE_SLUGS[page.attr.slug]}.md"
+    ministry_file: Path = ministries_dir / f"{CC_TO_SITE_SLUGS[page.attr.slug]}.mdx"
     async with await ministry_file.open("w") as f:
         # write the header
         await f.writelines(
@@ -212,6 +224,8 @@ async def model_to_markdown(page: PageInstance, ministries_dir: Path, images_dir
                 f"excerpt: {excerpt}\n",
                 f"image: ~/assets/images/{images[first_id]}\n",
                 "---\n\n",
+                "import Image from '~/components/common/Image.astro';\n",
+                "import BlockGrid from '~/components/ministries/BlockGrid.astro';\n\n",
             ]
         )
 

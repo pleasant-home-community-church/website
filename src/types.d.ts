@@ -52,6 +52,13 @@ export interface Ministry {
   readingTime?: number;
 }
 
+export interface BlockGridItem {
+  title?: string;
+  imageUrl?: string;
+  linkUrl?: string;
+  text?: string;
+}
+
 export interface Series {
   id: string,
   slug: string,

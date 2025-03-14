@@ -1,0 +1,15 @@
+---
+import Item from '~/components/ministries/BlockGridItem.astro';
+import type { BlockGridItem } from '~/types';
+
+export interface Props {
+  items: Array<BlockGridItem>;
+  columns?: number;
+}
+
+const { items, columns = 3 } = Astro.props;
+---
+
+<div class=`grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-${columns} -mb-6`>
+  {items.map((item) => <Item item={item} />)}
+</div>

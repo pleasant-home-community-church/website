@@ -202,7 +202,16 @@ class TextBlock(BaseModel):
     text_align: str = Field(validation_alias=AliasPath("attributes", "text_align"))
 
 
-Block = Annotated[ButtonBlock | DividerBlock | GridBlock | ImageBlock | SectionHeaderBlock | TextBlock, Field(discriminator="type")]
+class VideoBlock(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str
+    type: Literal["Video"]
+
+    url: str = Field(validation_alias=AliasPath("attributes", "url"))
+
+
+Block = Annotated[ButtonBlock | DividerBlock | GridBlock | ImageBlock | SectionHeaderBlock | TextBlock | VideoBlock, Field(discriminator="type")]
 
 
 class PageAttributes(BaseModel):

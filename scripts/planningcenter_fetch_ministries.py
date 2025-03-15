@@ -162,7 +162,7 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                 #     "</div>\n"
                 # )
                 button_link: str = f'<a href="{block.link_url}" target="_blank">{block.text}</a>'
-                content.append(f"{button_link}\n{"="*len(button_link)}")
+                content.append(f"{button_link}\n{"-"*len(button_link)}")
 
             case DividerBlock():
                 content.append("---")
@@ -238,7 +238,7 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
             case VideoBlock():
                 content.append(
                     '<div class="aspect-w-16 aspect-h-9 my-14">\n'
-                    f'    <iframe src="{block.url}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1" frameborder="0" title="Video Embed"></iframe>\n'
+                    f'    <iframe src="{block.url}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1" title="Video Embed"></iframe>\n'
                     "</div>\n"
                 )
 

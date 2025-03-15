@@ -36,7 +36,6 @@ function removeEvent(matches, event, fn) {
 function CalendarApp({categories, events, minDate, maxDate}) { 
   const eventsService = useState(() => createEventsServicePlugin())[0]
 
-  
   const calendar = useCalendarApp({
     firstDayOfWeek: 0,
     minDate,
@@ -59,12 +58,13 @@ function CalendarApp({categories, events, minDate, maxDate}) {
     eventsService.getAll()
   }, [])
 
-  const handleThemeChange = () => {
-    const dark = document.documentElement.classList.contains('dark');
-    calendar.setTheme(dark ? "dark" : "light");
-  };
-
   useEffect(() => {
+    const handleThemeChange = () => {
+      const dark = document.documentElement.classList.contains('dark');
+      if ( calendar == null) { return; }
+      calendar.setTheme(dark ? "dark" : "light");
+    };
+
     const matches = matchSelector('[data-aw-toggle-color-scheme]');
     attachEvent(matches, 'click', handleThemeChange);
 
@@ -76,7 +76,7 @@ function CalendarApp({categories, events, minDate, maxDate}) {
  
   return (
     <div>
-      <ScheduleXCalendar calendarApp={calendar} />
+      <ScheduleXCalendar calendarApp={calendar == null ? undefined : calendar} />
     </div>
   )
 }

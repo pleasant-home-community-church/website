@@ -143,9 +143,8 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                 content.append("---")
 
             case GridBlock():
-                content.append("{ /* Block Grid - START */ }")
-
-                content.append(f"export const items_{block.id.replace("-", "_")} = [")
+                grid_content: list[str] = ["{ /* Block Grid - START */ }"]
+                grid_content.append(f"export const items_{block.id.replace("-", "_")} = [")
                 for i, item in enumerate(block.attr.items):
                     item_content: dict[str, str] = {}
 
@@ -171,13 +170,15 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                         item_content["text"] = body
 
                     # render to the content
-                    content.append("    {")
-                    content.extend([f'        {k}: "{v.replace("\n", "<br />")}",' for k, v in item_content.items()])
-                    content.append("    },")
+                    grid_content.append("    {")
+                    grid_content.extend([f'        {k}: "{v.replace("\n", "<br />")}",' for k, v in item_content.items()])
+                    grid_content.append("    },")
 
-                content.append("];")
-                content.append(f"<BlockGrid items={{items_{block.id.replace("-", "_")}}} columns={{{block.attr.columns_desktop}}} />")
-                content.append("{ /* Block Grid - END */ }")
+                grid_content.append("];\n")
+                grid_content.append(f"<BlockGrid items={{items_{block.id.replace("-", "_")}}} columns={{{block.attr.columns_desktop}}} />")
+                grid_content.append("{ /* Block Grid - END */ }")
+
+                content.append("\n".join(grid_content))
 
             case ImageBlock():
                 alt: Path = Path(block.alt)
@@ -193,7 +194,14 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                 if block.background_image_enabled:
                     url: ParseResult = urlparse(block.background_image_url)
                     suffix: str = Path(url.path).suffix.lower()
-                    content.append(f"![background](~/assets/images/ministry-{slug}-{block.id}{suffix})")
+
+                    content.append(
+                        f'<Image src="~/assets/images/ministry-{slug}-{block.id}{suffix}" '
+                        'class="w-full h-40 rounded shadow-lg bg-gray-400 dark:bg-slate-700" '
+                        'widths={[400, 900]} width={400} sizes="(max-width: 900px) 400px, 900px" '
+                        'alt="background" aspectRatio="16:9" layout="cover" '
+                        'loading="lazy" decoding="async" />'
+                    )
 
             case TextBlock():
                 markdown: str = md(block.content)

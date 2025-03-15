@@ -30,6 +30,10 @@ export default defineConfig({
     svg: true,
   },
 
+  redirects: {
+    "/counseling": "https://biblicare.net/Site/Access/Login?KeyID=EBCAC141-1224-490B-B7F5-35027166"
+  },
+
   integrations: [
     tailwind({
       applyBaseStyles: false,

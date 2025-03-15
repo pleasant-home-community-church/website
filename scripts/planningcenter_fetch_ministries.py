@@ -9,7 +9,7 @@ from anyio import run, Path
 from dotenv import load_dotenv
 from httpx import BasicAuth, AsyncClient
 from loguru import logger
-from markdownify import MarkdownConverter
+from markdownify import MarkdownConverter, re_all_whitespace
 
 from planningcenter_api import (
     paginate,
@@ -24,6 +24,7 @@ from planningcenter_api_models import (
     PageInstance,
     SectionHeaderBlock,
     TextBlock,
+    VideoBlock,
 )
 
 CC_TO_SITE_SLUGS: dict[str, str] = {
@@ -50,6 +51,9 @@ async def download_images(page: PageInstance, images_dir: Path) -> tuple[Optiona
                 # not using grid block images for page image (first)
 
                 for i, item in enumerate(block.attr.items):
+                    if not item.src:
+                        continue
+
                     url: ParseResult = urlparse(item.src)
                     suffix: str = Path(url.path).suffix.lower()
                     image_file: Path = images_dir / f"ministry-{slug}-{block.id}-{i}{suffix}"
@@ -121,6 +125,22 @@ class BlankTargetLinkConverter(MarkdownConverter):
         else:
             return f"{md_link}"
 
+    def _convert_hn(self, n, el, text, parent_tags):
+        """Method name prefixed with _ to prevent <hn> to call this"""
+        if "_inline" in parent_tags:
+            return text
+
+        # prevent MemoryErrors in case of very large n
+        n = max(1, min(6, n))
+
+        text = text.strip()
+        if n <= 2:
+            line = "-"
+            return self.underline(text, line)
+        text = re_all_whitespace.sub(" ", text)
+        hashes = "#" * n
+        return "\n\n%s %s\n\n" % (hashes, text)
+
 
 # Create shorthand method for conversion
 def md(html, **options):
@@ -136,8 +156,11 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
     for block in page.attr.blocks:
         match block:
             case ButtonBlock():
-                button_link: str = f'<a href="{block.link_url}" target="_blank">{block.text}</a>'
-                content.append(f"{button_link}\n{"="*len(button_link)}")
+                content.append(
+                    '<div class="flex w-full sm:w-auto not-prose">\n'
+                    f'    <Button variant="primary" text="{block.text}" href="{block.link_url}" target="_blank" class="w-auto sm:mb-0" />\n'
+                    "</div>\n"
+                )
 
             case DividerBlock():
                 content.append("---")
@@ -210,6 +233,13 @@ async def convert_content(page: PageInstance) -> tuple[str, str]:
                 if excerpt is None:
                     excerpt = await geneate_excerpt(markdown)
 
+            case VideoBlock():
+                content.append(
+                    '<div class="aspect-w-16 aspect-h-9 my-14">\n'
+                    f'    <iframe src="{block.url}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1" frameborder="0" title="Video Embed"></iframe>\n'
+                    "</div>\n"
+                )
+
     # generate excerpt
     combined: str = "\n\n".join(content)
 
@@ -229,11 +259,14 @@ async def model_to_markdown(page: PageInstance, ministries_dir: Path, images_dir
             [
                 "---\n",
                 f'title: "{page.attr.title}"\n',
-                f"excerpt: {excerpt}\n",
-                f"image: ~/assets/images/{images[first_id]}\n",
-                "---\n\n",
+                f'excerpt: "{excerpt}"\n',
+                f'image: "~/assets/images/{images[first_id]}"\n',
+                "---\n",
+                "\n",
                 "import Image from '~/components/common/Image.astro';\n",
-                "import BlockGrid from '~/components/ministries/BlockGrid.astro';\n\n",
+                "import BlockGrid from '~/components/ministries/BlockGrid.astro';\n",
+                "import Button from '~/components/ui/Button.astro';\n",
+                "\n",
             ]
         )
 

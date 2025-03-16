@@ -4,7 +4,7 @@ import { fetchMinistries } from './utils/ministries';
 const ministriesLinks = (await fetchMinistries()).map((ministry) => ({
   text: ministry.title,
   href: getPermalink(ministry.slug, 'ministry'),
-})).sort((a, b) => a.text.localeCompare(b.text));
+}));
 
 export const headerData = {
   links: [

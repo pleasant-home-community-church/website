@@ -89,7 +89,7 @@ const load = async function (): Promise<Array<Ministry>> {
   const normalizedMinistries = ministries.map(async (ministry) => await getNormalizedMinistry(ministry));
 
   const results = (await Promise.all(normalizedMinistries))
-    .sort((a, b) => a.slug.localeCompare(b.slug))
+    .sort((a, b) => a.slug.localeCompare(b.title))
     .filter((ministry) => !ministry.draft);
 
   return results;

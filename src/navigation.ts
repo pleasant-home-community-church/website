@@ -1,24 +1,13 @@
 import { getPermalink, getMinistriesPermalink, getSermonsPermalink, getSeriesPermalink, getSpeakersPermalink } from './utils/permalinks';
 import { fetchMinistries } from './utils/ministries';
-// import { findLatestSermons } from './utils/sermons';
-// import { getFormattedDate } from './utils/utils';
 
 const ministriesLinks = (await fetchMinistries()).map((ministry) => ({
   text: ministry.title,
   href: getPermalink(ministry.slug, 'ministry'),
-}));
-
-// const sermonsLinks = (await findLatestSermons({ count: 3 })).map((sermon) => ({
-//   text: `${getFormattedDate(sermon.preachDate)}`,
-//   href: getPermalink(sermon.permalink, 'sermon')
-// }));
+})).sort((a, b) => a.text.localeCompare(b.text));
 
 export const headerData = {
   links: [
-    // {
-    //   text: 'Home',
-    //   href: '/',
-    // },
     {
       text: 'About',
       links: [
@@ -41,7 +30,6 @@ export const headerData = {
       text: 'Sermons',
       href: getSermonsPermalink(),
       links: [
-        // ...sermonsLinks,
         {
           text: "By Date",
           href: getSermonsPermalink()
@@ -84,7 +72,6 @@ export const footerData = {
       title: 'Sermons',
       href: getSermonsPermalink(),
       links: [
-        // ...sermonsLinks,
         {
           text: "By Date",
           href: getSermonsPermalink(),

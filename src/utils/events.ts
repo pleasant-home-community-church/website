@@ -28,6 +28,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
   } = data;
 
   const imageUrl = raw_event.image_url;
+  const eventUrl = `https://pleasanthome.churchcenter.com/calendar/event/${id}`
   const slug = id;
   const startsAt = new Date(starts_at);
   const endsAt = new Date(ends_at);
@@ -45,6 +46,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     allDayEvent,
     eventFeatured,
     imageUrl,
+    eventUrl,
 
     startsAt,
     endsAt,

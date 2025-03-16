@@ -3,6 +3,7 @@ import { useCalendarApp, ScheduleXCalendar } from '@schedule-x/react';
 import {
   createViewMonthGrid,
   createViewMonthAgenda,
+  CalendarApp,
 } from '@schedule-x/calendar'
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createEventModalPlugin } from '@schedule-x/event-modal';
@@ -32,11 +33,12 @@ function removeEvent(matches, event, fn) {
     });
   }
 }
+
  
-function CalendarApp({categories, events, minDate, maxDate}) { 
+function Calendar({categories, events, minDate, maxDate}) { 
   const eventsService = useState(() => createEventsServicePlugin())[0]
 
-  const calendar = useCalendarApp({
+  const calendar: CalendarApp | null = useCalendarApp({
     firstDayOfWeek: 0,
     minDate,
     maxDate,
@@ -72,7 +74,7 @@ function CalendarApp({categories, events, minDate, maxDate}) {
     return () => {
       removeEvent(matches, 'click', handleThemeChange);
     };  
-  }, [])
+  }, [calendar])
  
   return (
     <div>
@@ -81,4 +83,4 @@ function CalendarApp({categories, events, minDate, maxDate}) {
   )
 }
  
-export default CalendarApp
+export default Calendar

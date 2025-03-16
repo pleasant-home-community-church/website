@@ -17,6 +17,7 @@ export interface Event {
   allDayEvent: boolean;
   eventFeatured: boolean;
   imageUrl?: string | null;
+  eventUrl: string;
 
   startsAt: Date;
   endsAt: Date;

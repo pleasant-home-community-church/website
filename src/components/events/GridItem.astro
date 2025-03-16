@@ -12,7 +12,7 @@ export interface Props {
 
 const { event } = Astro.props;
 const image = event.imageUrl ? event.imageUrl : '~/assets/images/upcoming-events.jpg';
-const link = `https://pleasanthome.churchcenter.com/calendar/event/${event.id}`;
+const link = event.eventUrl;
 ---
 
 <article

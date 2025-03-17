@@ -138,12 +138,12 @@ class Calendar(RestClient):
 
     @retry_on_rate_limit
     @GET("events/{event_id}/event_connections")
-    @query("where_product_name", "where[product_name]")
+    # @query("where_product_name", "where[product_name]")
     @on(200, lambda r: r.json())
     async def event_connections(
         self,
         event_id,
-        where_product_name="groups",
+        # where_product_name="groups",
     ): ...
 
 
@@ -190,3 +190,14 @@ class Publishing(RestClient):
         per_page,
         filter="current_published",
     ): ...
+
+
+@backend("httpx")
+@endpoint("https://api.planningcenteronline.com/registrations/v2")
+@content("application/json")
+class Registrations(RestClient):
+
+    @retry_on_rate_limit
+    @GET("events/{event_id}")
+    @on(200, lambda r: r.json())
+    async def event(self, event_id): ...

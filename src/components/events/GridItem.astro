@@ -2,9 +2,9 @@
 import type { Event } from '~/types';
 
 import Image from '~/components/common/Image.astro';
-// import { getFormattedDate } from '~/utils/utils';
 import { Icon } from 'astro-icon/components';
 import { DateTime } from 'luxon';
+import Button from '~/components/ui/Button.astro';
 
 export interface Props {
   event: Event;
@@ -13,6 +13,23 @@ export interface Props {
 const { event } = Astro.props;
 const image = event.imageUrl ? event.imageUrl : '~/assets/images/upcoming-events.jpg';
 const link = event.eventUrl;
+const registrationOpensAt =
+  event.registrationOpensAt != undefined && event.registrationOpensAt != null
+    ? DateTime.fromJSDate(event.registrationOpensAt)
+    : null;
+const callToAction = event.registrationUrl
+  ? {
+      text: 'Sign Up',
+      href: event.registrationUrl,
+      target: '_blank',
+      icon: 'tabler:arrow-right',
+    }
+  : registrationOpensAt
+    ? {
+        text: `Sign Up ${registrationOpensAt.setZone('America/Los_Angeles').toFormat('MMMM dd')}`,
+        icon: 'tabler:clock',
+      }
+    : null;
 ---
 
 <article
@@ -73,4 +90,11 @@ const link = event.eventUrl;
       )
     }
   </span>
+  {
+    callToAction && (
+      <div class="mt-2">
+        <Button {...callToAction} />
+      </div>
+    )
+  }
 </article>

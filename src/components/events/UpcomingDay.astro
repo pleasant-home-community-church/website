@@ -19,8 +19,9 @@ const { day } = Astro.props;
   day.events.length > 0 ? (
     day.events.map((event) => (
       <tr style="border-bottom-width: 0px;">
-        <td style="padding-left: 1rem">{event.allDayEvent ? "All Day" : DateTime.fromJSDate(event.startsAt).setZone("America/Los_Angeles").toFormat("h:mm a")}</td>
-        <td><a class="prose" href={event.eventUrl} target="_blank">{event.eventName}</a></td>
+        <td class="pl-4" style="white-space: nowrap;">{event.allDayEvent ? "All Day" : DateTime.fromJSDate(event.startsAt).setZone("America/Los_Angeles").toFormat("h:mm a")}</td>
+        <td class="w-full"><a class="prose" href={event.eventUrl} target="_blank">{event.eventName}</a></td>
+        <td></td>
       </tr>
     ))
   ) : <></>

@@ -42,6 +42,7 @@ const eventsCollection = defineCollection({
     event_featured: z.boolean(),
     event: z.object({
       image_url: z.string().optional().nullable(),
+      registration_url: z.string().optional().nullable(),
     }),
 
     starts_at: z.string().datetime(),
@@ -52,12 +53,24 @@ const eventsCollection = defineCollection({
     ministry: z.string().optional(),
     color: z.string(),
 
+    registration: z.object({
+      id: z.string(),
+      at_maximum_capacity: z.boolean(),
+      visibility: z.string(),
+      closed: z.boolean(),
+      open: z.boolean(),
+      open_at: z.string().datetime().optional().nullable(),
+      hide_at: z.string().datetime().optional().nullable(),
+      show_at: z.string().datetime().optional().nullable(),
+    }).optional().nullable(),
+
     tags: z.array(z.object({
       id: z.string(),
       color: z.string(),
       name: z.string(),
       group: z.string(),
     })).optional(),
+
     event_tags: z.object({
       Highlight: z.string().optional(),
     })

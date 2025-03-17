@@ -15,6 +15,7 @@ from planningcenter_api import (
     paginate,
     Calendar,
     Groups,
+    Registrations,
 )
 
 from planningcenter_api_models import (
@@ -22,6 +23,7 @@ from planningcenter_api_models import (
     EventConnection,
     GroupTag,
     GroupTagGroup,
+    RegistrationEvent,
 )
 
 
@@ -149,54 +151,67 @@ async def main():
         logger.trace(f"Tag Group: {tag_group.id} - {tag_group.name}")
         group_tags[tag_group.id] = tag_group
 
+    # get the registrations class
+    registrations = Registrations(auth=auth)
+
     calendar = Calendar(auth=auth)
-    async for instance in paginate(calendar.calendar_instances_list, during_start, during_end):
-        event: CalendarInstance = CalendarInstance(**instance)
-        logger.info(f"{event.visible_starts_at}: {event.id} - {event.event_name}")
+    async for raw_instance in paginate(calendar.calendar_instances_list, during_start, during_end):
+        instance: CalendarInstance = CalendarInstance(**raw_instance)
+        logger.info(f"{instance.visible_starts_at}: {instance.id} - {instance.event_name}")
 
         # check for group connection and image
-        if event.event:
+        if instance.event:
 
             # keep track of the image urls and replace with the local cache path
-            if event.event.image_url:
-                image_name: str = await download_image(images_dir, event.event.image_url)
-                event.event.image_url = f"~/assets/images/{image_name}"
+            if instance.event.image_url:
+                image_name: str = await download_image(images_dir, instance.event.image_url)
+                instance.event.image_url = f"~/assets/images/{image_name}"
 
             # check for group connection
-            data = (await calendar.event_connections(event.event.id))["data"]
+            data = (await calendar.event_connections(instance.event.id))["data"]
             connections: list[EventConnection] = [EventConnection(**ec) for ec in data]
 
-            if connections:
-                # get the group tags
-                data = (await groups.group_tags(connections[0].connected_to_id))["data"]
-                for d in data:
-                    group_tag: GroupTag = GroupTag(**d)
-                    tag_group: GroupTagGroup = group_tags[group_tag.tag_group_id]
-                    event.group_tags[tag_group.name] = group_tag.value
+            for connection in connections:
+                match connection.connected_to_type:
+                    case "group":
+                        # get the group tags
+                        data = (await groups.group_tags(connection.connected_to_id))["data"]
+                        for d in data:
+                            group_tag: GroupTag = GroupTag(**d)
+                            tag_group: GroupTagGroup = group_tags[group_tag.tag_group_id]
+                            instance.group_tags[tag_group.name] = group_tag.value
+
+                    case "signup":
+                        # get the registration information to know if it is open
+                        data = (await registrations.event(connection.connected_to_id))["data"]
+                        instance.registration = RegistrationEvent(**data)
+
+                    case default:
+                        ...
 
         # convert event tags into simple dictionary
-        if event.tags:
-            for tag in event.tags:
-                event.event_tags[tag.group] = tag.name
+        if instance.tags:
+            for tag in instance.tags:
+                instance.event_tags[tag.group] = tag.name
 
         # figure out what the ministry is
         # 1. if group tag then use that
         # 2. if tag has a ministry then use that
         # 3. leave ministry blank if not found
-        if "Ministry" in event.group_tags:
-            ministry = event.group_tags["Ministry"]
+        if "Ministry" in instance.group_tags:
+            ministry = instance.group_tags["Ministry"]
             if ministry in MINISTRY_GROUP_TAG_TO_SLUG:
-                event.ministry = MINISTRY_GROUP_TAG_TO_SLUG[ministry]
-                event.color = MINISTRY_COLOR[event.ministry]
+                instance.ministry = MINISTRY_GROUP_TAG_TO_SLUG[ministry]
+                instance.color = MINISTRY_COLOR[instance.ministry]
 
-        elif "Ministry" in event.event_tags:
-            ministry = event.event_tags["Ministry"]
+        elif "Ministry" in instance.event_tags:
+            ministry = instance.event_tags["Ministry"]
             if ministry in MINISTRY_TAG_TO_SLUG:
-                event.ministry = MINISTRY_TAG_TO_SLUG[ministry]
-                event.color = MINISTRY_COLOR[event.ministry]
+                instance.ministry = MINISTRY_TAG_TO_SLUG[ministry]
+                instance.color = MINISTRY_COLOR[instance.ministry]
 
-        event_file: Path = events_dir / f"{event.id}.json"
-        await event_file.write_text(event.model_dump_json(indent=2))
+        event_file: Path = events_dir / f"{instance.id}.json"
+        await event_file.write_text(instance.model_dump_json(indent=2))
 
     logger.success("Done")
 

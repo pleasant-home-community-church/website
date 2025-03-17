@@ -24,6 +24,16 @@
     "visible_in_church_center": true,
     "tags": []
   },
+  "registration": {
+    "id": "2746424",
+    "at_maximum_capacity": false,
+    "visibility": "public",
+    "closed": false,
+    "open": true,
+    "open_at": "2025-02-04T08:00:00Z",
+    "hide_at": "2025-03-29T19:00:00Z",
+    "show_at": "2025-02-04T08:00:00Z"
+  },
   "tags": [
     {
       "id": "307165",

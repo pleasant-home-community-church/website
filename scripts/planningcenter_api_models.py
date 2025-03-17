@@ -11,6 +11,20 @@ class EventApprovalStatus(StrEnum):
     REJECTED = "R"
 
 
+class RegistrationEvent(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str
+
+    at_maximum_capacity: bool = Field(validation_alias=AliasPath("attributes", "at_maximum_capacity"))
+    visibility: str = Field(validation_alias=AliasPath("attributes", "visibility"))
+    closed: bool = Field(validation_alias=AliasPath("attributes", "closed"))
+    open: bool = Field(validation_alias=AliasPath("attributes", "open"))
+    open_at: Optional[datetime] = Field(validation_alias=AliasPath("attributes", "open_at"))
+    hide_at: Optional[datetime] = Field(validation_alias=AliasPath("attributes", "hide_at"))
+    show_at: Optional[datetime] = Field(validation_alias=AliasPath("attributes", "show_at"))
+
+
 class Tag(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
@@ -68,7 +82,8 @@ class CalendarInstance(BaseModel):
     visible_ends_at: datetime = Field(validation_alias=AliasPath("attributes", "visible_ends_at"))
     visible_starts_at: datetime = Field(validation_alias=AliasPath("attributes", "visible_starts_at"))
 
-    event: Optional[Event]
+    event: Optional[Event] = None
+    registration: Optional[RegistrationEvent] = None
     tags: Optional[list[Tag]] = Field(default_factory=list)
     event_tags: dict[str, str] = Field(default_factory=dict)
     group_tags: dict[str, str] = Field(default_factory=dict)

@@ -18,6 +18,8 @@ export interface Event {
   eventFeatured: boolean;
   imageUrl?: string | null;
   eventUrl: string;
+  registrationUrl?: string | null;
+  registrationOpensAt?: Date | null;
 
   startsAt: Date;
   endsAt: Date;

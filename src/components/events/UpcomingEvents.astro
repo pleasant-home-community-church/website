@@ -21,7 +21,7 @@ const count: number = days.reduce((sum, day) => sum + day.events.length, 0);
 
 <table>
   <thead>
-    <th colspan="2"><Headline title="This Week" /></th>
+    <th colspan="3"><Headline title="This Week" /></th>
   </thead>
   <tbody>
     {
@@ -29,7 +29,7 @@ const count: number = days.reduce((sum, day) => sum + day.events.length, 0);
         days.map((day) => <UpcomingDay day={day} />)
       ) : (
         <tr>
-          <td>
+          <td colspan="3">
             <Headline subtitle="No Scheduled Events" />
           </td>
         </tr>

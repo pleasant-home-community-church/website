@@ -20,14 +20,14 @@
     "percent_rejected": 0,
     "registration_url": "https://pleasanthome.churchcenter.com/registrations/events/2746424",
     "summary": "PHCC ladies,\n\nPlease join us for our annual Women's Ministry Spring Tea.\n\nThis event is open for PHCC ladies high school age and up.",
-    "updated_at": "2025-03-16T17:31:13Z",
+    "updated_at": "2025-03-29T19:00:05Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": {
     "id": "2746424",
     "at_maximum_capacity": false,
-    "visibility": "public",
+    "visibility": "private",
     "closed": false,
     "open": true,
     "open_at": "2025-02-04T08:00:00Z",
@@ -36,21 +36,21 @@
   },
   "tags": [
     {
-      "id": "307165",
-      "color": "#6ADCC8",
-      "name": "Pleasant Home Community Church",
-      "group": "Campus"
-    },
-    {
       "id": "142032",
       "color": "#F297CD",
       "name": "Women's Ministry",
       "group": "Ministry"
+    },
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
     }
   ],
   "event_tags": {
-    "Campus": "Pleasant Home Community Church",
-    "Ministry": "Women's Ministry"
+    "Ministry": "Women's Ministry",
+    "Campus": "Pleasant Home Community Church"
   },
   "group_tags": {
     "Location Type": "PHCC",

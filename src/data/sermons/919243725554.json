@@ -128,7 +128,7 @@
         "type": "media",
         "mediaType": "caption",
         "live": false,
-        "downloadURL": "https://cloud.sermonaudio.net/media/caption/high/919243725554.srt?ts=1726717532&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/caption/high/919243725554.srt?stats=false&ts=1726717532&language=eng",
         "adaptiveBitrate": false,
         "language": "eng",
         "mediaFilename": "919243725554-eng.srt",

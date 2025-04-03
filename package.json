@@ -31,6 +31,7 @@
     "@mantine/core": "^7.17.2",
     "@mantine/dates": "^7.17.2",
     "@mantine/hooks": "^7.17.2",
+    "@preact/signals": "^2.0.2",
     "@schedule-x/calendar": "^2.22.0",
     "@schedule-x/current-time": "^2.22.0",
     "@schedule-x/event-modal": "^2.22.0",

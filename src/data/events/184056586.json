@@ -20,12 +20,18 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-03-27T16:04:31Z",
+    "updated_at": "2025-04-06T17:55:52Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": null,
   "tags": [
+    {
+      "id": "307166",
+      "color": "#9FBFFE",
+      "name": "Foundation Bible Church",
+      "group": "Campus"
+    },
     {
       "id": "307165",
       "color": "#6ADCC8",
@@ -33,16 +39,17 @@
       "group": "Campus"
     },
     {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
+      "id": "344712",
+      "color": "#F9D266",
+      "name": "Vacation Bible School",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Vacation Bible School"
   },
   "group_tags": {},
-  "ministry": "default",
-  "color": "#6ADCC8"
+  "ministry": "vbs",
+  "color": "#F9D266"
 }

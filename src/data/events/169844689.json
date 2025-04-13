@@ -27,6 +27,12 @@
   "registration": null,
   "tags": [
     {
+      "id": "142032",
+      "color": "#F297CD",
+      "name": "Women's Ministry",
+      "group": "Ministry"
+    },
+    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
@@ -37,17 +43,11 @@
       "color": "#9FBFFE",
       "name": "Foundation Bible Church",
       "group": "Campus"
-    },
-    {
-      "id": "142032",
-      "color": "#F297CD",
-      "name": "Women's Ministry",
-      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church",
-    "Ministry": "Women's Ministry"
+    "Ministry": "Women's Ministry",
+    "Campus": "Foundation Bible Church"
   },
   "group_tags": {},
   "ministry": "women",

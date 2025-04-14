@@ -2,9 +2,9 @@
   "type": "speaker",
   "id": 68710,
   "displayName": "Travis Cole",
-  "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/generic.jpg",
-  "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/generic.png",
-  "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/generic.jpg",
-  "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/generic.png",
+  "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/68710-0001.jpg",
+  "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/68710-0001.png",
+  "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/68710-0001.jpg",
+  "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/68710-0001.png",
   "sortName": "Cole, Travis"
 }

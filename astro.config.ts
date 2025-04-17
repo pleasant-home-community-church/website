@@ -27,7 +27,6 @@ export default defineConfig({
   site: 'https://www.phccgresham.org',
 
   experimental: {
-    svg: true,
   },
 
   redirects: {

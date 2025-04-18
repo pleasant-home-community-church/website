@@ -27,15 +27,15 @@
   "registration": null,
   "tags": [
     {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    },
+    {
+      "id": "307166",
+      "color": "#9FBFFE",
+      "name": "Foundation Bible Church",
       "group": "Campus"
     },
     {
@@ -46,7 +46,7 @@
     }
   ],
   "event_tags": {
-    "Campus": "Pleasant Home Community Church",
+    "Campus": "Foundation Bible Church",
     "Ministry": "Vacation Bible School"
   },
   "group_tags": {},

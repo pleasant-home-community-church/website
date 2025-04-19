@@ -1,26 +1,26 @@
 {
-  "id": "176715174",
-  "all_day_event": false,
-  "ends_at": "2025-12-13T20:00:00Z",
+  "id": "185801997",
+  "all_day_event": true,
+  "ends_at": "2025-09-29T06:59:59Z",
   "event_featured": false,
-  "event_name": "Women's Christmas Gathering",
-  "starts_at": "2025-12-13T17:00:00Z",
+  "event_name": "PHCC Women's Retreat",
+  "starts_at": "2025-09-26T07:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-12-13T20:00:00Z",
-  "visible_starts_at": "2025-12-13T17:00:00Z",
+  "visible_ends_at": "2025-09-29T06:59:59Z",
+  "visible_starts_at": "2025-09-26T07:00:00Z",
   "event": {
-    "id": "15240621",
+    "id": "16485312",
     "approval_status": "A",
-    "created_at": "2025-01-11T00:05:42Z",
+    "created_at": "2025-04-18T22:23:46Z",
     "description": null,
     "featured": false,
-    "image_url": "~/assets/images/events--v1-transformuploads-2F253867-2Fawu8kotd6d0calvp5gnar1xuivl5.jpg",
-    "name": "Women's Christmas Gathering",
+    "image_url": null,
+    "name": "PHCC Women's Retreat",
     "percent_approved": 100,
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-03-14T00:51:02Z",
+    "updated_at": "2025-04-18T22:23:46Z",
     "visible_in_church_center": true,
     "tags": []
   },
@@ -37,18 +37,11 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
-    },
-    {
-      "id": "345688",
-      "color": "#E4EDFF",
-      "name": "Upcoming Event",
-      "group": "Highlight"
     }
   ],
   "event_tags": {
     "Ministry": "Women's Ministry",
-    "Campus": "Pleasant Home Community Church",
-    "Highlight": "Upcoming Event"
+    "Campus": "Pleasant Home Community Church"
   },
   "group_tags": {},
   "ministry": "women",

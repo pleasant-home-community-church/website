@@ -1,26 +1,26 @@
 {
-  "id": "169844689",
+  "id": "185803117",
   "all_day_event": false,
-  "ends_at": "2025-03-26T21:00:00Z",
+  "ends_at": "2025-07-23T21:00:00Z",
   "event_featured": false,
-  "event_name": "Sisterhood of Quilters",
-  "starts_at": "2025-03-26T16:00:00Z",
+  "event_name": "PHCC Women's Picnic",
+  "starts_at": "2025-07-23T17:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-03-26T21:00:00Z",
-  "visible_starts_at": "2025-03-26T16:00:00Z",
+  "visible_ends_at": "2025-07-23T21:00:00Z",
+  "visible_starts_at": "2025-07-23T17:00:00Z",
   "event": {
-    "id": "14379908",
+    "id": "16485425",
     "approval_status": "A",
-    "created_at": "2024-10-16T17:36:56Z",
-    "description": null,
+    "created_at": "2025-04-18T23:18:14Z",
+    "description": "<div>\n  Bring a picnic lunch and spend the afternoon in fellowship with other ladies.\n</div>\n",
     "featured": false,
     "image_url": null,
-    "name": "Sisterhood of Quilters",
+    "name": "PHCC Women's Picnic",
     "percent_approved": 100,
     "percent_rejected": 0,
     "registration_url": null,
-    "summary": null,
-    "updated_at": "2025-03-08T05:00:00Z",
+    "summary": "Bring a picnic lunch and spend the afternoon in fellowship with other ladies.",
+    "updated_at": "2025-04-18T23:18:15Z",
     "visible_in_church_center": true,
     "tags": []
   },
@@ -37,17 +37,11 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
-    },
-    {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
     }
   ],
   "event_tags": {
     "Ministry": "Women's Ministry",
-    "Campus": "Foundation Bible Church"
+    "Campus": "Pleasant Home Community Church"
   },
   "group_tags": {},
   "ministry": "women",

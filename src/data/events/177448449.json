@@ -36,21 +36,21 @@
   },
   "tags": [
     {
-      "id": "142032",
-      "color": "#F297CD",
-      "name": "Women's Ministry",
-      "group": "Ministry"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "142032",
+      "color": "#F297CD",
+      "name": "Women's Ministry",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Ministry": "Women's Ministry",
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Women's Ministry"
   },
   "group_tags": {
     "Location Type": "PHCC",

@@ -1,13 +1,13 @@
 {
-  "id": "151854504",
+  "id": "154770774",
   "all_day_event": false,
-  "ends_at": "2026-03-11T02:30:00Z",
+  "ends_at": "2026-04-22T02:30:00Z",
   "event_featured": false,
   "event_name": "Men's Bible Study",
-  "starts_at": "2026-03-11T01:30:00Z",
+  "starts_at": "2026-04-22T01:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2026-03-11T02:30:00Z",
-  "visible_starts_at": "2026-03-11T01:30:00Z",
+  "visible_ends_at": "2026-04-22T02:30:00Z",
+  "visible_starts_at": "2026-04-22T01:30:00Z",
   "event": {
     "id": "10218581",
     "approval_status": "A",

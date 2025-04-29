@@ -20,12 +20,18 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": "Join us for a time of study in God's word and in fellowship with one another.\nWe meet on Wednesday evenings at 6:30pm in the youth room. Just a reminder, we meet at Barton on the first Wednesday of every month for game time.",
-    "updated_at": "2025-04-02T01:49:48Z",
+    "updated_at": "2025-04-29T04:04:03Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": null,
   "tags": [
+    {
+      "id": "307166",
+      "color": "#9FBFFE",
+      "name": "Foundation Bible Church",
+      "group": "Campus"
+    },
     {
       "id": "307165",
       "color": "#6ADCC8",
@@ -33,14 +39,15 @@
       "group": "Campus"
     },
     {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
+      "id": "163124",
+      "color": "#FCDCCA",
+      "name": "Rooted (Youth Ministry)",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Rooted (Youth Ministry)"
   },
   "group_tags": {
     "Location Type": "PHCC",

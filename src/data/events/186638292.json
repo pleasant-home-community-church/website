@@ -1,0 +1,42 @@
+{
+  "id": "186638292",
+  "all_day_event": false,
+  "ends_at": "2025-09-24T21:00:00Z",
+  "event_featured": false,
+  "event_name": "Sisterhood of Quilters",
+  "starts_at": "2025-09-24T16:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-09-24T21:00:00Z",
+  "visible_starts_at": "2025-09-24T16:00:00Z",
+  "event": {
+    "id": "16591231",
+    "approval_status": "A",
+    "created_at": "2025-04-30T17:44:33Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "Sisterhood of Quilters",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2025-04-30T17:44:33Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church"
+  },
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
+}

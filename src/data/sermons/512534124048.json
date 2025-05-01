@@ -1,0 +1,140 @@
+{
+  "id": "512534124048",
+  "fullTitle": "Application: Human Responsibility",
+  "displayTitle": "Application: Human Responsi...",
+  "languageCode": "en",
+  "bibleText": "Romans 13",
+  "subtitle": "Romans",
+  "eventType": "Midweek Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 194945
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 4257,
+  "videoDurationSeconds": 4258,
+  "preachDate": "2025-04-30",
+  "publishTimestamp": 1746068700,
+  "type": "sermon",
+  "updateDate": 1746070361,
+  "publishDate": "2025-05-01",
+  "displayEventType": "Midweek Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/high/512534124048.mp3?ts=1746070826&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/high/512534124048.mp3?ts=1746070826&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 51399392,
+        "adaptiveBitrate": false,
+        "duration": 4257,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "512534124048.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/low/512534124048.mp3?ts=1746070826&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/low/512534124048.mp3?ts=1746070826&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 8798228,
+        "adaptiveBitrate": false,
+        "duration": 4257,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "512534124048.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/abr/512534124048.m3u8?ts=1746070826",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/512534124048.jpg?ts=1746070361",
+        "adaptiveBitrate": true,
+        "duration": 4258,
+        "mediaFilename": "512534124048.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/high/512534124048.m3u8?ts=1746070826&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/high/512534124048.mp4?ts=1746070826&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/512534124048.jpg?ts=1746070361",
+        "bitrate": 1091,
+        "fileSizeBytes": 585926581,
+        "adaptiveBitrate": false,
+        "duration": 4258,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "512534124048.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/low/512534124048.m3u8?ts=1746070826&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/low/512534124048.mp4?ts=1746070826&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/512534124048.jpg?ts=1746070361",
+        "bitrate": 393,
+        "fileSizeBytes": 213794189,
+        "adaptiveBitrate": false,
+        "duration": 4258,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "512534124048.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.net/media/caption/high/512534124048.srt?stats=false&ts=1746070826&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "512534124048-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/512534124048/waveform?peaksOnly=true"
+}

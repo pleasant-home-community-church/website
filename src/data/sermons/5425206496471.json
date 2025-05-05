@@ -1,0 +1,141 @@
+{
+  "id": "5425206496471",
+  "fullTitle": "Humble Faith",
+  "displayTitle": "Humble Faith",
+  "languageCode": "en",
+  "bibleText": "Mark 7:24-30",
+  "subtitle": "The Gospel of Mark",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 195640
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 4061,
+  "videoDurationSeconds": 4061,
+  "preachDate": "2025-05-04",
+  "publishTimestamp": 1746389374,
+  "type": "sermon",
+  "updateDate": 1746391042,
+  "publishDate": "2025-05-04",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/high/5425206496471.mp3?ts=1746391568&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/high/5425206496471.mp3?ts=1746391568&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 49035968,
+        "adaptiveBitrate": false,
+        "duration": 4061,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "5425206496471.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/low/5425206496471.mp3?ts=1746391568&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/low/5425206496471.mp3?ts=1746391568&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 8404313,
+        "adaptiveBitrate": false,
+        "duration": 4061,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "5425206496471.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/abr/5425206496471.m3u8?ts=1746391568",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/5425206496471.jpg?ts=1746391042",
+        "adaptiveBitrate": true,
+        "duration": 4061,
+        "mediaFilename": "5425206496471.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/high/5425206496471.m3u8?ts=1746391568&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/high/5425206496471.mp4?ts=1746391568&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/5425206496471.jpg?ts=1746391042",
+        "bitrate": 1092,
+        "fileSizeBytes": 559128310,
+        "adaptiveBitrate": false,
+        "duration": 4061,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "5425206496471.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/low/5425206496471.m3u8?ts=1746391568&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/low/5425206496471.mp4?ts=1746391568&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/5425206496471.jpg?ts=1746391042",
+        "bitrate": 395,
+        "fileSizeBytes": 204223718,
+        "adaptiveBitrate": false,
+        "duration": 4061,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "5425206496471.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.net/media/caption/high/5425206496471.srt?stats=false&ts=1746391568&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "5425206496471-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/5425206496471/waveform?peaksOnly=true",
+  "keywords": "Faith Possession Child Gentile Jesus"
+}

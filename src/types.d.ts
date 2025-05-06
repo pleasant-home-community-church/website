@@ -10,6 +10,7 @@ export interface EventTag {
 
 export interface Event {
   id: string;
+  eventId: string;
   slug: string;
   eventName: string;
 

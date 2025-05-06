@@ -28,8 +28,9 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
     event_tags,
   } = data;
 
+  const eventId = raw_event.id;
   const imageUrl = raw_event.image_url;
-  const eventUrl = `https://pleasanthome.churchcenter.com/calendar/event/${id}`
+  const eventUrl = `https://pleasanthome.churchcenter.com/calendar/event/${id}`;
   const registrationUrl = registration != null && !registration.closed && registration.open ? raw_event.registration_url : undefined;
   const registrationOpensAt = registration != null && registration.open_at != null ? DateTime.fromISO(registration.open_at).toJSDate() : undefined;
   const slug = id;
@@ -41,6 +42,7 @@ const getNormalizedEvent = async (event: CollectionEntry<'events'>): Promise<Eve
 
   return {
     id,
+    eventId,
     slug,
 
     eventName,
@@ -123,26 +125,30 @@ export const findFeaturedEvents = async ({ count = 3, ministry }: { count: numbe
   const beforeDate = new Date()
 
   const events = await fetchEvents();
-  const featured = events
+  let featured = events
     .filter((event: Event) =>
       (ministry ? event.ministry === ministry : true) &&
       (event.eventFeatured && event.endsAt.getTime() > beforeDate.getTime() || event.highlight)
     )
+    .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
 
   if (featured.length > count) {
     // remove duplicate event instances
-    return featured
-      .reduce((r: Array<Event>, event: Event) => {
-        if (!(event.id in r)) { r.push(event) }
-        return r;
-      }, [])
-      .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
-      .slice(0, count);
-  } else {
-    return featured
-      .sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime())
-      .slice(0, count);
+    const eventIds = new Set();
+
+    // use set to keep track of the high level event to dedupe with
+    featured = featured.reduce((r: Array<Event>, event: Event) => {
+      if (!eventIds.has(event.eventId)) {
+        r.push(event);
+        eventIds.add(event.eventId);
+      }
+      return r;
+    }, [])
   }
+
+  // take only the newest count
+  return featured
+    .slice(0, count);
 };
 
 /** */

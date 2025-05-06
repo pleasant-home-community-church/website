@@ -41,6 +41,7 @@ const eventsCollection = defineCollection({
     all_day_event: z.boolean(),
     event_featured: z.boolean(),
     event: z.object({
+      id: z.string(),
       image_url: z.string().optional().nullable(),
       registration_url: z.string().optional().nullable(),
     }),

@@ -1,0 +1,36 @@
+{
+  "id": "188163662",
+  "all_day_event": false,
+  "ends_at": "2025-07-23T02:30:00Z",
+  "event_featured": false,
+  "event_name": "Tues Women's Bible Study: The Power of Christian Contentment - Chapter 9 & 10",
+  "starts_at": "2025-07-23T01:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-07-23T02:30:00Z",
+  "visible_starts_at": "2025-07-23T01:30:00Z",
+  "event": {
+    "id": "16788635",
+    "approval_status": "A",
+    "created_at": "2025-05-19T01:05:44Z",
+    "description": "<div>\n  We will spend our time sharing our learnings from Chapter 9 Contentment in Suffering &amp; Chapter 10 Contentment in Prosperity / The Power of Christian Contentment by Andrew M Davis\n\nOptional video:  Contentment in Suffering\nWomen Walking Wisely @ Grace Community Church \nhttps://www.gracechurch.org/women/sermons/22649\n</div>\n",
+    "featured": false,
+    "image_url": "~/assets/images/events--uploads-group-header_image-2511179-medium_image-1728407853501.jpg",
+    "name": "Tues Women's Bible Study: The Power of Christian Contentment - Chapter 9 & 10",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "We will spend our time sharing our learnings from Chapter 9 Contentment in Suffering &amp; Chapter 10 Contentment in Prosperity / The Power of Christian Contentment by Andrew M Davis\n\nOptional video:  Contentment in Suffering\nWomen Walking Wisely @ Grace Community Church \nhttps://www.gracechurch.org/women/sermons/22649",
+    "updated_at": "2025-05-19T01:05:44Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [],
+  "event_tags": {},
+  "group_tags": {
+    "Campus": "Pleasant Home",
+    "Ministry": "Womens"
+  },
+  "ministry": "women",
+  "color": "#F297CD"
+}

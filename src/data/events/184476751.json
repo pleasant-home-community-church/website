@@ -1,13 +1,13 @@
 {
-  "id": "184476725",
+  "id": "184476751",
   "all_day_event": false,
-  "ends_at": "2025-11-20T04:00:00Z",
+  "ends_at": "2026-05-21T03:00:00Z",
   "event_featured": false,
   "event_name": "Rooted Youth Group: Rooted Youth Group",
-  "starts_at": "2025-11-20T02:30:00Z",
+  "starts_at": "2026-05-21T01:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-11-20T04:00:00Z",
-  "visible_starts_at": "2025-11-20T02:30:00Z",
+  "visible_ends_at": "2026-05-21T03:00:00Z",
+  "visible_starts_at": "2026-05-21T01:30:00Z",
   "event": {
     "id": "16299388",
     "approval_status": "A",

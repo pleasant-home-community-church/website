@@ -1,13 +1,13 @@
 {
-  "id": "186632206",
-  "all_day_event": true,
-  "ends_at": "2025-08-10T06:59:59Z",
+  "id": "188583058",
+  "all_day_event": false,
+  "ends_at": "2025-08-10T00:00:00Z",
   "event_featured": false,
   "event_name": "Prime Timers event",
-  "starts_at": "2025-08-09T07:00:00Z",
+  "starts_at": "2025-08-09T17:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-08-10T06:59:59Z",
-  "visible_starts_at": "2025-08-09T07:00:00Z",
+  "visible_ends_at": "2025-08-10T00:00:00Z",
+  "visible_starts_at": "2025-08-09T17:00:00Z",
   "event": {
     "id": "16590031",
     "approval_status": "A",
@@ -20,7 +20,7 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-04-30T16:43:22Z",
+    "updated_at": "2025-05-22T20:50:11Z",
     "visible_in_church_center": true,
     "tags": []
   },

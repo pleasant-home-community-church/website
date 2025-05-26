@@ -1,0 +1,11 @@
+{
+  "type": "speaker",
+  "id": 69292,
+  "displayName": "Mike Dahl",
+  "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/69292-0001.jpg",
+  "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/69292-0001.png",
+  "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/69292-0001.jpg",
+  "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/69292-0001.png",
+  "sortName": "Dahl, Mike",
+  "bio": "Pastor at Gresham Bible Church"
+}

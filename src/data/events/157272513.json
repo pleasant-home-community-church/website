@@ -1,26 +1,26 @@
 {
-  "id": "165402112",
+  "id": "157272513",
   "all_day_event": false,
-  "ends_at": "2025-04-17T03:00:00Z",
+  "ends_at": "2026-05-24T19:00:00Z",
   "event_featured": false,
-  "event_name": "Romans Bible Study",
-  "starts_at": "2025-04-17T01:30:00Z",
+  "event_name": "Worship Service",
+  "starts_at": "2026-05-24T17:45:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-04-17T03:00:00Z",
-  "visible_starts_at": "2025-04-17T01:30:00Z",
+  "visible_ends_at": "2026-05-24T19:00:00Z",
+  "visible_starts_at": "2026-05-24T17:45:00Z",
   "event": {
-    "id": "13878006",
+    "id": "5696382",
     "approval_status": "A",
-    "created_at": "2024-08-29T17:48:05Z",
+    "created_at": "2022-03-17T21:47:16Z",
     "description": null,
     "featured": false,
     "image_url": null,
-    "name": "Romans Bible Study",
+    "name": "Worship Service",
     "percent_approved": 100,
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-03-12T17:53:50Z",
+    "updated_at": "2025-03-21T03:21:14Z",
     "visible_in_church_center": true,
     "tags": []
   },
@@ -31,16 +31,10 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
-    },
-    {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church"
+    "Campus": "Pleasant Home Community Church"
   },
   "group_tags": {},
   "ministry": "default",

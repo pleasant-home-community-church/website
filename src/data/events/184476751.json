@@ -1,13 +1,13 @@
 {
-  "id": "184476687",
+  "id": "184476751",
   "all_day_event": false,
-  "ends_at": "2025-04-24T03:00:00Z",
+  "ends_at": "2026-05-21T03:00:00Z",
   "event_featured": false,
   "event_name": "Rooted Youth Group: Rooted Youth Group",
-  "starts_at": "2025-04-24T01:30:00Z",
+  "starts_at": "2026-05-21T01:30:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-04-24T03:00:00Z",
-  "visible_starts_at": "2025-04-24T01:30:00Z",
+  "visible_ends_at": "2026-05-21T03:00:00Z",
+  "visible_starts_at": "2026-05-21T01:30:00Z",
   "event": {
     "id": "16299388",
     "approval_status": "A",
@@ -33,16 +33,16 @@
       "group": "Campus"
     },
     {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
-    },
-    {
       "id": "163124",
       "color": "#FCDCCA",
       "name": "Rooted (Youth Ministry)",
       "group": "Ministry"
+    },
+    {
+      "id": "307166",
+      "color": "#9FBFFE",
+      "name": "Foundation Bible Church",
+      "group": "Campus"
     }
   ],
   "event_tags": {

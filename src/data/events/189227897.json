@@ -1,0 +1,42 @@
+{
+  "id": "189227897",
+  "all_day_event": false,
+  "ends_at": "2025-06-09T02:00:00Z",
+  "event_featured": false,
+  "event_name": "Q&A w/Andrew Wilkerson",
+  "starts_at": "2025-06-09T01:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-06-09T02:00:00Z",
+  "visible_starts_at": "2025-06-09T01:00:00Z",
+  "event": {
+    "id": "16930798",
+    "approval_status": "A",
+    "created_at": "2025-05-30T20:29:18Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "Q&A w/Andrew Wilkerson",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2025-05-30T20:29:18Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church"
+  },
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
+}

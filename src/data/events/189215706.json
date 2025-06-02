@@ -1,26 +1,26 @@
 {
-  "id": "183270455",
+  "id": "189215706",
   "all_day_event": false,
-  "ends_at": "2025-04-27T16:30:00Z",
+  "ends_at": "2025-06-08T01:00:00Z",
   "event_featured": false,
-  "event_name": "Vote for Travis Cole",
-  "starts_at": "2025-04-27T16:15:00Z",
+  "event_name": "HS Rooted Senior Celebration",
+  "starts_at": "2025-06-07T23:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-04-27T16:30:00Z",
-  "visible_starts_at": "2025-04-27T16:15:00Z",
+  "visible_ends_at": "2025-06-08T01:00:00Z",
+  "visible_starts_at": "2025-06-07T23:00:00Z",
   "event": {
-    "id": "16137617",
+    "id": "15749301",
     "approval_status": "A",
-    "created_at": "2025-03-18T18:01:55Z",
+    "created_at": "2025-02-14T23:43:17Z",
     "description": null,
     "featured": false,
     "image_url": null,
-    "name": "Vote for Travis Cole",
+    "name": "HS Rooted Senior Celebration",
     "percent_approved": 100,
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-03-18T18:01:56Z",
+    "updated_at": "2025-05-30T16:56:37Z",
     "visible_in_church_center": true,
     "tags": []
   },
@@ -31,10 +31,17 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "162866",
+      "color": "#9FBFFE",
+      "name": "Special Fellowship Event",
+      "group": "Fellowship"
     }
   ],
   "event_tags": {
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Fellowship": "Special Fellowship Event"
   },
   "group_tags": {},
   "ministry": "default",

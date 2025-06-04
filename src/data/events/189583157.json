@@ -1,0 +1,42 @@
+{
+  "id": "189583157",
+  "all_day_event": false,
+  "ends_at": "2025-08-31T17:00:00Z",
+  "event_featured": false,
+  "event_name": "Sunday School",
+  "starts_at": "2025-08-31T16:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-08-31T17:00:00Z",
+  "visible_starts_at": "2025-08-31T16:00:00Z",
+  "event": {
+    "id": "16969903",
+    "approval_status": "A",
+    "created_at": "2025-06-04T18:12:06Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "Sunday School",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2025-06-04T18:12:07Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church"
+  },
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
+}

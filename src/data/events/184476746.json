@@ -33,16 +33,16 @@
       "group": "Campus"
     },
     {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
-    },
-    {
       "id": "163124",
       "color": "#FCDCCA",
       "name": "Rooted (Youth Ministry)",
       "group": "Ministry"
+    },
+    {
+      "id": "307166",
+      "color": "#9FBFFE",
+      "name": "Foundation Bible Church",
+      "group": "Campus"
     }
   ],
   "event_tags": {

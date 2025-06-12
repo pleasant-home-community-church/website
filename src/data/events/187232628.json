@@ -28,9 +28,9 @@
     "id": "2923988",
     "at_maximum_capacity": false,
     "visibility": "private",
-    "closed": false,
-    "open": true,
-    "open_at": "2025-05-07T15:30:00Z",
+    "closed": true,
+    "open": false,
+    "open_at": null,
     "hide_at": "2025-06-05T03:00:00Z",
     "show_at": "2025-05-04T15:30:00Z"
   },

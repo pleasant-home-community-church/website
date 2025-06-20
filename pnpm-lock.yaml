@@ -40,7 +40,7 @@ importers:
         version: 2.2.0(preact@10.26.8)
       '@schedule-x/calendar':
         specifier: ^2.22.0
-        version: 2.33.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)
+        version: 2.34.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)
       '@schedule-x/current-time':
         specifier: ^2.22.0
         version: 2.34.0
@@ -52,7 +52,7 @@ importers:
         version: 2.32.0
       '@schedule-x/react':
         specifier: ^2.22.0
-        version: 2.32.0(@schedule-x/calendar@2.33.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 2.32.0(@schedule-x/calendar@2.34.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
         version: 2.32.0
@@ -1121,8 +1121,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@schedule-x/calendar@2.33.0':
-    resolution: {integrity: sha512-QaJR55pDX/QMK+fL9rtfxgZz0L9GhXXYUGvP7UhlSBCLlvJh/2TyBphGLFcaWaAG7s+4qp4YywejXkEltRDRRA==}
+  '@schedule-x/calendar@2.34.0':
+    resolution: {integrity: sha512-u1s+aqb0kUk2VWCLpSBWdLmzaJZ8iPge3t8wc/vV5NbjPbtdG/Cwfz1ZR82TnQu5pDEmQyWAQRc/hTyDvc0hGA==}
     peerDependencies:
       '@preact/signals': ^2.0.2
       preact: ^10.19.2
@@ -5038,7 +5038,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.43.0':
     optional: true
 
-  '@schedule-x/calendar@2.33.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)':
+  '@schedule-x/calendar@2.34.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)':
     dependencies:
       '@preact/signals': 2.2.0(preact@10.26.8)
       preact: 10.26.8
@@ -5052,9 +5052,9 @@ snapshots:
 
   '@schedule-x/events-service@2.32.0': {}
 
-  '@schedule-x/react@2.32.0(@schedule-x/calendar@2.33.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@schedule-x/react@2.32.0(@schedule-x/calendar@2.34.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@schedule-x/calendar': 2.33.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)
+      '@schedule-x/calendar': 2.34.0(@preact/signals@2.2.0(preact@10.26.8))(preact@10.26.8)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 

@@ -27,6 +27,12 @@
   "registration": null,
   "tags": [
     {
+      "id": "163124",
+      "color": "#FCDCCA",
+      "name": "Rooted (Youth Ministry)",
+      "group": "Ministry"
+    },
+    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
@@ -37,17 +43,11 @@
       "color": "#9FBFFE",
       "name": "Foundation Bible Church",
       "group": "Campus"
-    },
-    {
-      "id": "163124",
-      "color": "#FCDCCA",
-      "name": "Rooted (Youth Ministry)",
-      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church",
-    "Ministry": "Rooted (Youth Ministry)"
+    "Ministry": "Rooted (Youth Ministry)",
+    "Campus": "Foundation Bible Church"
   },
   "group_tags": {
     "Location Type": "PHCC",

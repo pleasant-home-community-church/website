@@ -27,21 +27,21 @@
   "registration": null,
   "tags": [
     {
-      "id": "162866",
-      "color": "#9FBFFE",
-      "name": "Special Fellowship Event",
-      "group": "Fellowship"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "162866",
+      "color": "#9FBFFE",
+      "name": "Special Fellowship Event",
+      "group": "Fellowship"
     }
   ],
   "event_tags": {
-    "Fellowship": "Special Fellowship Event",
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Fellowship": "Special Fellowship Event"
   },
   "group_tags": {},
   "ministry": "default",

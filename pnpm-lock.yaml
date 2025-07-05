@@ -55,7 +55,7 @@ importers:
         version: 2.35.0(@schedule-x/calendar@2.35.0(@preact/signals@2.2.1(preact@10.26.8))(preact@10.26.8))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
-        version: 2.34.0
+        version: 2.35.0
       '@tabler/icons-react':
         specifier: ^3.31.0
         version: 3.34.0(react@19.1.0)
@@ -1158,8 +1158,8 @@ packages:
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
-  '@schedule-x/theme-default@2.34.0':
-    resolution: {integrity: sha512-yqojSAeMDzkU32YkR/EUppdZMwjhRRo+kBqBn9UbEX0S8Xca+ws9U3BqTEnTSTARB3CCRNsbqZYycbXHwAV3mg==}
+  '@schedule-x/theme-default@2.35.0':
+    resolution: {integrity: sha512-zGJfoCarz6ZfxMWerAyIFXg1PVJFfSTDsM4/P//d2cCDrE7sMH7ySO0tx/N1CLjMBnIzH/H1s1e5y6nrq/PoPQ==}
 
   '@shikijs/core@3.4.2':
     resolution: {integrity: sha512-AG8vnSi1W2pbgR2B911EfGqtLE9c4hQBYkv/x7Z+Kt0VxhgQKcW7UNDVYsu9YxwV6u+OJrvdJrMq6DNWoBjihQ==}
@@ -5081,7 +5081,7 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@schedule-x/theme-default@2.34.0': {}
+  '@schedule-x/theme-default@2.35.0': {}
 
   '@shikijs/core@3.4.2':
     dependencies:

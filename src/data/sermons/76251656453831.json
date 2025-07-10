@@ -25,10 +25,10 @@
     "type": "speaker",
     "id": 69962,
     "displayName": "Mike Garland",
-    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/69962-0001.jpg",
-    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/69962-0001.png",
-    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/69962-0001.jpg",
-    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/69962-0001.png"
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/69962-0002.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/69962-0002.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/69962-0002.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/69962-0002.png"
   },
   "series": {
     "type": "series",

@@ -1,0 +1,156 @@
+{
+  "id": "713251558356316",
+  "fullTitle": "Authority of God's Word",
+  "displayTitle": "Authority of God's Word",
+  "languageCode": "en",
+  "subtitle": "Why Israel Matters",
+  "eventType": "Sunday School",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 69962,
+    "displayName": "Mike Garland",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/69962-0002.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/69962-0002.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/69962-0002.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/69962-0002.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 206384
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3775,
+  "videoDurationSeconds": 3775,
+  "preachDate": "2025-07-13",
+  "publishTimestamp": 1752440450,
+  "type": "sermon",
+  "updateDate": 1752433178,
+  "publishDate": "2025-07-13",
+  "displayEventType": "Sunday School",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/high/713251558356316.mp3?ts=1752432740&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/high/713251558356316.mp3?ts=1752432740&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 45602889,
+        "adaptiveBitrate": false,
+        "duration": 3775,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "713251558356316.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/audio/low/713251558356316.mp3?ts=1752432740&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/audio/low/713251558356316.mp3?ts=1752432740&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 7832203,
+        "adaptiveBitrate": false,
+        "duration": 3775,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "713251558356316.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/abr/713251558356316.m3u8?ts=1752432740",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/713251558356316.jpg?ts=1752433178",
+        "adaptiveBitrate": true,
+        "duration": 3775,
+        "mediaFilename": "713251558356316.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/1080p/713251558356316.m3u8?ts=1752432740&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/1080p/713251558356316.mp4?ts=1752432740&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/713251558356316.jpg?ts=1752433178",
+        "bitrate": 501,
+        "fileSizeBytes": 240912695,
+        "adaptiveBitrate": false,
+        "duration": 3775,
+        "audioCodec": "aac",
+        "videoCodec": "h265",
+        "language": "eng",
+        "mediaFilename": "713251558356316.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/high/713251558356316.m3u8?ts=1752432740&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/high/713251558356316.mp4?ts=1752432740&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/713251558356316.jpg?ts=1752433178",
+        "bitrate": 1077,
+        "fileSizeBytes": 512576194,
+        "adaptiveBitrate": false,
+        "duration": 3775,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "713251558356316.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.net/media/video/low/713251558356316.m3u8?ts=1752432740&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.net/media/video/low/713251558356316.mp4?ts=1752432740&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/713251558356316.jpg?ts=1752433178",
+        "bitrate": 381,
+        "fileSizeBytes": 183309235,
+        "adaptiveBitrate": false,
+        "duration": 3775,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "713251558356316.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.net/media/caption/high/713251558356316.srt?stats=false&ts=1752432740&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "713251558356316-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/713251558356316/waveform?peaksOnly=true",
+  "keywords": "Israel Authority"
+}

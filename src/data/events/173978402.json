@@ -1,26 +1,26 @@
 {
-  "id": "177416882",
-  "all_day_event": true,
-  "ends_at": "2025-06-16T06:59:59Z",
+  "id": "173978402",
+  "all_day_event": false,
+  "ends_at": "2026-07-14T03:00:00Z",
   "event_featured": false,
-  "event_name": "Father/Daughter Campout",
-  "starts_at": "2025-06-12T07:00:00Z",
+  "event_name": "Missions Commission Mtg",
+  "starts_at": "2026-07-14T02:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-06-16T06:59:59Z",
-  "visible_starts_at": "2025-06-12T07:00:00Z",
+  "visible_ends_at": "2026-07-14T03:00:00Z",
+  "visible_starts_at": "2026-07-14T02:00:00Z",
   "event": {
-    "id": "15330604",
+    "id": "14933608",
     "approval_status": "A",
-    "created_at": "2025-01-16T19:28:17Z",
+    "created_at": "2024-12-10T19:37:02Z",
     "description": null,
     "featured": false,
     "image_url": null,
-    "name": "Father/Daughter Campout",
+    "name": "Missions Commission Mtg",
     "percent_approved": 100,
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-01-16T19:28:18Z",
+    "updated_at": "2025-04-12T01:44:25Z",
     "visible_in_church_center": true,
     "tags": []
   },
@@ -31,16 +31,10 @@
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
-    },
-    {
-      "id": "307166",
-      "color": "#9FBFFE",
-      "name": "Foundation Bible Church",
-      "group": "Campus"
     }
   ],
   "event_tags": {
-    "Campus": "Foundation Bible Church"
+    "Campus": "Pleasant Home Community Church"
   },
   "group_tags": {},
   "ministry": "default",

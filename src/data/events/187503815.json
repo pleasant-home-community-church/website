@@ -27,21 +27,21 @@
   "registration": null,
   "tags": [
     {
-      "id": "142034",
-      "color": "#F6E7BB",
-      "name": "Children's Ministry",
-      "group": "Ministry"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "142034",
+      "color": "#F6E7BB",
+      "name": "Children's Ministry",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Ministry": "Children's Ministry",
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Children's Ministry"
   },
   "group_tags": {},
   "ministry": "children",

@@ -27,21 +27,21 @@
   "registration": null,
   "tags": [
     {
-      "id": "142029",
-      "color": "#CBEAFA",
-      "name": "Men's Ministry",
-      "group": "Ministry"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "142029",
+      "color": "#CBEAFA",
+      "name": "Men's Ministry",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Ministry": "Men's Ministry",
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Men's Ministry"
   },
   "group_tags": {
     "Location Type": "In Home",

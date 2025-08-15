@@ -1,17 +1,17 @@
 {
-  "id": "172633150",
+  "id": "196180475",
   "all_day_event": false,
-  "ends_at": "2025-10-04T16:45:00Z",
+  "ends_at": "2026-05-02T16:45:00Z",
   "event_featured": true,
   "event_name": "Men's Breakfast: Men's Breakfast",
-  "starts_at": "2025-10-04T15:00:00Z",
+  "starts_at": "2026-05-02T15:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-10-04T16:45:00Z",
-  "visible_starts_at": "2025-10-04T15:00:00Z",
+  "visible_ends_at": "2026-05-02T16:45:00Z",
+  "visible_starts_at": "2026-05-02T15:00:00Z",
   "event": {
-    "id": "13025539",
+    "id": "17744208",
     "approval_status": "A",
-    "created_at": "2024-05-30T21:57:02Z",
+    "created_at": "2025-08-15T17:40:03Z",
     "description": null,
     "featured": true,
     "image_url": "~/assets/images/events--uploads-group-header_image-1468709-medium_Men_s_Breakfast_4.png",
@@ -20,22 +20,13 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-07-29T16:48:27Z",
+    "updated_at": "2025-08-15T17:48:03Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": null,
-  "tags": [
-    {
-      "id": "307165",
-      "color": "#6ADCC8",
-      "name": "Pleasant Home Community Church",
-      "group": "Campus"
-    }
-  ],
-  "event_tags": {
-    "Campus": "Pleasant Home Community Church"
-  },
+  "tags": [],
+  "event_tags": {},
   "group_tags": {
     "Location Type": "PHCC",
     "Frequency": "Monthly",

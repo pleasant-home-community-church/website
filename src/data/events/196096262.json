@@ -1,0 +1,42 @@
+{
+  "id": "196096262",
+  "all_day_event": false,
+  "ends_at": "2025-09-08T02:30:00Z",
+  "event_featured": false,
+  "event_name": "Send Off Celebration for Pastor Ryan",
+  "starts_at": "2025-09-08T00:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-09-08T02:30:00Z",
+  "visible_starts_at": "2025-09-08T00:00:00Z",
+  "event": {
+    "id": "17739660",
+    "approval_status": "A",
+    "created_at": "2025-08-15T01:52:53Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "Send Off Celebration for Pastor Ryan",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2025-08-15T01:52:53Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church"
+  },
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
+}

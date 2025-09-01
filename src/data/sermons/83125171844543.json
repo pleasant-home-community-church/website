@@ -1,0 +1,157 @@
+{
+  "id": "83125171844543",
+  "fullTitle": "The Miseries of the Rich",
+  "displayTitle": "The Miseries of the Rich",
+  "languageCode": "en",
+  "bibleText": "James 5:1-6",
+  "subtitle": "James",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 57018,
+    "displayName": "Jason Evans",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/57018-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/57018-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/57018-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/57018-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 167589
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 2459,
+  "videoDurationSeconds": 2459,
+  "preachDate": "2025-08-31",
+  "publishTimestamp": 1756674948,
+  "type": "sermon",
+  "updateDate": 1756668985,
+  "publishDate": "2025-08-31",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/83125171844543.mp3?ts=1756680462&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/83125171844543.mp3?ts=1756680462&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 29795739,
+        "adaptiveBitrate": false,
+        "duration": 2459,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "83125171844543.mp3"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/low/83125171844543.mp3?ts=1756680462&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/low/83125171844543.mp3?ts=1756680462&language=eng&download=true",
+        "bitrate": 16,
+        "fileSizeBytes": 5197656,
+        "adaptiveBitrate": false,
+        "duration": 2459,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "83125171844543.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/83125171844543.m3u8?ts=1756680462",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/83125171844543.jpg?ts=1756668985",
+        "adaptiveBitrate": true,
+        "duration": 2459,
+        "mediaFilename": "83125171844543.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/1080p/83125171844543.m3u8?ts=1756680462&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/1080p/83125171844543.mp4?ts=1756680462&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/83125171844543.jpg?ts=1756668985",
+        "bitrate": 2084,
+        "fileSizeBytes": 643293832,
+        "adaptiveBitrate": false,
+        "duration": 2459,
+        "audioCodec": "aac",
+        "videoCodec": "h265",
+        "language": "eng",
+        "mediaFilename": "83125171844543.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/83125171844543.m3u8?ts=1756680462&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/83125171844543.mp4?ts=1756680462&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/83125171844543.jpg?ts=1756668985",
+        "bitrate": 1076,
+        "fileSizeBytes": 333386315,
+        "adaptiveBitrate": false,
+        "duration": 2459,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "83125171844543.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/83125171844543.m3u8?ts=1756680462&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/83125171844543.mp4?ts=1756680462&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/83125171844543.jpg?ts=1756668985",
+        "bitrate": 382,
+        "fileSizeBytes": 119556576,
+        "adaptiveBitrate": false,
+        "duration": 2459,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "83125171844543.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/83125171844543.srt?stats=false&ts=1756680462&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "83125171844543-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/83125171844543/waveform?peaksOnly=true",
+  "keywords": "Judgement Evidence"
+}

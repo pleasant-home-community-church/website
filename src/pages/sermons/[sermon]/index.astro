@@ -21,7 +21,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { sermon } = Astro.props as Props;
 
 const url = getCanonical(getPermalink(sermon.permalink, 'sermon'));
-const image = (await findImage(sermon.image)) as ImageMetadata | string | undefined;
+const image = undefined; // (await findImage(sermon.image)) as ImageMetadata | string | undefined;
 
 const metadata = merge(
   {

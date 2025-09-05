@@ -3,6 +3,7 @@ from pathlib import Path
 from os import environ
 
 from dotenv import load_dotenv
+from httpx import get
 from loguru import logger
 from sermonaudio import set_api_key
 from sermonaudio.models import SeriesSortOrder, SermonSortOption
@@ -24,8 +25,9 @@ def parse_args():
     return parser.parse_args()
 
 
-def fetch_sermons(sermons_dir: Path) -> None:
+def fetch_sermons(sermons_dir: Path, thumbs_dir: Path) -> None:
     sermons_dir.mkdir(parents=True, exist_ok=True)
+    thumbs_dir.mkdir(parents=True, exist_ok=True)
 
     page: int = 0
     total: int = 0
@@ -48,6 +50,13 @@ def fetch_sermons(sermons_dir: Path) -> None:
                 sermon_file: Path = sermons_dir / f"{sermon.id}.json"
                 sermon_file.write_text(sermon.model_dump_json(indent=2, exclude_none=True, exclude_unset=True))
                 logger.debug(f"{sermon.id} - {sermon.displayTitle}")
+
+                # download the thumbnail as sermon audio seems to have issues with these now
+                thumbnail_file: Path = thumbs_dir / f"{sermon.id}.jpg"
+
+                if not thumbnail_file.exists():
+                    resp = get(str(sermon.media.video[0].thumbnailImageURL))
+                    thumbnail_file.write_bytes(resp.read())
 
     logger.info(f"fetched {total} sermons")
 
@@ -112,7 +121,7 @@ def main():
     SERMONAUDIO_API_KEY: str = environ.get("SERMONAUDIO_API_KEY")
     set_api_key(SERMONAUDIO_API_KEY)
 
-    fetch_sermons(data_dir / "sermons")
+    fetch_sermons(data_dir / "sermons", data_dir.parent / "assets" / "images" / "sermons")
     fetch_series(data_dir / "series")
     fetch_speakers(data_dir / "speakers")
 

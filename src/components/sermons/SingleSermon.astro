@@ -92,7 +92,7 @@ console.log(sermon.image.src)
               class="video-js max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
               controls
               preload="auto"
-              poster={`/_image?href=${encodeURIComponent(sermon.image.src)}&f=webp`}
+              poster={sermon.image.src}
               data-setup="{}"
             >
               <source src={sermon.streamURL} type="application/x-mpegURL" />

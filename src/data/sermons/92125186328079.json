@@ -1,0 +1,143 @@
+{
+  "id": "92125186328079",
+  "fullTitle": "Jesus Teaching on Discipleship",
+  "displayTitle": "Jesus Teaching on Discipleship",
+  "languageCode": "en",
+  "bibleText": "Mark 8:34-38",
+  "subtitle": "The Gospel of Mark",
+  "eventType": "Sunday Service",
+  "broadcaster": {
+    "type": "broadcaster",
+    "lite_type": "false",
+    "id": "phcc",
+    "displayName": "Pleasant Home Community Church",
+    "location": "Gresham, Oregon",
+    "imageURL": "https://media.sermonaudio.com/images/broadcasters/phcc.1660761476.jpg",
+    "imageURLResizable": "https://vps.sermonaudio.com/resize_image/images/broadcasters/{width}/{height}/phcc.1660761476.jpg",
+    "languageCode": "en",
+    "shortName": "Pleasant Home Community Church",
+    "homePageURL": "http://www.phccgresham.org",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/sources/podcast/{size}/{size}/phcc.1660761476.jpg",
+    "categories": 1,
+    "disabled": false,
+    "bannerImageURL": "https://media.sermonaudio.com/images/broadcasters/banners/stock/40.jpg"
+  },
+  "speaker": {
+    "type": "speaker",
+    "id": 28621,
+    "displayName": "Mike Johnston",
+    "albumArtURL": "https://vps.sermonaudio.com/resize_image/speakers/podcast/{size}/{size}/28621-0001.jpg",
+    "roundedThumbnailImageURL": "https://media.sermonaudio.com/images/speakers/thumbnail/28621-0001.png",
+    "portraitURLResizable": "https://vps.sermonaudio.com/resize_image/speakers/albumart/{width}/{height}/28621-0001.jpg",
+    "roundedThumbnailImageURLResizable": "https://vps.sermonaudio.com/resize_image/speaker/thumbnail/{width}/{height}/28621-0001.png"
+  },
+  "series": {
+    "type": "series",
+    "id": 195640
+  },
+  "hasAudio": true,
+  "hasVideo": true,
+  "hasPDF": false,
+  "audioDurationSeconds": 3557,
+  "videoDurationSeconds": 3556,
+  "preachDate": "2025-09-21",
+  "publishTimestamp": 1758488676,
+  "type": "sermon",
+  "updateDate": 1758492556,
+  "publishDate": "2025-09-21",
+  "displayEventType": "Sunday Service",
+  "media": {
+    "type": "media_set",
+    "audio": [
+      {
+        "type": "media",
+        "mediaType": "mp3",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/audio/high/92125186328079.mp3?ts=1758498190&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/audio/high/92125186328079.mp3?ts=1758498190&language=eng&download=true",
+        "bitrate": 96,
+        "fileSizeBytes": 42995981,
+        "adaptiveBitrate": false,
+        "duration": 3557,
+        "audioCodec": "mp3",
+        "language": "eng",
+        "mediaFilename": "92125186328079.mp3"
+      }
+    ],
+    "video": [
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/92125186328079.m3u8?ts=1758498190",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/92125186328079.jpg?ts=1758492556",
+        "adaptiveBitrate": true,
+        "duration": 3556,
+        "mediaFilename": "92125186328079.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/1080p/92125186328079.m3u8?ts=1758498190&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/1080p/92125186328079.mp4?ts=1758498190&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/92125186328079.jpg?ts=1758492556",
+        "bitrate": 1298,
+        "fileSizeBytes": 581121150,
+        "adaptiveBitrate": false,
+        "duration": 3556,
+        "audioCodec": "aac",
+        "videoCodec": "h265",
+        "language": "eng",
+        "mediaFilename": "92125186328079.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/high/92125186328079.m3u8?ts=1758498190&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/high/92125186328079.mp4?ts=1758498190&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/92125186328079.jpg?ts=1758492556",
+        "bitrate": 1063,
+        "fileSizeBytes": 476639182,
+        "adaptiveBitrate": false,
+        "duration": 3556,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "92125186328079.mp4"
+      },
+      {
+        "type": "media",
+        "mediaType": "mp4",
+        "live": false,
+        "streamURL": "https://cloud.sermonaudio.com/media/video/low/92125186328079.m3u8?ts=1758498190&language=eng",
+        "downloadURL": "https://cloud.sermonaudio.com/media/video/low/92125186328079.mp4?ts=1758498190&language=eng&download=true",
+        "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/92125186328079.jpg?ts=1758492556",
+        "bitrate": 366,
+        "fileSizeBytes": 165942294,
+        "adaptiveBitrate": false,
+        "duration": 3556,
+        "audioCodec": "aac",
+        "videoCodec": "h264",
+        "language": "eng",
+        "mediaFilename": "92125186328079.mp4"
+      }
+    ],
+    "text": [],
+    "caption": [
+      {
+        "type": "media",
+        "mediaType": "caption",
+        "live": false,
+        "downloadURL": "https://cloud.sermonaudio.com/media/caption/high/92125186328079.srt?stats=false&ts=1758498190&language=eng",
+        "adaptiveBitrate": false,
+        "language": "eng",
+        "mediaFilename": "92125186328079-eng.srt",
+        "autoGenerated": true
+      }
+    ]
+  },
+  "waveformPeaksURL": "https://api.sermonaudio.com/v2/node/sermons/92125186328079/waveform?peaksOnly=true",
+  "keywords": "Discipleship Cost Paradox Danger Christ"
+}

@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const { sermon } = Astro.props;
-const image = await findImage(sermon.image);
+const image = await findImage(`~/assets/images/sermons/${sermon.id}.jpg`);
 
 const link = getPermalink(sermon.permalink, 'sermon');
 const speakerLink = getPermalink(sermon.speaker?.permalink, 'speaker');

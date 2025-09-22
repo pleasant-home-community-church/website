@@ -13,6 +13,8 @@ const { sermon } = Astro.props;
 
 const speakerLink = getPermalink(sermon.speaker?.permalink, 'speaker');
 const seriesLink = getPermalink(sermon.series?.permalink, 'series');
+
+console.log(sermon.image.src)
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
@@ -90,7 +92,7 @@ const seriesLink = getPermalink(sermon.series?.permalink, 'series');
               class="video-js max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
               controls
               preload="auto"
-              poster={sermon.image}
+              poster={sermon.image.src}
               data-setup="{}"
             >
               <source src={sermon.streamURL} type="application/x-mpegURL" />

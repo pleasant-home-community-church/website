@@ -42,8 +42,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1)
       '@schedule-x/current-time':
-        specifier: ^2.22.0
-        version: 2.36.0
+        specifier: ^3.0.0
+        version: 3.2.0
       '@schedule-x/event-modal':
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1)
@@ -1152,8 +1152,8 @@ packages:
       '@preact/signals': ^2.0.2
       preact: ^10.19.2
 
-  '@schedule-x/current-time@2.36.0':
-    resolution: {integrity: sha512-1JOO826jJD6H8g+FlcdN1rIwKCQC10OJsx9zIbTQbTJAUHkKfHG4PVOBwFvWGU3aPkGWpwXQxtdaMv6DNDcxcw==}
+  '@schedule-x/current-time@3.2.0':
+    resolution: {integrity: sha512-HvD3rzfmQp6owmokwW9iz4wK/L4atypfLU7CXjuCN8HbREOBujzYMTd6+Gc8CogzndoBuYkbnJoNXXOj/kssVg==}
 
   '@schedule-x/event-modal@2.36.0':
     resolution: {integrity: sha512-dMjgtBhOTy/M/MUy1khGafVqs978zECv2Tb5MM4oBrPOO5ofbuKRpYzIsbnsyz5SsgCX1ThQHTLr7ndN5WocYA==}
@@ -5058,7 +5058,7 @@ snapshots:
       '@preact/signals': 2.3.1(preact@10.27.1)
       preact: 10.27.1
 
-  '@schedule-x/current-time@2.36.0': {}
+  '@schedule-x/current-time@3.2.0': {}
 
   '@schedule-x/event-modal@2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1)':
     dependencies:

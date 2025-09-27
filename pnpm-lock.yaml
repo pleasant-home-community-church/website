@@ -51,8 +51,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0
       '@schedule-x/react':
-        specifier: ^2.22.0
-        version: 2.36.0(@schedule-x/calendar@2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: ^3.0.0
+        version: 3.2.0(@schedule-x/calendar@2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
         version: 2.36.0
@@ -1164,10 +1164,10 @@ packages:
   '@schedule-x/events-service@2.36.0':
     resolution: {integrity: sha512-M4dz8AgaEtpbXAanvYvuPnEDAKlhMO7d6R8WQ8wX8hXsJSzWa18XS3qLJOT+5jCR7O8QD8aDIDg3RpihleUeiA==}
 
-  '@schedule-x/react@2.36.0':
-    resolution: {integrity: sha512-MZAs67Krn1zmxmmlM1iWUdypmYAiOkIV7Z4wi9PJKWjt4Dtbx8K8Q4kW38aWmfDCImPbfBUGDp3LaP9u53zCzg==}
+  '@schedule-x/react@3.2.0':
+    resolution: {integrity: sha512-4HkuPSn/CuZS9d6d6cG9OanciQA5LoJugv3CTMWF369/eAvOlcGJtyLwLnc2H4EHnfMSgKHSWuYvI/zhEnUgng==}
     peerDependencies:
-      '@schedule-x/calendar': ^2.25.0
+      '@schedule-x/calendar': ^3.1.0
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
@@ -5067,7 +5067,7 @@ snapshots:
 
   '@schedule-x/events-service@2.36.0': {}
 
-  '@schedule-x/react@2.36.0(@schedule-x/calendar@2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@schedule-x/react@3.2.0(@schedule-x/calendar@2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@schedule-x/calendar': 2.36.0(@preact/signals@2.3.1(preact@10.27.1))(preact@10.27.1)
       react: 19.1.1

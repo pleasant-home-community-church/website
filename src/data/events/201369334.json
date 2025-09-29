@@ -1,0 +1,36 @@
+{
+  "id": "201369334",
+  "all_day_event": false,
+  "ends_at": "2025-10-08T02:30:00Z",
+  "event_featured": false,
+  "event_name": "Tues Women's Bible Study: 1 week",
+  "starts_at": "2025-10-08T01:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2025-10-08T02:30:00Z",
+  "visible_starts_at": "2025-10-08T01:30:00Z",
+  "event": {
+    "id": "18315755",
+    "approval_status": "A",
+    "created_at": "2025-09-29T02:20:16Z",
+    "description": "<div>\n  https://www.gracechurch.org/women/series/498\n</div>\n",
+    "featured": false,
+    "image_url": "~/assets/images/events--uploads-group-header_image-2511179-medium_image-1728407853501.jpg",
+    "name": "Tues Women's Bible Study: 1 week",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "https://www.gracechurch.org/women/series/498",
+    "updated_at": "2025-09-29T02:23:28Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [],
+  "event_tags": {},
+  "group_tags": {
+    "Campus": "Pleasant Home",
+    "Ministry": "Womens"
+  },
+  "ministry": "women",
+  "color": "#F297CD"
+}

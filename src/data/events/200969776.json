@@ -36,7 +36,11 @@
   "event_tags": {
     "Campus": "Pleasant Home Community Church"
   },
-  "group_tags": {},
-  "ministry": "default",
-  "color": "#6ADCC8"
+  "group_tags": {
+    "Stage of Life": "Adults",
+    "Who": "Adults",
+    "Ministry": "Senior Adults"
+  },
+  "ministry": "seniors",
+  "color": "#CBEAFA"
 }

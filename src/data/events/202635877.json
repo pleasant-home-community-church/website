@@ -1,13 +1,13 @@
 {
-  "id": "194946984",
+  "id": "202635877",
   "all_day_event": true,
   "ends_at": "2026-03-01T07:59:59Z",
   "event_featured": false,
   "event_name": "Bright Light's Conference",
-  "starts_at": "2026-02-28T08:00:00Z",
+  "starts_at": "2026-02-27T08:00:00Z",
   "status": "approved",
   "visible_ends_at": "2026-03-01T07:59:59Z",
-  "visible_starts_at": "2026-02-28T08:00:00Z",
+  "visible_starts_at": "2026-02-27T08:00:00Z",
   "event": {
     "id": "17597047",
     "approval_status": "A",
@@ -20,28 +20,28 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": "Conference for PHCC and Open Door Bright Lights groups.",
-    "updated_at": "2025-08-05T22:58:23Z",
+    "updated_at": "2025-10-11T22:47:52Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": null,
   "tags": [
     {
-      "id": "142709",
-      "color": "#F8DDF3",
-      "name": "Homeschool Ministry",
-      "group": "Ministry"
-    },
-    {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "142709",
+      "color": "#F8DDF3",
+      "name": "Homeschool Ministry",
+      "group": "Ministry"
     }
   ],
   "event_tags": {
-    "Ministry": "Homeschool Ministry",
-    "Campus": "Pleasant Home Community Church"
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Homeschool Ministry"
   },
   "group_tags": {},
   "ministry": "default",

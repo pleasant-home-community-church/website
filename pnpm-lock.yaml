@@ -110,7 +110,7 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
+        version: 0.9.5(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
       '@astrojs/markdown-remark':
         specifier: ^6.3.0
         version: 6.3.8
@@ -246,8 +246,8 @@ packages:
     peerDependencies:
       astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta || ^5.0.0-beta
 
-  '@astrojs/check@0.9.4':
-    resolution: {integrity: sha512-IOheHwCtpUfvogHHsvu0AbeRZEnjJg3MopdLddkJE70mULItS/Vh37BHcI00mcOJcH1vhD3odbpvWokpxam7xA==}
+  '@astrojs/check@0.9.5':
+    resolution: {integrity: sha512-88vc8n2eJ1Oua74yXSGo/8ABMeypfQPGEzuoAx2awL9Ju8cE6tZ2Rz9jVx5hIExHK5gKVhpxfZj4WXm7e32g1w==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -4053,7 +4053,7 @@ snapshots:
       astro: 5.15.1(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.5)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
       lite-youtube-embed: 0.3.3
 
-  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)':
+  '@astrojs/check@0.9.5(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)':
     dependencies:
       '@astrojs/language-server': 2.15.5(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
       chokidar: 4.0.3

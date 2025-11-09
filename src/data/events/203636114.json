@@ -20,14 +20,14 @@
     "percent_rejected": 0,
     "registration_url": "https://pleasanthome.churchcenter.com/registrations/events/3231163",
     "summary": null,
-    "updated_at": "2025-10-22T20:03:14Z",
+    "updated_at": "2025-11-09T18:15:09Z",
     "visible_in_church_center": true,
     "tags": []
   },
   "registration": {
     "id": "3231163",
     "at_maximum_capacity": false,
-    "visibility": "public",
+    "visibility": "private",
     "closed": false,
     "open": true,
     "open_at": "2025-10-22T07:00:00Z",

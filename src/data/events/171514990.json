@@ -1,13 +1,13 @@
 {
-  "id": "139492465",
+  "id": "171514990",
   "all_day_event": false,
-  "ends_at": "2025-10-05T19:00:00Z",
+  "ends_at": "2026-11-08T20:00:00Z",
   "event_featured": false,
   "event_name": "Worship Service",
-  "starts_at": "2025-10-05T17:45:00Z",
+  "starts_at": "2026-11-08T18:45:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-10-05T19:00:00Z",
-  "visible_starts_at": "2025-10-05T17:45:00Z",
+  "visible_ends_at": "2026-11-08T20:00:00Z",
+  "visible_starts_at": "2026-11-08T18:45:00Z",
   "event": {
     "id": "5696382",
     "approval_status": "A",

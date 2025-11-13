@@ -1,13 +1,13 @@
 {
-  "id": "173978395",
+  "id": "205589645",
   "all_day_event": false,
-  "ends_at": "2025-12-09T04:00:00Z",
+  "ends_at": "2025-12-16T04:00:00Z",
   "event_featured": false,
   "event_name": "Missions Commission Mtg",
-  "starts_at": "2025-12-09T03:00:00Z",
+  "starts_at": "2025-12-16T03:00:00Z",
   "status": "approved",
-  "visible_ends_at": "2025-12-09T04:00:00Z",
-  "visible_starts_at": "2025-12-09T03:00:00Z",
+  "visible_ends_at": "2025-12-16T04:00:00Z",
+  "visible_starts_at": "2025-12-16T03:00:00Z",
   "event": {
     "id": "14933608",
     "approval_status": "A",
@@ -20,7 +20,7 @@
     "percent_rejected": 0,
     "registration_url": null,
     "summary": null,
-    "updated_at": "2025-09-16T17:31:07Z",
+    "updated_at": "2025-11-13T17:41:05Z",
     "visible_in_church_center": true,
     "tags": []
   },

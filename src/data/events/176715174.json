@@ -12,31 +12,40 @@
     "id": "15240621",
     "approval_status": "A",
     "created_at": "2025-01-11T00:05:42Z",
-    "description": null,
+    "description": "<div>\n  <div>All women and girls are welcome to come together for a time of fellowship as we sing Christmas carols, hear a Christmas devotional and share breakfast.&nbsp; Please sign up for the event on the Church Center App.&nbsp; The meal train link is available there as well.</div>\n</div>\n",
     "featured": false,
     "image_url": "~/assets/images/events--v1-transformuploads-2F253867-2Fawu8kotd6d0calvp5gnar1xuivl5.jpg",
     "name": "Women's Christmas Gathering",
     "percent_approved": 100,
     "percent_rejected": 0,
-    "registration_url": null,
-    "summary": null,
-    "updated_at": "2025-03-14T00:51:02Z",
+    "registration_url": "https://pleasanthome.churchcenter.com/registrations/events/3295515",
+    "summary": "All women and girls are welcome to come together for a time of fellowship as we sing Christmas carols, hear a Christmas devotional and share breakfast.  Please sign up for the event on the Church Center App.  The meal train link is available there as well.",
+    "updated_at": "2025-11-20T18:30:24Z",
     "visible_in_church_center": true,
     "tags": []
   },
-  "registration": null,
+  "registration": {
+    "id": "3295515",
+    "at_maximum_capacity": false,
+    "visibility": "public",
+    "closed": false,
+    "open": true,
+    "open_at": "2025-11-20T18:29:13Z",
+    "hide_at": "2025-12-13T20:00:00Z",
+    "show_at": "2025-11-20T08:00:00Z"
+  },
   "tags": [
-    {
-      "id": "142032",
-      "color": "#F297CD",
-      "name": "Women's Ministry",
-      "group": "Ministry"
-    },
     {
       "id": "307165",
       "color": "#6ADCC8",
       "name": "Pleasant Home Community Church",
       "group": "Campus"
+    },
+    {
+      "id": "142032",
+      "color": "#F297CD",
+      "name": "Women's Ministry",
+      "group": "Ministry"
     },
     {
       "id": "345688",
@@ -46,8 +55,8 @@
     }
   ],
   "event_tags": {
-    "Ministry": "Women's Ministry",
     "Campus": "Pleasant Home Community Church",
+    "Ministry": "Women's Ministry",
     "Highlight": "Upcoming Event"
   },
   "group_tags": {},

@@ -51,8 +51,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0
       '@schedule-x/react':
-        specifier: ^2.22.0
-        version: 2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^3.0.0
+        version: 3.7.0(@schedule-x/calendar@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
         version: 2.36.0
@@ -1164,11 +1164,10 @@ packages:
   '@schedule-x/events-service@2.36.0':
     resolution: {integrity: sha512-M4dz8AgaEtpbXAanvYvuPnEDAKlhMO7d6R8WQ8wX8hXsJSzWa18XS3qLJOT+5jCR7O8QD8aDIDg3RpihleUeiA==}
 
-  '@schedule-x/react@2.37.0':
-    resolution: {integrity: sha512-mbPE3JRcB7qjCSsnt5ATYz635Cw+WgXJqjD8LrBpWOji1rxuJWheSFfr9Ag1cLZUbUwRQyEsTRFHw046+2MxOw==}
-    deprecated: unintended minor version
+  '@schedule-x/react@3.7.0':
+    resolution: {integrity: sha512-2D7eZYVPXpwElu/uLn1pQKhHbOrZaSbkjcr2EKsd5MdBw0zZnutsVp1H3TH+ArlMsnA1W7oztmljoNYh58IWyQ==}
     peerDependencies:
-      '@schedule-x/calendar': ^3.0.0
+      '@schedule-x/calendar': ^3.1.0
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
@@ -3930,6 +3929,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -5005,7 +5005,7 @@ snapshots:
 
   '@schedule-x/events-service@2.36.0': {}
 
-  '@schedule-x/react@2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@schedule-x/react@3.7.0(@schedule-x/calendar@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@schedule-x/calendar': 2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2)
       react: 19.2.0

@@ -54,8 +54,8 @@ importers:
         specifier: ^2.22.0
         version: 2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@schedule-x/theme-default':
-        specifier: ^2.22.0
-        version: 2.36.0
+        specifier: ^3.0.0
+        version: 3.7.3
       '@tabler/icons-react':
         specifier: ^3.31.0
         version: 3.35.0(react@19.2.0)
@@ -1172,8 +1172,8 @@ packages:
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
-  '@schedule-x/theme-default@2.36.0':
-    resolution: {integrity: sha512-jkN9/srYS54dO2h12iCvNMMrLEiod6BAoUc47KbOgGE66zyUU+kmQwUOYQ3A2LrKyIWjwtCp3Ewdd4h/HHvG9A==}
+  '@schedule-x/theme-default@3.7.3':
+    resolution: {integrity: sha512-suJs+AyQT6OhTq7e752Psg5IwaGE4EzPOSBhp7L8e9FgmluxOvnzlfbWod2i9mfYAsdkzX+WMIlCfBFkRu1o1A==}
 
   '@shikijs/core@3.15.0':
     resolution: {integrity: sha512-8TOG6yG557q+fMsSVa8nkEDOZNTSxjbbR8l6lF2gyr6Np+jrPlslqDxQkN6rMXCECQ3isNPZAGszAfYoJOPGlg==}
@@ -3930,6 +3930,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -5011,7 +5012,7 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@schedule-x/theme-default@2.36.0': {}
+  '@schedule-x/theme-default@3.7.3': {}
 
   '@shikijs/core@3.15.0':
     dependencies:

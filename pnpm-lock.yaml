@@ -42,8 +42,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2)
       '@schedule-x/current-time':
-        specifier: ^2.22.0
-        version: 2.36.0
+        specifier: ^3.0.0
+        version: 3.7.3
       '@schedule-x/event-modal':
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2)
@@ -1152,8 +1152,8 @@ packages:
       '@preact/signals': ^2.0.2
       preact: ^10.19.2
 
-  '@schedule-x/current-time@2.36.0':
-    resolution: {integrity: sha512-1JOO826jJD6H8g+FlcdN1rIwKCQC10OJsx9zIbTQbTJAUHkKfHG4PVOBwFvWGU3aPkGWpwXQxtdaMv6DNDcxcw==}
+  '@schedule-x/current-time@3.7.3':
+    resolution: {integrity: sha512-rv8gEaEad5bHvRhmDEjFwBUiMg6PXHYtdAUyGiHN5SPiqV4hf2hY5x7zusdHtYjjLiVJwF6LQfWjlRxrp82/7g==}
 
   '@schedule-x/event-modal@2.36.0':
     resolution: {integrity: sha512-dMjgtBhOTy/M/MUy1khGafVqs978zECv2Tb5MM4oBrPOO5ofbuKRpYzIsbnsyz5SsgCX1ThQHTLr7ndN5WocYA==}
@@ -3930,6 +3930,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -4996,7 +4997,7 @@ snapshots:
       '@preact/signals': 2.5.1(preact@10.27.2)
       preact: 10.27.2
 
-  '@schedule-x/current-time@2.36.0': {}
+  '@schedule-x/current-time@3.7.3': {}
 
   '@schedule-x/event-modal@2.36.0(@preact/signals@2.5.1(preact@10.27.2))(preact@10.27.2)':
     dependencies:

@@ -37,22 +37,22 @@ importers:
         version: 8.3.13(react@19.2.3)
       '@preact/signals':
         specifier: ^2.0.2
-        version: 2.6.0(preact@10.27.2)
+        version: 2.6.1(preact@10.27.2)
       '@schedule-x/calendar':
         specifier: ^2.22.0
-        version: 2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2)
+        version: 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
       '@schedule-x/current-time':
         specifier: ^2.22.0
         version: 2.36.0
       '@schedule-x/event-modal':
         specifier: ^2.22.0
-        version: 2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2)
+        version: 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
       '@schedule-x/events-service':
         specifier: ^2.22.0
         version: 2.36.0
       '@schedule-x/react':
         specifier: ^2.22.0
-        version: 2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
         version: 2.36.0
@@ -919,8 +919,8 @@ packages:
   '@preact/signals-core@1.12.2':
     resolution: {integrity: sha512-5Yf8h1Ke3SMHr15xl630KtwPTW4sYDFkkxS0vQ8UiQLWwZQnrF9IKaVG1mN5VcJz52EcWs2acsc/Npjha/7ysA==}
 
-  '@preact/signals@2.6.0':
-    resolution: {integrity: sha512-a22Mh1CCA+PaqobdV2YfeZ30PGywp/QnhCBNVDIsHUdkuqpYcbxt0vgC78JYaicBqWxAOGXLoExj5WHaZ/VKvg==}
+  '@preact/signals@2.6.1':
+    resolution: {integrity: sha512-Gp3DI1T/0YyirwJnImR8l9xyVJgKiVzJXmEhic1/7SPw3zStrsvuBpwKnD609CzsIdzxprWa6yTNXN+VLLZPGQ==}
     peerDependencies:
       preact: '>= 10.25.0 || >=11.0.0-0'
 
@@ -4733,7 +4733,7 @@ snapshots:
 
   '@preact/signals-core@1.12.2': {}
 
-  '@preact/signals@2.6.0(preact@10.27.2)':
+  '@preact/signals@2.6.1(preact@10.27.2)':
     dependencies:
       '@preact/signals-core': 1.12.2
       preact: 10.27.2
@@ -4818,23 +4818,23 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@schedule-x/calendar@2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2)':
+  '@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)':
     dependencies:
-      '@preact/signals': 2.6.0(preact@10.27.2)
+      '@preact/signals': 2.6.1(preact@10.27.2)
       preact: 10.27.2
 
   '@schedule-x/current-time@2.36.0': {}
 
-  '@schedule-x/event-modal@2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2)':
+  '@schedule-x/event-modal@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)':
     dependencies:
-      '@preact/signals': 2.6.0(preact@10.27.2)
+      '@preact/signals': 2.6.1(preact@10.27.2)
       preact: 10.27.2
 
   '@schedule-x/events-service@2.36.0': {}
 
-  '@schedule-x/react@2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@schedule-x/react@2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@schedule-x/calendar': 2.36.0(@preact/signals@2.6.0(preact@10.27.2))(preact@10.27.2)
+      '@schedule-x/calendar': 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 

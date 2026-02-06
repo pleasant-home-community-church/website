@@ -1,0 +1,36 @@
+{
+  "id": "212521621",
+  "all_day_event": false,
+  "ends_at": "2026-02-04T03:30:00Z",
+  "event_featured": false,
+  "event_name": "Tues Women's Bible Study: OT Survey - Winter 2016 - Lesson 4 - Judges & Ruth",
+  "starts_at": "2026-02-04T02:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2026-02-04T03:30:00Z",
+  "visible_starts_at": "2026-02-04T02:30:00Z",
+  "event": {
+    "id": "19757067",
+    "approval_status": "A",
+    "created_at": "2026-01-22T11:14:39Z",
+    "description": "<div>\n  Sermon locations\nhttps://www.sermonaudio.com/broadcasters/phcc/\n\n\n\nDirect link to Judges and Ruth\nhttps://www.sermonaudio.com/sermons/12826212578007\n\n\nEvery Woman’s Grace | Grace Community Church\nhttps://www.gracechurch.org/women/sermons/11691\n</div>\n",
+    "featured": false,
+    "image_url": "~/assets/images/events--uploads-group-header_image-2511179-medium_image-1728407853501.jpg",
+    "name": "Tues Women's Bible Study: OT Survey - Winter 2016 - Lesson 4 - Judges & Ruth",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "Sermon locations\nhttps://www.sermonaudio.com/broadcasters/phcc/\n\n\n\nDirect link to Judges and Ruth\nhttps://www.sermonaudio.com/sermons/12826212578007\n\n\nEvery Woman’s Grace | Grace Community Church\nhttps://www.gracechurch.org/women/sermons/11691",
+    "updated_at": "2026-01-30T21:20:55Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [],
+  "event_tags": {},
+  "group_tags": {
+    "Campus": "Pleasant Home",
+    "Ministry": "Womens"
+  },
+  "ministry": "women",
+  "color": "#F297CD"
+}

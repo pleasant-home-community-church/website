@@ -1,0 +1,42 @@
+{
+  "id": "205479536",
+  "all_day_event": false,
+  "ends_at": "2026-12-15T20:00:00Z",
+  "event_featured": false,
+  "event_name": "Widow's Group Gathering",
+  "starts_at": "2026-12-15T18:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2026-12-15T20:00:00Z",
+  "visible_starts_at": "2026-12-15T18:00:00Z",
+  "event": {
+    "id": "18892965",
+    "approval_status": "A",
+    "created_at": "2025-11-12T18:00:51Z",
+    "description": "<div>\n  Join with other widows within our body for a morning of fellowship and prayer.  We meet at Hope's Cafe in Gresham.<br><br>If you have any questions, please contact Raye Shadduck at (503)577-8588.\n</div>\n",
+    "featured": false,
+    "image_url": null,
+    "name": "Widow's Group Gathering",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "Join with other widows within our body for a morning of fellowship and prayer.  We meet at Hope's Cafe in Gresham.\n\nIf you have any questions, please contact Raye Shadduck at (503)577-8588.",
+    "updated_at": "2025-11-12T18:00:52Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church"
+  },
+  "group_tags": {},
+  "ministry": "default",
+  "color": "#6ADCC8"
+}

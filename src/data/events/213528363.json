@@ -1,0 +1,36 @@
+{
+  "id": "213528363",
+  "all_day_event": false,
+  "ends_at": "2026-02-25T03:30:00Z",
+  "event_featured": false,
+  "event_name": "Tues Women's Bible Study: OT Survey - Winter 2016 - Lesson 7   1 Kings - 2 Kings",
+  "starts_at": "2026-02-25T02:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2026-02-25T03:30:00Z",
+  "visible_starts_at": "2026-02-25T02:30:00Z",
+  "event": {
+    "id": "19896744",
+    "approval_status": "A",
+    "created_at": "2026-01-30T02:52:47Z",
+    "description": null,
+    "featured": false,
+    "image_url": "~/assets/images/events--uploads-group-header_image-2511179-medium_image-1728407853501.jpg",
+    "name": "Tues Women's Bible Study: OT Survey - Winter 2016 - Lesson 7   1 Kings - 2 Kings",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2026-01-30T02:54:25Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [],
+  "event_tags": {},
+  "group_tags": {
+    "Campus": "Pleasant Home",
+    "Ministry": "Womens"
+  },
+  "ministry": "women",
+  "color": "#F297CD"
+}

@@ -42,8 +42,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
       '@schedule-x/current-time':
-        specifier: ^2.22.0
-        version: 2.36.0
+        specifier: ^4.0.0
+        version: 4.1.0
       '@schedule-x/event-modal':
         specifier: ^2.22.0
         version: 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
@@ -1057,8 +1057,8 @@ packages:
       '@preact/signals': ^2.0.2
       preact: ^10.19.2
 
-  '@schedule-x/current-time@2.36.0':
-    resolution: {integrity: sha512-1JOO826jJD6H8g+FlcdN1rIwKCQC10OJsx9zIbTQbTJAUHkKfHG4PVOBwFvWGU3aPkGWpwXQxtdaMv6DNDcxcw==}
+  '@schedule-x/current-time@4.1.0':
+    resolution: {integrity: sha512-i7JfAJ0Sw4F01xypIcQO4P51RqiCif6QjCCfQcFHTFJWkkoHKrtj/mgey4+lEeOca/9pTilMTHl900eyeOwLEA==}
 
   '@schedule-x/event-modal@2.36.0':
     resolution: {integrity: sha512-dMjgtBhOTy/M/MUy1khGafVqs978zECv2Tb5MM4oBrPOO5ofbuKRpYzIsbnsyz5SsgCX1ThQHTLr7ndN5WocYA==}
@@ -3364,7 +3364,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   terser@5.44.1:
     resolution: {integrity: sha512-t/R3R/n0MSwnnazuPpPNVO60LX0SKL45pyl9YlvxIdkH0Of7D5qM2EVe+yASRIlY5pZ73nclYJfNANGWPwFDZw==}
@@ -4823,7 +4823,7 @@ snapshots:
       '@preact/signals': 2.6.1(preact@10.27.2)
       preact: 10.27.2
 
-  '@schedule-x/current-time@2.36.0': {}
+  '@schedule-x/current-time@4.1.0': {}
 
   '@schedule-x/event-modal@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)':
     dependencies:

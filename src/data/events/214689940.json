@@ -1,0 +1,49 @@
+{
+  "id": "214689940",
+  "all_day_event": false,
+  "ends_at": "2026-06-20T18:00:00Z",
+  "event_featured": false,
+  "event_name": "VBS Dry Run and finish decorating",
+  "starts_at": "2026-06-20T16:00:00Z",
+  "status": "approved",
+  "visible_ends_at": "2026-06-20T18:00:00Z",
+  "visible_starts_at": "2026-06-20T16:00:00Z",
+  "event": {
+    "id": "20028919",
+    "approval_status": "A",
+    "created_at": "2026-02-09T19:04:03Z",
+    "description": null,
+    "featured": false,
+    "image_url": null,
+    "name": "VBS Dry Run and finish decorating",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": null,
+    "updated_at": "2026-02-09T19:10:59Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    },
+    {
+      "id": "344712",
+      "color": "#F9D266",
+      "name": "Vacation Bible School",
+      "group": "Ministry"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Vacation Bible School"
+  },
+  "group_tags": {},
+  "ministry": "vbs",
+  "color": "#F9D266"
+}

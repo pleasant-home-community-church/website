@@ -1,0 +1,49 @@
+{
+  "id": "214691887",
+  "all_day_event": false,
+  "ends_at": "2026-03-08T21:00:00Z",
+  "event_featured": false,
+  "event_name": "VBS Decorations Interest Meeting",
+  "starts_at": "2026-03-08T19:30:00Z",
+  "status": "approved",
+  "visible_ends_at": "2026-03-08T21:00:00Z",
+  "visible_starts_at": "2026-03-08T19:30:00Z",
+  "event": {
+    "id": "20029221",
+    "approval_status": "A",
+    "created_at": "2026-02-09T19:17:08Z",
+    "description": "<div>\n  If you are interested in helping with decorations at our VBS program this summer, please attend this meeting for more information.\n</div>\n",
+    "featured": false,
+    "image_url": null,
+    "name": "VBS Decorations Interest Meeting",
+    "percent_approved": 100,
+    "percent_rejected": 0,
+    "registration_url": null,
+    "summary": "If you are interested in helping with decorations at our VBS program this summer, please attend this meeting for more information.",
+    "updated_at": "2026-02-09T19:17:09Z",
+    "visible_in_church_center": true,
+    "tags": []
+  },
+  "registration": null,
+  "tags": [
+    {
+      "id": "307165",
+      "color": "#6ADCC8",
+      "name": "Pleasant Home Community Church",
+      "group": "Campus"
+    },
+    {
+      "id": "344712",
+      "color": "#F9D266",
+      "name": "Vacation Bible School",
+      "group": "Ministry"
+    }
+  ],
+  "event_tags": {
+    "Campus": "Pleasant Home Community Church",
+    "Ministry": "Vacation Bible School"
+  },
+  "group_tags": {},
+  "ministry": "vbs",
+  "color": "#F9D266"
+}

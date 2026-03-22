@@ -51,8 +51,8 @@ importers:
         specifier: ^2.22.0
         version: 2.36.0
       '@schedule-x/react':
-        specifier: ^2.22.0
-        version: 2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: ^4.0.0
+        version: 4.1.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@schedule-x/theme-default':
         specifier: ^2.22.0
         version: 2.36.0
@@ -1069,11 +1069,10 @@ packages:
   '@schedule-x/events-service@2.36.0':
     resolution: {integrity: sha512-M4dz8AgaEtpbXAanvYvuPnEDAKlhMO7d6R8WQ8wX8hXsJSzWa18XS3qLJOT+5jCR7O8QD8aDIDg3RpihleUeiA==}
 
-  '@schedule-x/react@2.37.0':
-    resolution: {integrity: sha512-mbPE3JRcB7qjCSsnt5ATYz635Cw+WgXJqjD8LrBpWOji1rxuJWheSFfr9Ag1cLZUbUwRQyEsTRFHw046+2MxOw==}
-    deprecated: unintended minor version
+  '@schedule-x/react@4.1.0':
+    resolution: {integrity: sha512-l2hn1kdTModk4Lbt+nEr/VAcuNMA+w+hAAtgz8VLOj5UeieM7PWoK+cDapzPHCjUKisCSPd8QZfAX966Ma82kQ==}
     peerDependencies:
-      '@schedule-x/calendar': ^3.0.0
+      '@schedule-x/calendar': ^3.1.0 || ^4.0.0
       react: ^16.7.0 || ^17 || ^18 || ^19
       react-dom: ^16.7.0 || ^17 || ^18 || ^19
 
@@ -3364,7 +3363,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   terser@5.44.1:
     resolution: {integrity: sha512-t/R3R/n0MSwnnazuPpPNVO60LX0SKL45pyl9YlvxIdkH0Of7D5qM2EVe+yASRIlY5pZ73nclYJfNANGWPwFDZw==}
@@ -4832,7 +4831,7 @@ snapshots:
 
   '@schedule-x/events-service@2.36.0': {}
 
-  '@schedule-x/react@2.37.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@schedule-x/react@4.1.0(@schedule-x/calendar@2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@schedule-x/calendar': 2.36.0(@preact/signals@2.6.1(preact@10.27.2))(preact@10.27.2)
       react: 19.2.3

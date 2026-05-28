@@ -40,7 +40,7 @@
     "@schedule-x/theme-default": "^2.22.0",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.5.2",
+    "astro": "^6.0.0",
     "astro-embed": "^0.9.0",
     "astro-icon": "^1.1.5",
     "clsx": "^2.1.1",

@@ -85,7 +85,7 @@
         "type": "media",
         "mediaType": "mp4",
         "live": false,
-        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/5172620413111.m3u8?ts=1779055688&dc=linode",
+        "streamURL": "https://cloud.sermonaudio.com/media/video/abr/5172620413111.m3u8?ts=1779055688&dc=vault",
         "thumbnailImageURL": "https://media.sermonaudio.com/thumbnails/5172620413111.jpg?ts=1779051253",
         "adaptiveBitrate": true,
         "duration": 2974,
